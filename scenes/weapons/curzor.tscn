@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ca62u2ae3vnhv"]
+
+[ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_1xlka"]
+[ext_resource type="Texture2D" uid="uid://ll18c770cnda" path="res://gut textures/weapons/curzor.png" id="2_6b5d7"]
+
+[node name="curzor" unique_id=1316297280 instance=ExtResource("1_1xlka")]
+damage = 2
+automatic = false
+shake_strength = 10.0
+shake_duration = 0.2
+
+[node name="sprite" parent="." index="0" unique_id=275115365]
+texture = ExtResource("2_6b5d7")
+
+[node name="flash" parent="." index="1" unique_id=1903842766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0099231, 0.028793573, -0.67927706)

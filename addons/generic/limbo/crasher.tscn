@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c1ndlqixlqq61"]
+
+[ext_resource type="Script" uid="uid://mwvpafaj2fm2" path="res://scripts/skibidi.gd" id="1_5ea8b"]
+[ext_resource type="Texture2D" uid="uid://c3s1owbcqymnn" path="res://addons/generic/limbo/crasher.png" id="2_5ea8b"]
+[ext_resource type="AudioStream" uid="uid://cdsvur5380cr7" path="res://addons/generic/limbo/chase.wav" id="3_qf7bw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkbot"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = ExtResource("2_5ea8b")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_h057u"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_dkbot")
+size = Vector2(3, 3)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iwecp"]
+radius = 0.7
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0yeh"]
+size = Vector3(1.2, 1.2, 1.2)
+
+[node name="Crasher" type="CharacterBody3D" unique_id=111595298]
+script = ExtResource("1_5ea8b")
+move_speed = 12.01
+is_crasher = true
+always_chase = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1810971608]
+mesh = SubResource("QuadMesh_h057u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=124626515]
+shape = SubResource("SphereShape3D_iwecp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=867456851]
+stream = ExtResource("3_qf7bw")
+volume_db = 80.0
+unit_size = 0.1
+autoplay = true
+max_distance = 20.0
+
+[node name="hurt_box" type="Area3D" parent="." unique_id=554069896]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=761893044]
+shape = SubResource("BoxShape3D_a0yeh")
+
+[connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]

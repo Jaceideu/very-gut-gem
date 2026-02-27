@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dw2jm82ua87pm"]
+
+[ext_resource type="PackedScene" uid="uid://bbtmb7j8kfgen" path="res://addons/generic/door.blend" id="1_wk0ok"]
+
+[sub_resource type="Animation" id="Animation_wk0ok"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("knob:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vgkeh"]
+resource_name = "knob"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("knob:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.7853981), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfiq8"]
+_data = {
+&"RESET": SubResource("Animation_wk0ok"),
+&"knob": SubResource("Animation_vgkeh")
+}
+
+[node name="EvilDoor" unique_id=1218078094 instance=ExtResource("1_wk0ok")]
+
+[node name="knob" parent="." index="1" unique_id=1079393073]
+transform = Transform3D(2.4819214, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0.7104683, 1.5482224, 0.090711616)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=111988509]
+libraries/ = SubResource("AnimationLibrary_kfiq8")

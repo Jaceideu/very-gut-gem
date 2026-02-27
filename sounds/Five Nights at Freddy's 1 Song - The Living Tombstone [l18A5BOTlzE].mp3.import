@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxeq7ssqfb8f5"
+path="res://.godot/imported/Five Nights at Freddy's 1 Song - The Living Tombstone [l18A5BOTlzE].mp3-da76b035a138689710879dea261774db.mp3str"
+
+[deps]
+
+source_file="res://sounds/Five Nights at Freddy's 1 Song - The Living Tombstone [l18A5BOTlzE].mp3"
+dest_files=["res://.godot/imported/Five Nights at Freddy's 1 Song - The Living Tombstone [l18A5BOTlzE].mp3-da76b035a138689710879dea261774db.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

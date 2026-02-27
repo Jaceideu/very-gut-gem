@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b51p1bhv2brb5"]
+
+[ext_resource type="Texture2D" uid="uid://bmwg2bl1vl7in" path="res://gut textures/enemies/gd_face.png" id="1_wgwcy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65hex"]
+albedo_texture = ExtResource("1_wgwcy")
+
+[sub_resource type="BoxMesh" id="BoxMesh_3xauh"]
+material = SubResource("StandardMaterial3D_65hex")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wuts4"]
+
+[node name="PvpCube" type="StaticBody3D" unique_id=138985341]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2043247844]
+mesh = SubResource("BoxMesh_3xauh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=369829350]
+shape = SubResource("BoxShape3D_wuts4")

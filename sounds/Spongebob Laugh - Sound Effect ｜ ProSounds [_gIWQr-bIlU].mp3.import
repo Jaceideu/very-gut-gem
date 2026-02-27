@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1bdwpj4gke4w"
+path="res://.godot/imported/Spongebob Laugh - Sound Effect ｜ ProSounds [_gIWQr-bIlU].mp3-53c1e3ec1bd1ffb3832c44f9625096e3.mp3str"
+
+[deps]
+
+source_file="res://sounds/Spongebob Laugh - Sound Effect ｜ ProSounds [_gIWQr-bIlU].mp3"
+dest_files=["res://.godot/imported/Spongebob Laugh - Sound Effect ｜ ProSounds [_gIWQr-bIlU].mp3-53c1e3ec1bd1ffb3832c44f9625096e3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

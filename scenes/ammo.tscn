@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://by0yffnntkc60"]
+
+[ext_resource type="Script" uid="uid://crb6bwhxkgpf2" path="res://scripts/ammo.gd" id="1_n7lxl"]
+[ext_resource type="Texture2D" uid="uid://hnn6bftc210c" path="res://gut textures/luckyblock.png" id="2_api3o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0sae"]
+albedo_texture = ExtResource("2_api3o")
+uv1_scale = Vector3(1, 2, 3)
+uv2_scale = Vector3(1, 2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lofg2"]
+material = SubResource("StandardMaterial3D_t0sae")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggsie"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Ammo" type="StaticBody3D" unique_id=2138249844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.250289, 0)
+script = ExtResource("1_n7lxl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=97046894]
+mesh = SubResource("BoxMesh_lofg2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1813823596]
+shape = SubResource("BoxShape3D_ggsie")

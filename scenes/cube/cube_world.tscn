@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://clhsdegt4eqsa"]
+
+[ext_resource type="Script" uid="uid://vdk787r5qd6n" path="res://scripts/the_cube.gd" id="1_jqh2s"]
+[ext_resource type="Texture2D" uid="uid://b2p6p2pvximj6" path="res://gut textures/gut/gut.png" id="1_y4fw2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qavq4"]
+albedo_texture = ExtResource("1_y4fw2")
+uv1_scale = Vector3(1, 2, 3)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_4r5pv"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_qavq4")
+
+[sub_resource type="Environment" id="Environment_jqh2s"]
+
+[node name="CUBE WORLD" type="Node3D" unique_id=1514434164]
+
+[node name="THE CUBE" type="MeshInstance3D" parent="." unique_id=1068753944]
+mesh = SubResource("BoxMesh_4r5pv")
+skeleton = NodePath("../..")
+script = ExtResource("1_jqh2s")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1632771713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3481442)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=868751843]
+environment = SubResource("Environment_jqh2s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=254173308]
+transform = Transform3D(0.9600351, -0.18693794, 0.20829451, -6.992644e-08, 0.7442299, 0.6679235, -0.27987915, -0.6412301, 0.71448696, -1.7738668, 0.96836865, 0)

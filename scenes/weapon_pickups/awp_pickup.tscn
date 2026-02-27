@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8g4ntx3bripd"]
+
+[ext_resource type="PackedScene" uid="uid://bekuuxbyxpjxa" path="res://scenes/weapon_pickups/weapon_pickup.tscn" id="1_tqx24"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kb8bs"]
+load_path = "res://.godot/imported/awp.png-fde88a3eeb9b58bde0278bc93635c4e1.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mttwk"]
+transparency = 1
+albedo_texture = SubResource("CompressedTexture2D_kb8bs")
+texture_filter = 0
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_ktt8o"]
+material = SubResource("StandardMaterial3D_mttwk")
+size = Vector2(1.5, 1.5)
+
+[node name="AWP_Pickup" unique_id=118521975 instance=ExtResource("1_tqx24")]
+mesh = SubResource("QuadMesh_ktt8o")
+weapon_scene_path = "uid://dacy0pkw2h6wt"

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://2dncue5fb4f0"]
+
+[ext_resource type="Script" uid="uid://djyhetnmdg5uo" path="res://addons/generic/evil_door.gd" id="1_6al7f"]
+[ext_resource type="PackedScene" uid="uid://dw2jm82ua87pm" path="res://addons/generic/evil_door_model.tscn" id="2_6al7f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6al7f"]
+size = Vector3(1.55719, 2.9960022, 0.18041992)
+
+[node name="EvilDoor" type="StaticBody3D" unique_id=1790417461]
+script = ExtResource("1_6al7f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1189355454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011291504, 1.4979095, -0.0040283203)
+shape = SubResource("BoxShape3D_6al7f")
+
+[node name="EvilDoor" parent="." unique_id=1218078094 instance=ExtResource("2_6al7f")]

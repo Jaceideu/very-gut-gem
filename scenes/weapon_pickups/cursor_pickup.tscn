@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://brcax8mff2mo2"]
+
+[ext_resource type="PackedScene" uid="uid://bekuuxbyxpjxa" path="res://scenes/weapon_pickups/weapon_pickup.tscn" id="1_5rh2n"]
+[ext_resource type="Texture2D" uid="uid://ll18c770cnda" path="res://gut textures/weapons/curzor.png" id="2_vfuwh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1t447"]
+transparency = 1
+albedo_texture = ExtResource("2_vfuwh")
+texture_filter = 0
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_wpjyy"]
+material = SubResource("StandardMaterial3D_1t447")
+size = Vector2(1.5, 1.5)
+
+[node name="CursorPickup" unique_id=118521975 instance=ExtResource("1_5rh2n")]
+mesh = SubResource("QuadMesh_wpjyy")
+weapon_scene_path = "uid://ca62u2ae3vnhv"

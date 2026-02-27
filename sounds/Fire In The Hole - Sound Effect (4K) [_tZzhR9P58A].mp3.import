@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnbw8cwn3vfo5"
+path="res://.godot/imported/Fire In The Hole - Sound Effect (4K) [_tZzhR9P58A].mp3-b14ec83212104ce08aad1e18d37a138c.mp3str"
+
+[deps]
+
+source_file="res://sounds/Fire In The Hole - Sound Effect (4K) [_tZzhR9P58A].mp3"
+dest_files=["res://.godot/imported/Fire In The Hole - Sound Effect (4K) [_tZzhR9P58A].mp3-b14ec83212104ce08aad1e18d37a138c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

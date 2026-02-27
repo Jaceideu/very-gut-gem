@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://t6kge32xqby0"]
+
+[ext_resource type="Texture2D" uid="uid://656ykxai01od" path="res://gut textures/menu/lobby.png" id="1_d0wi2"]
+[ext_resource type="Script" uid="uid://h3sb2xtqstye" path="res://scripts/multiplayer/menu_lobby.gd" id="1_wd2f6"]
+[ext_resource type="AudioStream" uid="uid://ccbpgtw6a661w" path="res://sounds/Vine Boom [_vBVGjFdwk4].wav" id="4_8plnq"]
+[ext_resource type="AudioStream" uid="uid://bkq7gee7y4516" path="res://sounds/kh 2.mp3" id="5_5b3yv"]
+
+[sub_resource type="SystemFont" id="SystemFont_2na3v"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd2f6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b3yv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8plnq"]
+
+[sub_resource type="SystemFont" id="SystemFont_8plnq"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[node name="MenuLobby" type="Control" unique_id=868847147]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wd2f6")
+debug_other_level = "uid://qqfpk4k3yb3q"
+
+[node name="background" type="TextureRect" parent="." unique_id=693294263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d0wi2")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="start" type="Button" parent="." unique_id=1842378833]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -601.00006
+offset_top = -270.0
+offset_right = -218.0
+offset_bottom = -128.0
+grow_horizontal = 0
+rotation = 1.0640409
+scale = Vector2(3.8322625, 0.8143623)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_focus_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_pressed_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_hover_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_disabled_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/font_outline_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_normal_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_focus_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_pressed_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_hover_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_colors/icon_disabled_color = Color(0.7882353, 0.07450981, 0.007843138, 1)
+theme_override_fonts/font = SubResource("SystemFont_2na3v")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd2f6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8plnq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b3yv")
+action_mode = 0
+text = "sTART"
+
+[node name="pvp" type="Button" parent="." unique_id=1067824744]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1504.0
+offset_top = 398.99997
+offset_right = -1180.7858
+offset_bottom = 469.99997
+grow_horizontal = 0
+rotation = -1.1656375
+scale = Vector2(1.882309, 7.0457244)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_focus_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_pressed_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_hover_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_disabled_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/font_outline_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_normal_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_focus_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_pressed_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_hover_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_colors/icon_disabled_color = Color(0.30588236, 1, 0.74509805, 1)
+theme_override_fonts/font = SubResource("SystemFont_2na3v")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd2f6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8plnq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b3yv")
+action_mode = 0
+text = "pVp"
+
+[node name="host" type="Button" parent="." unique_id=1457897097]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1194.0
+offset_top = 148.00003
+offset_right = -811.00006
+offset_bottom = 290.00003
+grow_horizontal = 0
+rotation = -0.30094132
+focus_mode = 0
+theme_override_colors/font_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_pressed_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_disabled_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_normal_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_focus_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_pressed_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_hover_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_disabled_color = Color(0.11372549, 0.8745098, 0.8745098, 1)
+theme_override_fonts/font = SubResource("SystemFont_2na3v")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd2f6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8plnq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b3yv")
+action_mode = 0
+text = "HOST"
+
+[node name="menu" type="Button" parent="." unique_id=190208817]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -396.0
+offset_top = 30.000015
+offset_right = -13.0
+offset_bottom = 172.00002
+grow_horizontal = 0
+rotation = 0.5152277
+scale = Vector2(0.9212213, 0.42791617)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_focus_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_pressed_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_hover_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_disabled_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/font_outline_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_normal_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_focus_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_pressed_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_hover_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_colors/icon_disabled_color = Color(0.012617188, 0.0006468763, 0.0019673533, 1)
+theme_override_fonts/font = SubResource("SystemFont_2na3v")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd2f6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8plnq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b3yv")
+action_mode = 0
+text = "inaciate menu"
+
+[node name="join" type="Button" parent="." unique_id=1013220232]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -534.0
+offset_top = 336.0
+offset_right = -151.0
+offset_bottom = 478.0
+grow_horizontal = 0
+rotation = 0.45464906
+focus_mode = 0
+theme_override_colors/font_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_focus_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_pressed_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_hover_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_disabled_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/font_outline_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_normal_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_focus_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_pressed_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_hover_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_colors/icon_disabled_color = Color(0.9647059, 0.6509804, 0.18431373, 1)
+theme_override_fonts/font = SubResource("SystemFont_2na3v")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wd2f6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8plnq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5b3yv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b3yv")
+action_mode = 0
+text = "join"
+
+[node name="ipEdit" type="LineEdit" parent="." unique_id=405574736]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 461.00003
+offset_top = 424.0
+offset_right = 529.5
+offset_bottom = 455.0
+rotation = -0.9115622
+scale = Vector2(5.4845333, 1.7193614)
+
+[node name="nicknameEdit" type="LineEdit" parent="." unique_id=907734085]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 682.0
+offset_right = 1142.5
+offset_bottom = 713.0
+rotation = -1.6872205
+scale = Vector2(5.4845333, 1.7193614)
+text = "🤣🤣"
+placeholder_text = "UR gamertag"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="." unique_id=1599504059]
+unique_name_in_owner = true
+stream = ExtResource("4_8plnq")
+volume_db = 18.328
+
+[node name="players_label" type="Label" parent="." unique_id=1482466366]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 243.0
+offset_top = 215.0
+offset_right = 539.0
+offset_bottom = 286.0
+rotation = -0.26105016
+scale = Vector2(2.1035864, 1.5108823)
+theme_override_fonts/font = SubResource("SystemFont_8plnq")
+theme_override_font_sizes/font_size = 50
+text = "pLayere: "
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=582461494]
+stream = ExtResource("5_5b3yv")
+volume_db = -12.374
+autoplay = true
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="pvp" to="." method="_on_pvp_pressed"]
+[connection signal="pressed" from="host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://diis7inqeye3a"]
+
+[ext_resource type="Script" uid="uid://dsifa8a36dfa2" path="res://scripts/powerups/starman.gd" id="1_ia8na"]
+[ext_resource type="Texture2D" uid="uid://d11l6qgv5udfi" path="res://gut textures/powerups/Starman.webp" id="1_ni1uf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ia8na"]
+
+[node name="Starman" type="Area3D" unique_id=52172687]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ia8na")
+duration = 30.0
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1066192448]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_ni1uf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=61652246]
+shape = SubResource("SphereShape3D_ia8na")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

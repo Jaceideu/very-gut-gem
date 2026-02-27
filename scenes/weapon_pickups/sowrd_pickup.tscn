@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b0gwdcfb4nrc0"]
+
+[ext_resource type="PackedScene" uid="uid://bekuuxbyxpjxa" path="res://scenes/weapon_pickups/weapon_pickup.tscn" id="1_7keuk"]
+[ext_resource type="Texture2D" uid="uid://c74jjv83yppia" path="res://gut textures/weapons/sowrd.png" id="2_s3ii1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0as8"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_s3ii1")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_tnf53"]
+material = SubResource("StandardMaterial3D_a0as8")
+size = Vector2(1.5, 1.5)
+
+[node name="SowrdPickup" unique_id=118521975 instance=ExtResource("1_7keuk")]
+mesh = SubResource("QuadMesh_tnf53")
+weapon_scene_path = "uid://d0on74kstson4"

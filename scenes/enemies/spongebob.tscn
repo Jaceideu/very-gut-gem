@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://c7akkd5pba6bv"]
+
+[ext_resource type="Script" uid="uid://mwvpafaj2fm2" path="res://scripts/skibidi.gd" id="1_elcfm"]
+[ext_resource type="Texture2D" uid="uid://d35hd6cp1ingg" path="res://gut textures/enemies/cheese boi.png" id="2_elcfm"]
+[ext_resource type="AudioStream" uid="uid://c1bdwpj4gke4w" path="res://sounds/Spongebob Laugh - Sound Effect ｜ ProSounds [_gIWQr-bIlU].mp3" id="3_elcfm"]
+
+[sub_resource type="Shader" id="Shader_c5ynt"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+instance uniform vec4 albedo : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+
+	// Billboard Mode: Y-Billboard
+	MODELVIEW_MATRIX = VIEW_MATRIX * mat4(
+			vec4(normalize(cross(vec3(0.0, 1.0, 0.0), MAIN_CAM_INV_VIEW_MATRIX[2].xyz)), 0.0),
+			vec4(0.0, 1.0, 0.0, 0.0),
+			vec4(normalize(cross(MAIN_CAM_INV_VIEW_MATRIX[0].xyz, vec3(0.0, 1.0, 0.0))), 0.0),
+			MODEL_MATRIX[3]);
+	MODELVIEW_NORMAL_MATRIX = mat3(MODELVIEW_MATRIX);
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	ALPHA *= albedo.a * albedo_tex.a;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_elcfm"]
+render_priority = 0
+shader = SubResource("Shader_c5ynt")
+shader_parameter/texture_albedo = ExtResource("2_elcfm")
+shader_parameter/albedo_texture_size = Vector2i(460, 345)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vbjpc"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_elcfm")
+size = Vector2(3, 3)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iwecp"]
+radius = 1.2947744
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nhe5d"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_181tp"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_elcfm"]
+radius = 7.529094
+
+[node name="Spongebob" type="CharacterBody3D" unique_id=493577690 groups=["immune_to_players"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44571, 0)
+collision_layer = 3
+script = ExtResource("1_elcfm")
+health = 300
+credit_reward = -1
+always_chase = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1075928211]
+mesh = SubResource("QuadMesh_vbjpc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=380100939]
+shape = SubResource("SphereShape3D_iwecp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=798057661]
+stream = ExtResource("3_elcfm")
+unit_size = 1.25
+max_db = 6.0
+autoplay = true
+bus = &"enemies"
+
+[node name="hurt_box" type="Area3D" parent="." unique_id=200565056]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=968220557]
+shape = SubResource("BoxShape3D_nhe5d")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1519172805]
+replication_config = SubResource("SceneReplicationConfig_181tp")
+
+[node name="player_detector" type="Area3D" parent="." unique_id=1222008813]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_detector" unique_id=826660627]
+shape = SubResource("SphereShape3D_elcfm")
+
+[connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]

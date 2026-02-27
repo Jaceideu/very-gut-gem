@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://46exn10k1s44"
+path="res://.godot/imported/low quality dream music [-_BCv-nyO68].mp3-c606b0e2b2ee12c26ef86179cffc353b.mp3str"
+
+[deps]
+
+source_file="res://sounds/low quality dream music [-_BCv-nyO68].mp3"
+dest_files=["res://.godot/imported/low quality dream music [-_BCv-nyO68].mp3-c606b0e2b2ee12c26ef86179cffc353b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

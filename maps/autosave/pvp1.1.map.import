@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://6xmutgktuw8k"
+path="res://.godot/imported/pvp1.1.map-c6fc8228d7348bdc7f8e7d4366633c79.tres"
+
+[deps]
+
+source_file="res://maps/autosave/pvp1.1.map"
+dest_files=["res://.godot/imported/pvp1.1.map-c6fc8228d7348bdc7f8e7d4366633c79.tres"]
+
+[params]
+

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b41lehh10c4t3"]
+
+[ext_resource type="Script" uid="uid://dr7jr6byxvhyh" path="res://scripts/multiplayer/pvp_ui.gd" id="1_6y1v1"]
+
+[sub_resource type="Theme" id="Theme_a38lo"]
+default_font_size = 30
+Label/colors/font_color = Color(1, 0, 1, 1)
+
+[node name="PvpUi" type="CanvasLayer" unique_id=244763578]
+unique_name_in_owner = true
+script = ExtResource("1_6y1v1")
+
+[node name="Label" type="Label" parent="." unique_id=1678409809]
+offset_left = 637.0
+offset_top = 249.20355
+offset_right = 758.0
+offset_bottom = 320.20355
+rotation = -0.0512915
+theme_override_colors/font_color = Color(0.40535104, 0.47600466, 1, 1)
+text = "Peple"
+
+[node name="Leaderboards" type="VBoxContainer" parent="." unique_id=405888580]
+unique_name_in_owner = true
+offset_left = 662.0
+offset_top = 333.20352
+offset_right = 879.0
+offset_bottom = 376.20352
+rotation = -0.25644588
+mouse_filter = 2
+theme = SubResource("Theme_a38lo")
+
+[node name="Label" type="Label" parent="Leaderboards" unique_id=468410820]
+layout_mode = 2
+text = "twoja stara 1/4"
+
+[node name="DeathLabel" type="Label" parent="." unique_id=719613675]
+unique_name_in_owner = true
+visible = false
+offset_left = 95.999954
+offset_top = 41.99997
+offset_right = 819.99994
+offset_bottom = 182.99997
+rotation = 0.41263464
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "u got pwned by "

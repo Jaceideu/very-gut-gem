@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgmrsctyce1es"
+path="res://.godot/imported/Fnaf 2 ambience [UfAG_bqZXgY].mp3-c1a075088b3ab12200c391dc8c221136.mp3str"
+
+[deps]
+
+source_file="res://sounds/Fnaf 2 ambience [UfAG_bqZXgY].mp3"
+dest_files=["res://.godot/imported/Fnaf 2 ambience [UfAG_bqZXgY].mp3-c1a075088b3ab12200c391dc8c221136.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

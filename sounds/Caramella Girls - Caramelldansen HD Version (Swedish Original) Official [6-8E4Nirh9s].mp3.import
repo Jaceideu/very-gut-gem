@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hbd1rlh8t46x"
+path="res://.godot/imported/Caramella Girls - Caramelldansen HD Version (Swedish Original) Official [6-8E4Nirh9s].mp3-77e7ea1f8dc15c7725eee290a6a0cd3d.mp3str"
+
+[deps]
+
+source_file="res://sounds/Caramella Girls - Caramelldansen HD Version (Swedish Original) Official [6-8E4Nirh9s].mp3"
+dest_files=["res://.godot/imported/Caramella Girls - Caramelldansen HD Version (Swedish Original) Official [6-8E4Nirh9s].mp3-77e7ea1f8dc15c7725eee290a6a0cd3d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

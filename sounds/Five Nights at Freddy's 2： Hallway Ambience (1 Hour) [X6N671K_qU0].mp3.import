@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl3yvlg0jepwu"
+path="res://.godot/imported/Five Nights at Freddy's 2： Hallway Ambience (1 Hour) [X6N671K_qU0].mp3-4eb15c0e6822c453b88b7cff020c405f.mp3str"
+
+[deps]
+
+source_file="res://sounds/Five Nights at Freddy's 2： Hallway Ambience (1 Hour) [X6N671K_qU0].mp3"
+dest_files=["res://.godot/imported/Five Nights at Freddy's 2： Hallway Ambience (1 Hour) [X6N671K_qU0].mp3-4eb15c0e6822c453b88b7cff020c405f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

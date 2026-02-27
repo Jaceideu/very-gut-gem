@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://qdys5rfnf2ia"]
+
+[ext_resource type="Texture2D" uid="uid://c5mbktescvqr4" path="res://addons/generic/limbo/Grass_01.png" id="1_a442c"]
+[ext_resource type="Script" uid="uid://bjaf4ug1cmvyo" path="res://addons/generic/limbo/ground_follow_player.gd" id="1_jaitq"]
+[ext_resource type="PackedScene" uid="uid://ca5cvww1u7iq1" path="res://scenes/player.tscn" id="2_1uqh6"]
+[ext_resource type="PackedScene" uid="uid://c1ndlqixlqq61" path="res://addons/generic/limbo/crasher.tscn" id="4_6vwxw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1uqh6"]
+albedo_texture = ExtResource("1_a442c")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jaitq"]
+material = SubResource("StandardMaterial3D_1uqh6")
+size = Vector2(100, 100)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_a442c"]
+
+[sub_resource type="Environment" id="Environment_1uqh6"]
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
+fog_depth_begin = 1.0
+fog_depth_end = 10.0
+
+[node name="Limbo" type="Node3D" unique_id=1581928960]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=134778967 node_paths=PackedStringArray("target")]
+script = ExtResource("1_jaitq")
+target = NodePath("Player")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=35002059]
+mesh = SubResource("PlaneMesh_jaitq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1995192850]
+shape = SubResource("WorldBoundaryShape3D_a442c")
+
+[node name="Player" parent="Ground" unique_id=1859002790 instance=ExtResource("2_1uqh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0)
+disable_hud = true
+is_invincible = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1956058060]
+environment = SubResource("Environment_1uqh6")
+
+[node name="Crasher" parent="." unique_id=111595298 node_paths=PackedStringArray("chased_target") instance=ExtResource("4_6vwxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.483, 200)
+chased_target = NodePath("../Ground/Player")

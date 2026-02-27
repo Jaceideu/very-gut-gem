@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6lkrxq1j2yty"
+path="res://.godot/imported/EXTREMELY LOUD INCORRECT BUZZER [3GDr-eyhsSM].wav-123fd5d36cbcb32dd72d3ebc52e97192.sample"
+
+[deps]
+
+source_file="res://sounds/EXTREMELY LOUD INCORRECT BUZZER [3GDr-eyhsSM].wav"
+dest_files=["res://.godot/imported/EXTREMELY LOUD INCORRECT BUZZER [3GDr-eyhsSM].wav-123fd5d36cbcb32dd72d3ebc52e97192.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

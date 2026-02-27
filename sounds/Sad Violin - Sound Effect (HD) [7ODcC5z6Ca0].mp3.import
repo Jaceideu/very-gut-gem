@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bykiapvg4vycf"
+path="res://.godot/imported/Sad Violin - Sound Effect (HD) [7ODcC5z6Ca0].mp3-7d04cb8fd8004a61a347a695053b6cef.mp3str"
+
+[deps]
+
+source_file="res://sounds/Sad Violin - Sound Effect (HD) [7ODcC5z6Ca0].mp3"
+dest_files=["res://.godot/imported/Sad Violin - Sound Effect (HD) [7ODcC5z6Ca0].mp3-7d04cb8fd8004a61a347a695053b6cef.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

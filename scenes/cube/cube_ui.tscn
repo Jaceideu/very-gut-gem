@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dat62mww4pi3g"]
+
+[ext_resource type="PackedScene" uid="uid://clhsdegt4eqsa" path="res://scenes/cube/cube_world.tscn" id="1_fyykb"]
+
+[node name="CUBE" type="SubViewportContainer" unique_id=1006109590]
+offset_right = 202.52063
+offset_bottom = 191.0
+mouse_filter = 2
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=644319978]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(50, 47)
+render_target_update_mode = 4
+
+[node name="CUBE WORLD" parent="SubViewport" unique_id=1514434164 instance=ExtResource("1_fyykb")]

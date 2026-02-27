@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://qg27ga56s03y"]
+
+[ext_resource type="Script" uid="uid://mwvpafaj2fm2" path="res://scripts/skibidi.gd" id="1_sr2l3"]
+[ext_resource type="Texture2D" uid="uid://cfrhs5hmwg6xh" path="res://gut textures/enemies/clippy.png" id="2_sr2l3"]
+[ext_resource type="AudioStream" uid="uid://u74tvh1ualwg" path="res://sounds/You are an idiot!! [48rz8udZBmQ].mp3" id="3_c5ynt"]
+[ext_resource type="Script" uid="uid://c6rdbr62ymee8" path="res://scripts/clippy_spawner.gd" id="4_c5ynt"]
+
+[sub_resource type="Shader" id="Shader_c5ynt"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+instance uniform vec4 albedo : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+
+	// Billboard Mode: Y-Billboard
+	MODELVIEW_MATRIX = VIEW_MATRIX * mat4(
+			vec4(normalize(cross(vec3(0.0, 1.0, 0.0), MAIN_CAM_INV_VIEW_MATRIX[2].xyz)), 0.0),
+			vec4(0.0, 1.0, 0.0, 0.0),
+			vec4(normalize(cross(MAIN_CAM_INV_VIEW_MATRIX[0].xyz, vec3(0.0, 1.0, 0.0))), 0.0),
+			MODEL_MATRIX[3]);
+	MODELVIEW_NORMAL_MATRIX = mat3(MODELVIEW_MATRIX);
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	ALPHA *= albedo.a * albedo_tex.a;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5ynt"]
+render_priority = 0
+shader = SubResource("Shader_c5ynt")
+shader_parameter/texture_albedo = ExtResource("2_sr2l3")
+shader_parameter/albedo_texture_size = Vector2i(460, 345)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bdb2r"]
+material = SubResource("ShaderMaterial_c5ynt")
+size = Vector2(14.94, 7.555)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iwecp"]
+radius = 2.542722
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nhe5d"]
+size = Vector3(4.8530617, 4.7268553, 4.0981946)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_181tp"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_181tp"]
+radius = 25.174
+
+[node name="Clippy" type="CharacterBody3D" unique_id=493577690 groups=["enemies"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44571, 0)
+script = ExtResource("1_sr2l3")
+move_speed = 0.5
+health = 150
+attack_range = 50.0
+attack_damage = 10
+credit_reward = 10000
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1075928211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5045295, 0)
+mesh = SubResource("QuadMesh_bdb2r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=380100939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4720111, 0)
+shape = SubResource("SphereShape3D_iwecp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=798057661]
+stream = ExtResource("3_c5ynt")
+unit_size = 1.25
+max_db = 6.0
+autoplay = true
+bus = &"enemies"
+
+[node name="hurt_box" type="Area3D" parent="." unique_id=200565056]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=968220557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14920998, 0.8990724, -0.15153646)
+shape = SubResource("BoxShape3D_nhe5d")
+debug_color = Color(0.9788045, 0, 0.39703032, 0.41960785)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1519172805]
+replication_config = SubResource("SceneReplicationConfig_181tp")
+
+[node name="player_detector" type="Area3D" parent="." unique_id=829735627]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_detector" unique_id=1144968142]
+shape = SubResource("SphereShape3D_181tp")
+
+[node name="ClippySpawner" type="Node3D" parent="." unique_id=2072304723]
+script = ExtResource("4_c5ynt")
+
+[node name="SpawnMarkers" type="Node3D" parent="ClippySpawner" unique_id=1977662818]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9176376, 0)
+
+[node name="Marker3D" type="Marker3D" parent="ClippySpawner/SpawnMarkers" unique_id=669767630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="ClippySpawner/SpawnMarkers" unique_id=1520768012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="ClippySpawner/SpawnMarkers" unique_id=1369770290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Timer" type="Timer" parent="ClippySpawner" unique_id=1475725264]
+unique_name_in_owner = true
+wait_time = 4.0
+
+[connection signal="detected_player" from="." to="ClippySpawner" method="_on_clippy_detected_player"]
+[connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]
+[connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="timeout" from="ClippySpawner/Timer" to="ClippySpawner" method="_on_timer_timeout"]

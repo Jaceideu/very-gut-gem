@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://uunv1ohp7ihs"]
+
+[ext_resource type="Script" uid="uid://csrk620mhg6sw" path="res://scripts/bepis_machine.gd" id="1_23kgb"]
+[ext_resource type="PackedScene" uid="uid://bqefmy86rugqi" path="res://models/machine.blend" id="1_jvrv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktgxe"]
+size = Vector3(1, 1.99011, 1)
+
+[node name="Bepis machine" type="StaticBody3D" unique_id=134580942]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+script = ExtResource("1_23kgb")
+
+[node name="machine" parent="." unique_id=1092184912 instance=ExtResource("1_jvrv5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1753327547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02624, 0)
+shape = SubResource("BoxShape3D_ktgxe")

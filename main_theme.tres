@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://d28idwi18misx"]
+
+[ext_resource type="FontFile" uid="uid://dmq4sp8sk1s2a" path="res://comic.ttf" id="1_470mv"]
+
+[resource]
+Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("1_470mv")

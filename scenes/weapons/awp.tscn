@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dacy0pkw2h6wt"]
+
+[ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_qr6ql"]
+[ext_resource type="Texture2D" uid="uid://dc1v4vog5hreu" path="res://gut textures/weapons/awp.png" id="2_n0plw"]
+
+[node name="awp" unique_id=727478161 instance=ExtResource("1_qr6ql")]
+ammo = 30
+damage = 10
+automatic = false
+shake_strength = 10.0
+shake_duration = 0.5
+
+[node name="sprite" parent="." index="0" unique_id=275115365]
+texture = ExtResource("2_n0plw")
+
+[node name="shoot" parent="." index="2" unique_id=143853678]
+wait_time = 0.8
+
+[node name="shoot_sound" parent="." index="3" unique_id=254803767]
+volume_db = 24.0
+
+[node name="shootcast" parent="." index="5" unique_id=1686008047]
+target_position = Vector3(0, 0, -100)

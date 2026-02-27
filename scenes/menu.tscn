@@ -1,0 +1,398 @@
+[gd_scene format=3 uid="uid://crtsjjh4n4i5n"]
+
+[ext_resource type="Texture2D" uid="uid://doub6p015gydq" path="res://gut textures/menu/main.png" id="1_fsk18"]
+[ext_resource type="Script" uid="uid://tn6u4nf2525m" path="res://scripts/menu.gd" id="1_wq3gn"]
+[ext_resource type="Texture2D" uid="uid://nqo5hkq3di6" path="res://gut textures/gut/up.png" id="2_xb7nm"]
+[ext_resource type="Script" uid="uid://8ipr48qgtedt" path="res://scripts/rotate.gd" id="3_nqim7"]
+[ext_resource type="Texture2D" uid="uid://fln76ckeoqpt" path="res://gut textures/menu/settings.png" id="5_kt78t"]
+[ext_resource type="AudioStream" uid="uid://dhe3jb2lku36i" path="res://sounds/Kevin MacLeod ~ Carefree [dGbahiIH3dk].mp3" id="6_q6aop"]
+[ext_resource type="AudioStream" uid="uid://ccbpgtw6a661w" path="res://sounds/Vine Boom [_vBVGjFdwk4].wav" id="7_bar1y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ibg8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acihy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tu3p5"]
+
+[node name="Menu" type="Control" unique_id=1248194577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wq3gn")
+
+[node name="background" type="TextureRect" parent="." unique_id=1494812719]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fsk18")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="up" type="Sprite2D" parent="." unique_id=1683602649]
+position = Vector2(219, 293)
+scale = Vector2(2.63, 1)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 3.0
+
+[node name="up2" type="Sprite2D" parent="." unique_id=888241132]
+position = Vector2(350, 456)
+scale = Vector2(2.26, 1.79)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 10.0
+
+[node name="up3" type="Sprite2D" parent="." unique_id=122235385]
+position = Vector2(423, 221)
+scale = Vector2(2.36, 1.86)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 0.4
+reverse = true
+
+[node name="up4" type="Sprite2D" parent="." unique_id=847973747]
+position = Vector2(611, 408)
+scale = Vector2(2.23, 1.52)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 1.0
+
+[node name="play_single" type="Button" parent="." unique_id=646755052]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -384.0
+offset_top = 20.0
+offset_right = -13.0
+offset_bottom = 118.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="play_multi" type="Button" parent="." unique_id=1075205483]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -404.0
+offset_top = 164.0
+offset_right = -9.0
+offset_bottom = 262.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="option" type="Button" parent="." unique_id=1672507391]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -707.0
+offset_top = 269.0
+offset_right = -4.0
+offset_bottom = 398.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="quit" type="Button" parent="." unique_id=1497608276]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -711.0
+offset_top = 447.0
+offset_right = -8.0
+offset_bottom = 589.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="Settings" type="CanvasLayer" parent="." unique_id=1815212784]
+unique_name_in_owner = true
+visible = false
+
+[node name="background" type="TextureRect" parent="Settings" unique_id=595219915]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kt78t")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="back" type="Button" parent="Settings" unique_id=723183877]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -473.0
+offset_top = 556.0
+offset_right = -90.0
+offset_bottom = 698.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="fullscreen" type="Button" parent="Settings" unique_id=1152822961]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1057.0
+offset_top = 93.0
+offset_right = -888.0
+offset_bottom = 184.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="window" type="Button" parent="Settings" unique_id=1291003680]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1031.0
+offset_top = 182.0
+offset_right = -799.0
+offset_bottom = 273.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="small" type="Button" parent="Settings" unique_id=2090773614]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -605.0
+offset_top = 173.0
+offset_right = -480.0
+offset_bottom = 222.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="normal" type="Button" parent="Settings" unique_id=1250015755]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -574.0
+offset_top = 229.0
+offset_right = -392.0
+offset_bottom = 290.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="big" type="Button" parent="Settings" unique_id=914573088]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -566.0
+offset_top = 312.0
+offset_right = -348.0
+offset_bottom = 401.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="biggerer" type="Button" parent="Settings" unique_id=776815786]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -591.0
+offset_top = 421.0
+offset_right = 47.0
+offset_bottom = 563.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="mute" type="Button" parent="Settings" unique_id=1732642292]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = 37.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="vsync" type="Button" parent="Settings" unique_id=80435885]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1154.0
+offset_top = 442.0
+offset_right = -1024.0
+offset_bottom = 505.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="fps3" type="Button" parent="Settings" unique_id=2053019028]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1126.0
+offset_top = 518.0
+offset_right = -869.0
+offset_bottom = 581.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="fps69" type="Button" parent="Settings" unique_id=1480776852]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1121.0
+offset_top = 593.0
+offset_right = -1013.0
+offset_bottom = 656.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="fps297" type="Button" parent="Settings" unique_id=769618480]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -979.0
+offset_top = 652.0
+offset_right = -674.0
+offset_bottom = 715.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="fps0" type="Button" parent="Settings" unique_id=1172307151]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1261.0
+offset_top = 651.0
+offset_right = -1134.0
+offset_bottom = 714.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="up" type="Sprite2D" parent="Settings" unique_id=824155159]
+position = Vector2(128, 269)
+scale = Vector2(2.63, 1)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 3.0
+
+[node name="up2" type="Sprite2D" parent="Settings" unique_id=382294493]
+position = Vector2(517.99994, 96.00003)
+scale = Vector2(2.26, 1.79)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 10.0
+
+[node name="up5" type="Sprite2D" parent="Settings" unique_id=1111811186]
+position = Vector2(574, 282)
+scale = Vector2(2.63, 1)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 3.0
+
+[node name="up6" type="Sprite2D" parent="Settings" unique_id=418399726]
+position = Vector2(691, 625)
+scale = Vector2(2.26, 1.79)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 10.0
+
+[node name="up7" type="Sprite2D" parent="Settings" unique_id=1889803574]
+position = Vector2(1090, 263.00003)
+scale = Vector2(2.36, 1.86)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 0.4
+reverse = true
+
+[node name="up8" type="Sprite2D" parent="Settings" unique_id=1243166074]
+position = Vector2(562, 489)
+scale = Vector2(2.23, 1.52)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 1.0
+
+[node name="up10" type="Sprite2D" parent="Settings" unique_id=207765730]
+position = Vector2(1165, 121)
+scale = Vector2(2.26, 1.79)
+texture = ExtResource("2_xb7nm")
+script = ExtResource("3_nqim7")
+speed = 10.0
+
+[node name="background2" type="AudioStreamPlayer" parent="." unique_id=275155773]
+stream = ExtResource("6_q6aop")
+volume_db = 17.733
+autoplay = true
+
+[node name="click_sound" type="AudioStreamPlayer" parent="." unique_id=1304736222]
+unique_name_in_owner = true
+stream = ExtResource("7_bar1y")
+volume_db = 5.751
+
+[connection signal="button_down" from="play_single" to="." method="_on_play_single_button_down"]
+[connection signal="button_down" from="play_multi" to="." method="_on_play_multi_button_down"]
+[connection signal="button_down" from="option" to="." method="_on_option_button_down"]
+[connection signal="button_down" from="quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="Settings/back" to="." method="_on_back_button_down"]
+[connection signal="button_down" from="Settings/fullscreen" to="." method="_on_fullscreen_button_down"]
+[connection signal="button_down" from="Settings/window" to="." method="_on_window_button_down"]
+[connection signal="button_down" from="Settings/small" to="." method="set_mouse_sensitivity" binds= [0.001]]
+[connection signal="button_down" from="Settings/normal" to="." method="set_mouse_sensitivity" binds= [0.003]]
+[connection signal="button_down" from="Settings/big" to="." method="set_mouse_sensitivity" binds= [0.01]]
+[connection signal="button_down" from="Settings/biggerer" to="." method="set_mouse_sensitivity" binds= [0.1]]
+[connection signal="button_down" from="Settings/mute" to="." method="_on_mute_button_down"]
+[connection signal="button_down" from="Settings/vsync" to="." method="enable_vsync"]
+[connection signal="button_down" from="Settings/fps3" to="." method="set_max_fps" binds= [4]]
+[connection signal="button_down" from="Settings/fps69" to="." method="set_max_fps" binds= [69]]
+[connection signal="button_down" from="Settings/fps297" to="." method="set_max_fps" binds= [297]]
+[connection signal="button_down" from="Settings/fps0" to="." method="set_max_fps" binds= [0]]

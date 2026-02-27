@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://2n57g3pfwoq5"]
+
+[ext_resource type="Script" uid="uid://bcpl7q5f2m07t" path="res://scripts/level_end.gd" id="1_07sjm"]
+[ext_resource type="Texture2D" uid="uid://cq8kcxu0xa1eb" path="res://gut textures/gut/Icon_VBucks.webp" id="1_muv60"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_muv60"]
+radius = 0.5634899
+
+[node name="LevelEnd" type="Area3D" unique_id=2144118839]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_07sjm")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=343589405]
+transform = Transform3D(0.3056739, 0, 0, 0, 0.3056739, 0, 0, 0, 0.3056739, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_muv60")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=243701215]
+shape = SubResource("SphereShape3D_muv60")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
