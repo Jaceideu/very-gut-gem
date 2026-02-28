@@ -24,7 +24,10 @@ func _ready() -> void:
 		enemy.always_chase = true
 	
 	if !multiplayer.is_server(): return
-	targets.assign(get_tree().get_nodes_in_group("destroyable_walls"))
+	
+	for wall in get_tree().get_nodes_in_group("destroyable_walls"):
+		if wall.id > 0:
+			targets.push_back(wall)
 
 	
 	for target in targets:

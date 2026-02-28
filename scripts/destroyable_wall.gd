@@ -4,13 +4,16 @@ class_name DestroyableWall
 signal destroyed
 
 
-var health := 300
+@export var health := 30
 @export var id := 0
 @onready var mesh: MeshInstance3D = get_child(0)
 
 
-func _func_godot_apply_properties(properties):
+func _func_godot_apply_properties(properties: Dictionary):
 	id = properties.id
+	if properties["immune_to_players"]:
+		add_to_group("immune_to_players", true)
+		health *= 10
 
 @rpc("authority", "call_local", "reliable")
 func mul_destroy():

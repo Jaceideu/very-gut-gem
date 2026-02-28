@@ -19,9 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://b51p1bhv2brb5" path="res://scenes/pvp_cube.tscn" id="19_wuts4"]
 [ext_resource type="Script" uid="uid://dr44apu6kdkiw" path="res://scripts/evil_cube.gd" id="20_65hex"]
 [ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="21_t0g0k"]
-[ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="22_cwst0"]
 [ext_resource type="PackedScene" uid="uid://brcax8mff2mo2" path="res://scenes/weapon_pickups/cursor_pickup.tscn" id="23_2lkli"]
 [ext_resource type="AudioStream" uid="uid://bpcd2b3khe2xq" path="res://sounds/IndiHome Paket Phoenix full version [_IneeB-UDFA].mp3" id="24_2lkli"]
+[ext_resource type="PackedScene" uid="uid://b0gwdcfb4nrc0" path="res://scenes/weapon_pickups/sowrd_pickup.tscn" id="24_h5r8r"]
 [ext_resource type="PackedScene" uid="uid://b41lehh10c4t3" path="res://scenes/pvp_ui.tscn" id="25_h5r8r"]
 [ext_resource type="PackedScene" uid="uid://uunv1ohp7ihs" path="res://scenes/bepis_machine.tscn" id="26_tuts7"]
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="27_3xwer"]
@@ -924,10 +924,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, -0.17009246, -86.47428)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.335291, 5.75, -5.6401825)
 skeleton = NodePath("../..")
 
-[node name="AWP_Pickup2" parent="Things" unique_id=1583227967 instance=ExtResource("22_cwst0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72971344, 1.7499995, -84.564224)
-skeleton = NodePath("../..")
-
 [node name="RiflePickup2" parent="Things" unique_id=1702790298 instance=ExtResource("21_t0g0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.551907, -2.2500005, -73.55021)
 skeleton = NodePath("../..")
@@ -995,6 +991,19 @@ skeleton = NodePath("../..")
 [node name="Bepis machine" parent="Things" unique_id=134580942 instance=ExtResource("26_tuts7")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.510149, -1.0000005, -19.515137)
 
+[node name="SowrdPickup" parent="Things" unique_id=1126381308 instance=ExtResource("24_h5r8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0645673, 1.4032545, -84.53668)
+skeleton = NodePath("../..")
+
+[node name="PvpCube15" parent="Things" unique_id=1622213605 instance=ExtResource("19_wuts4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2898746, 0.076931715, -90.5)
+
+[node name="PvpCube16" parent="Things" unique_id=1906074849 instance=ExtResource("19_wuts4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2898746, 0.076931715, -95.5)
+
+[node name="PvpCube17" parent="Things" unique_id=1317715399 instance=ExtResource("19_wuts4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2898746, 0.076931715, -100.5)
+
 [node name="Parkour" type="Node3D" parent="." unique_id=1600989567]
 
 [node name="PvpCube" parent="Parkour" unique_id=238638321 instance=ExtResource("19_wuts4")]
@@ -1060,5 +1069,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.213715, 8.5, -84.02102)
 [node name="LevelEnd" parent="Parkour" unique_id=2144118839 instance=ExtResource("27_3xwer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.21728, 10.550213, -80.031364)
 level_path = "uid://b25jh4entlwse"
+
+[node name="PvpCube" parent="." unique_id=332505330 instance=ExtResource("19_wuts4")]
+transform = Transform3D(36.525, 0, 0, 0, 36.525, 0, 0, 0, 36.525, 1.693367, -13.2470455, -138.51945)
+
+[node name="PvpCube2" parent="." unique_id=2043943663 instance=ExtResource("19_wuts4")]
+transform = Transform3D(7.705, 0, 0, 0, 7.705, 0, 0, 0, 7.705, -23.911844, 1.9412298, -138.51945)
+
+[node name="PvpCube3" parent="." unique_id=187039691 instance=ExtResource("19_wuts4")]
+transform = Transform3D(7.705, 0, 0, 0, 7.705, 0, 0, 0, 7.705, -35.274582, 2.4921818, -138.51945)
+
+[node name="PvpCube4" parent="." unique_id=1564812923 instance=ExtResource("19_wuts4")]
+transform = Transform3D(7.705, 0, 0, 0, 7.705, 0, 0, 0, 7.705, -46.044125, 4.852071, -138.51945)
 
 [connection signal="body_entered" from="Things/EvilCube" to="Things/EvilCube" method="_on_body_entered"]
