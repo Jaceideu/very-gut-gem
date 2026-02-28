@@ -5,6 +5,7 @@ extends Control
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	click_sound.play()
 
 func _on_play_single_button_down() -> void:
 	click_sound.play()
@@ -55,3 +56,8 @@ func set_max_fps(max: int):
 
 func _on_mute_button_down() -> void:
 	get_tree().quit()
+
+
+func _on_skins_button_down() -> void:
+	click_sound.play()
+	get_tree().change_scene_to_file("res://scenes/skin_menu.tscn")

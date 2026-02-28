@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://dgsgt0yyse28b"]
 
 [ext_resource type="Texture2D" uid="uid://7qf7kcss8rw4" path="res://gut textures/weapons/rifle.png" id="1_fj6x2"]
+[ext_resource type="Shader" uid="uid://cyffa053m1s8n" path="res://scenes/weapons/weapon_base.gdshader" id="2_nmho7"]
 [ext_resource type="Script" uid="uid://dmflixh4e4xig" path="res://scripts/weapon.gd" id="2_objym"]
 [ext_resource type="Texture2D" uid="uid://bfv8meg1pp2mk" path="res://gut textures/weapons/muzzle_flash.png" id="3_nym0v"]
 [ext_resource type="AudioStream" uid="uid://dx2e4gkpvdp4p" path="res://sounds/Taco Bell Bong sound effect [kLvGB3Ol2p4].wav" id="4_28mby"]
 [ext_resource type="AudioStream" uid="uid://rukrbl0graxx" path="res://sounds/fart with extra reverb [hr7GyFM7pX4].wav" id="5_3j1rg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jpfg6"]
+render_priority = 0
+shader = ExtResource("2_nmho7")
+shader_parameter/albedo_texture = ExtResource("1_fj6x2")
+shader_parameter/skin_textures = Array[Texture2D]([])
 
 [node name="weapon" type="Node3D" unique_id=657429270]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
@@ -15,7 +22,9 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.672)
 
 [node name="sprite" type="Sprite3D" parent="RotPivot" unique_id=275115365]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.834, -0.18, 0)
+material_override = SubResource("ShaderMaterial_jpfg6")
 pixel_size = 0.005
 texture = ExtResource("1_fj6x2")
 

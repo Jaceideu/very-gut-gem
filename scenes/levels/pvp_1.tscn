@@ -501,7 +501,7 @@ size = Vector3(300, 1, 300)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wuts4"]
 size = Vector3(300, 1, 300)
 
-[node name="Pvp1" type="Node3D" unique_id=969194813]
+[node name="play 2 win" type="Node3D" unique_id=969194813]
 script = ExtResource("1_3xauh")
 
 [node name="FuncGodotMap" type="Node3D" parent="." unique_id=1871124943]

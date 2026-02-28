@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dacy0pkw2h6wt"]
 
 [ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_qr6ql"]
+[ext_resource type="Material" uid="uid://b6idud4a5te46" path="res://materials/weapons/awp.tres" id="2_esyor"]
 [ext_resource type="Texture2D" uid="uid://dc1v4vog5hreu" path="res://gut textures/weapons/awp.png" id="2_n0plw"]
 
 [node name="awp" unique_id=727478161 instance=ExtResource("1_qr6ql")]
@@ -10,7 +11,8 @@ automatic = false
 shake_strength = 10.0
 shake_duration = 0.5
 
-[node name="sprite" parent="." index="0" unique_id=275115365]
+[node name="sprite" parent="RotPivot" parent_id_path=PackedInt32Array(395466194) index="0" unique_id=275115365]
+material_override = ExtResource("2_esyor")
 texture = ExtResource("2_n0plw")
 
 [node name="shoot" parent="." index="2" unique_id=143853678]

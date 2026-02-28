@@ -91,7 +91,6 @@ properties/0/replication_mode = 1
 radius = 52.098
 
 [node name="Teto" type="CharacterBody3D" unique_id=493577690 groups=["enemies"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44571, 0)
 script = ExtResource("1_eanu4")
 move_speed = 10.0
 health = 3
@@ -120,11 +119,16 @@ shape = SubResource("BoxShape3D_nhe5d")
 replication_config = SubResource("SceneReplicationConfig_181tp")
 
 [node name="player_detector" type="Area3D" parent="." unique_id=829735627]
+unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player_detector" unique_id=1144968142]
 shape = SubResource("SphereShape3D_181tp")
+
+[node name="TargetChangeTimer" type="Timer" parent="." unique_id=2015953713]
+unique_name_in_owner = true
+wait_time = 0.5
 
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
 [connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]

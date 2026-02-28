@@ -96,7 +96,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44571, 0)
 script = ExtResource("1_sr2l3")
 move_speed = 0.5
 health = 150
-attack_range = 50.0
 attack_damage = 10
 credit_reward = 10000
 
@@ -128,6 +127,7 @@ debug_color = Color(0.9788045, 0, 0.39703032, 0.41960785)
 replication_config = SubResource("SceneReplicationConfig_181tp")
 
 [node name="player_detector" type="Area3D" parent="." unique_id=829735627]
+unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
@@ -153,6 +153,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 [node name="Timer" type="Timer" parent="ClippySpawner" unique_id=1475725264]
 unique_name_in_owner = true
 wait_time = 4.0
+
+[node name="TargetChangeTimer" type="Timer" parent="." unique_id=1897535202]
+unique_name_in_owner = true
+wait_time = 0.5
 
 [connection signal="detected_player" from="." to="ClippySpawner" method="_on_clippy_detected_player"]
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]

@@ -25,7 +25,11 @@ signal shake_camera(shake_strength: float, shake_duration: float)
 @onready var cast: RayCast3D = $shootcast
 @onready var light_flash: OmniLight3D = $light_flash
 @onready var rot_pivot: Node3D = %RotPivot
+@onready var sprite: Sprite3D = %sprite
 
+@rpc("any_peer", "call_local", "reliable")
+func set_skin(id: int):
+	sprite.set_instance_shader_parameter("skinId", id)
 
 func swap_to():
 	ammo_changed.emit(ammo)

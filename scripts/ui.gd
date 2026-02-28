@@ -15,6 +15,11 @@ extends Control
 @onready var weapon_list: Label = %weapon_list
 @onready var starman_flash: ColorRect = %starman_flash
 @onready var starman_blink_timer: Timer = %starman_blink_timer
+@onready var map_name_label: Label = %MapNameLabel
+
+
+func _ready():
+	map_name_label.text = "levele is %s" % get_tree().current_scene.name
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape") && !Lobby.online_mode:
@@ -28,6 +33,8 @@ func show_gameover_screen():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	game_over_screen.show()
 	over_sound.play()
+	
+
 
 
 func _on_player_ammo_changed(new_amount: int) -> void:

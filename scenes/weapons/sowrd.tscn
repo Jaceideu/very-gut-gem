@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0on74kstson4"]
 
 [ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_l6s2i"]
+[ext_resource type="Material" uid="uid://cmgqxj7qxarpw" path="res://materials/weapons/sowrd.tres" id="2_k7eel"]
 [ext_resource type="Texture2D" uid="uid://c74jjv83yppia" path="res://gut textures/weapons/sowrd.png" id="2_uf3l7"]
 [ext_resource type="AudioStream" uid="uid://c16olnxvk8i77" path="res://sounds/Minecraft Damage - Sound Effect [RMkKsZL3_uc].wav" id="3_uf3l7"]
 
@@ -19,6 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6806773, -0.5435516, -0.67
 
 [node name="sprite" parent="RotPivot" index="0" unique_id=275115365]
 transform = Transform3D(0.883733, 0.4679915, 5.082196e-09, -0.4679915, 0.883733, 2.0456563e-08, 5.0821924e-09, -2.0456563e-08, 1, -0.11152601, 0.51399654, -5.9604645e-08)
+material_override = ExtResource("2_k7eel")
 texture = ExtResource("2_uf3l7")
 
 [node name="shoot" parent="." index="2" unique_id=143853678]

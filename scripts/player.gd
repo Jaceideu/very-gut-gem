@@ -208,6 +208,10 @@ func add_weapon(weapon_path: String):
 	new_weapon.ammo_changed.connect(_on_weapon_ammo_changed)
 	refresh_weapon_list()
 	set_weapon.rpc(0, true)
+	
+	var skin_id: int = GlobalSettings.equipped_skins.get(new_weapon.name, -1)
+	if skin_id >= 0:
+		new_weapon.set_skin.rpc(skin_id)
 
 @rpc("any_peer", "call_local", "reliable")
 func set_weapon(id: int, forced: bool = false):

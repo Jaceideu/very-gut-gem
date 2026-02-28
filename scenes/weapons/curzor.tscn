@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_1xlka"]
 [ext_resource type="Texture2D" uid="uid://ll18c770cnda" path="res://gut textures/weapons/curzor.png" id="2_6b5d7"]
+[ext_resource type="Material" uid="uid://c0081sujuv788" path="res://materials/weapons/curzor.tres" id="2_h3b61"]
 
 [node name="curzor" unique_id=1316297280 instance=ExtResource("1_1xlka")]
 damage = 2
@@ -9,7 +10,8 @@ automatic = false
 shake_strength = 10.0
 shake_duration = 0.2
 
-[node name="sprite" parent="." index="0" unique_id=275115365]
+[node name="sprite" parent="RotPivot" parent_id_path=PackedInt32Array(395466194) index="0" unique_id=275115365]
+material_override = ExtResource("2_h3b61")
 texture = ExtResource("2_6b5d7")
 
 [node name="flash" parent="." index="1" unique_id=1903842766]

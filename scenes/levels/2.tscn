@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://b0nwlx25mcy4l" path="res://scenes/enemies/gd_face.tscn" id="12_0v1d0"]
 [ext_resource type="PackedScene" uid="uid://by0yffnntkc60" path="res://scenes/ammo.tscn" id="13_0v1d0"]
 [ext_resource type="PackedScene" uid="uid://uunv1ohp7ihs" path="res://scenes/bepis_machine.tscn" id="14_js46e"]
-[ext_resource type="PackedScene" uid="uid://diis7inqeye3a" path="res://scenes/powerups/starman.tscn" id="15_js46e"]
 [ext_resource type="PackedScene" uid="uid://b7suu2b2w1ad6" path="res://scenes/enemies/feddy.tscn" id="16_64ba3"]
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="17_i33xw"]
 [ext_resource type="AudioStream" uid="uid://bxeq7ssqfb8f5" path="res://sounds/Five Nights at Freddy's 1 Song - The Living Tombstone [l18A5BOTlzE].mp3" id="23_axhb4"]
@@ -30,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="29_k8nic"]
 [ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="29_sikc3"]
 [ext_resource type="PackedScene" uid="uid://ca5cvww1u7iq1" path="res://scenes/player.tscn" id="29_uko7y"]
+[ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="30_k8nic"]
+[ext_resource type="Material" uid="uid://dbnrtprjnf8ws" path="res://materials/weapons/rifle.tres" id="31_uko7y"]
 
 [sub_resource type="Shader" id="Shader_wpetf"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
@@ -514,7 +515,7 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.5
 
-[node name="2" type="Node3D" unique_id=1949700448]
+[node name="feddyland" type="Node3D" unique_id=1949700448]
 script = ExtResource("1_8jtne")
 
 [node name="FuncGodotMap" type="Node3D" parent="." unique_id=430896393]
@@ -970,9 +971,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.44494, -2.7761393, -85.18
 [node name="Ammo20" parent="Things" unique_id=1071647731 instance=ExtResource("13_0v1d0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.674437, -2.7761393, -82.44954)
 
-[node name="Starman" parent="Things" unique_id=52172687 instance=ExtResource("15_js46e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.553122, 5.459572, -60.854664)
-
 [node name="Feddy" parent="Things" unique_id=1453971860 instance=ExtResource("16_64ba3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62375736, -1.5264282, -94.55493)
 
@@ -1242,3 +1240,9 @@ offline_player = NodePath("Player")
 
 [node name="LevelBorder" parent="." unique_id=1692510602 instance=ExtResource("29_k8nic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+
+[node name="SkinPickup" parent="." unique_id=337438143 instance=ExtResource("30_k8nic")]
+transform = Transform3D(-0.8414636, 0, 0.5403138, 0, 1, 0, -0.5403138, 0, -0.8414636, -27.673222, 5.773572, -59.46523)
+weapon_material = ExtResource("31_uko7y")
+weapon_name = "rifle"
+skin_id = 1

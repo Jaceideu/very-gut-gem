@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dbnrtprjnf8ws"]
+
+[ext_resource type="Shader" uid="uid://cyffa053m1s8n" path="res://scenes/weapons/weapon_base.gdshader" id="1_76afg"]
+[ext_resource type="Texture2D" uid="uid://7qf7kcss8rw4" path="res://gut textures/weapons/rifle.png" id="2_ugayg"]
+[ext_resource type="Texture2D" uid="uid://bjv6dupxscc23" path="res://textures/men.png" id="3_i4a46"]
+[ext_resource type="Texture2D" uid="uid://coahlp77jo8hd" path="res://gut textures/weapons/skins/teto_face.png" id="4_ugayg"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_76afg")
+shader_parameter/albedo_texture = ExtResource("2_ugayg")
+shader_parameter/skin_textures = Array[Texture2D]([ExtResource("3_i4a46"), ExtResource("4_ugayg")])

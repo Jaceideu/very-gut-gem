@@ -6,16 +6,17 @@ signal died
 
 @export var move_speed: float = 5.0;
 @export var health: int = 5
-@export var attack_range: float = 30.0
 @export var attack_damage: int = 1
 @export var credit_reward: int = 50
 @export var chased_target: Node3D = null
 @export var is_crasher := false
-@export var always_chase := false
+@export var dont_change_targets := false
 var attacked_target: Node3D = null
 
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var player_detector: Area3D = %player_detector
+@onready var target_change_timer: Timer = %TargetChangeTimer
 
 @rpc("any_peer", "call_local", "reliable")
 func kill_mult(player_path: String):
@@ -54,9 +55,6 @@ func _physics_process(delta: float) -> void:
 	
 	if !chased_target:
 		return
-		
-	if global_position.distance_to(chased_target.global_position) > attack_range && !always_chase:
-		return
 	
 	var dir: Vector3 = chased_target.global_position - global_position
 	dir.y = 0.0
@@ -88,6 +86,31 @@ func set_target(player_path: String):
 
 
 func _on_player_detector_body_entered(body: Node3D) -> void:
-	if chased_target: return
+	if (!multiplayer.is_server()): return
+	if dont_change_targets: return
+	if body == chased_target: return
+	
+	
+	if chased_target:
+		if is_instance_valid(chased_target):
+			var current_target_squared_distance := chased_target.global_position.distance_squared_to(global_position)
+			var new_target_squared_distance := body.global_position.distance_squared_to(global_position)
+			if new_target_squared_distance >= current_target_squared_distance: return
+	else:
+		target_change_timer.start()
+	
 	set_target.rpc(body.get_path())
 	detected_player.emit()
+
+
+func _on_target_change_timer_timeout() -> void:
+	if (!multiplayer.is_server()): return
+	if (!is_instance_valid(chased_target)): return
+	
+	var current_target_squared_distance := chased_target.global_position.distance_squared_to(global_position)
+	
+	var bodies := player_detector.get_overlapping_bodies()
+	for body in bodies:
+		var new_target_squared_distance := body.global_position.distance_squared_to(global_position)
+		if new_target_squared_distance < current_target_squared_distance:
+			set_target.rpc(body.get_path())

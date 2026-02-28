@@ -35,21 +35,21 @@ expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="up" type="Sprite2D" parent="." unique_id=1683602649]
-position = Vector2(219, 293)
+position = Vector2(162, 220)
 scale = Vector2(2.63, 1)
 texture = ExtResource("2_xb7nm")
 script = ExtResource("3_nqim7")
 speed = 3.0
 
 [node name="up2" type="Sprite2D" parent="." unique_id=888241132]
-position = Vector2(350, 456)
+position = Vector2(439.99997, 586)
 scale = Vector2(2.26, 1.79)
 texture = ExtResource("2_xb7nm")
 script = ExtResource("3_nqim7")
 speed = 10.0
 
 [node name="up3" type="Sprite2D" parent="." unique_id=122235385]
-position = Vector2(423, 221)
+position = Vector2(477.00003, 235)
 scale = Vector2(2.36, 1.86)
 texture = ExtResource("2_xb7nm")
 script = ExtResource("3_nqim7")
@@ -122,6 +122,13 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="skins" type="TextureButton" parent="." unique_id=393310292]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 391.0
+offset_right = 410.0
+offset_bottom = 510.0
 
 [node name="Settings" type="CanvasLayer" parent="." unique_id=1815212784]
 unique_name_in_owner = true
@@ -378,11 +385,13 @@ autoplay = true
 unique_name_in_owner = true
 stream = ExtResource("7_bar1y")
 volume_db = 5.751
+max_polyphony = 100
 
 [connection signal="button_down" from="play_single" to="." method="_on_play_single_button_down"]
 [connection signal="button_down" from="play_multi" to="." method="_on_play_multi_button_down"]
 [connection signal="button_down" from="option" to="." method="_on_option_button_down"]
 [connection signal="button_down" from="quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="skins" to="." method="_on_skins_button_down"]
 [connection signal="button_down" from="Settings/back" to="." method="_on_back_button_down"]
 [connection signal="button_down" from="Settings/fullscreen" to="." method="_on_fullscreen_button_down"]
 [connection signal="button_down" from="Settings/window" to="." method="_on_window_button_down"]

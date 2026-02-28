@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://d32h1sayj8qtg"]
+
+[ext_resource type="Texture2D" uid="uid://dwx88bc6afem" path="res://gut textures/menu/arrow.png" id="1_e12no"]
+[ext_resource type="Script" uid="uid://4g44w2ug6mrx" path="res://scripts/skin_menu.gd" id="1_xmlfx"]
+[ext_resource type="Texture2D" uid="uid://c74jjv83yppia" path="res://gut textures/weapons/sowrd.png" id="1_xt7lh"]
+[ext_resource type="Texture2D" uid="uid://b6en5xsb75ibj" path="res://gut textures/menu/skins.png" id="2_0edpv"]
+[ext_resource type="AudioStream" uid="uid://ccbpgtw6a661w" path="res://sounds/Vine Boom [_vBVGjFdwk4].wav" id="6_h4mfo"]
+[ext_resource type="AudioStream" uid="uid://crgffbkihqg4j" path="res://sounds/Counter-Strike： Global Offensive - Main Menu Music Theme Extended [Rvi6c8toWJM].mp3" id="7_18at4"]
+
+[sub_resource type="Environment" id="Environment_xmlfx"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="SkinMenu" type="Control" unique_id=1146975928]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmlfx")
+weapon_names = Array[String](["rifle", "awp", "curzor", "sowrd"])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=352772124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0edpv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=734622296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1566257309]
+layout_mode = 2
+alignment = 1
+
+[node name="prev" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=323072398]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+action_mode = 0
+texture_normal = ExtResource("1_e12no")
+stretch_mode = 3
+flip_h = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HBoxContainer" unique_id=874970136]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/SubViewportContainer" unique_id=428326455]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(772, 680)
+render_target_update_mode = 4
+
+[node name="weapon_preview" type="Sprite3D" parent="MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=274117238]
+unique_name_in_owner = true
+texture = ExtResource("1_xt7lh")
+
+[node name="Camera3D" type="Camera3D" parent="MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=707637886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1333872342]
+environment = SubResource("Environment_xmlfx")
+
+[node name="next" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=1883545228]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+action_mode = 0
+texture_normal = ExtResource("1_e12no")
+stretch_mode = 3
+
+[node name="skin_buttons_container" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1257278860]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="click_sound" type="AudioStreamPlayer" parent="." unique_id=126333756]
+unique_name_in_owner = true
+stream = ExtResource("6_h4mfo")
+volume_db = 5.751
+max_polyphony = 100
+
+[node name="_music_" type="AudioStreamPlayer" parent="." unique_id=1843825748]
+stream = ExtResource("7_18at4")
+volume_db = -14.141
+autoplay = true
+bus = &"\"music\""
+
+[node name="back" type="TextureButton" parent="." unique_id=1156242009]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 607.0
+offset_right = 251.0
+offset_bottom = 697.0
+action_mode = 0
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

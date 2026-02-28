@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://chkjwek33ppjd"]
 
 [ext_resource type="PackedScene" uid="uid://dgsgt0yyse28b" path="res://scenes/weapons/weapon_base.tscn" id="1_kv6hh"]
+[ext_resource type="Material" uid="uid://dbnrtprjnf8ws" path="res://materials/weapons/rifle.tres" id="2_hkhc6"]
 
 [node name="rifle" unique_id=1527665731 instance=ExtResource("1_kv6hh")]
+
+[node name="sprite" parent="RotPivot" parent_id_path=PackedInt32Array(395466194) index="0" unique_id=275115365]
+material_override = ExtResource("2_hkhc6")

@@ -370,6 +370,17 @@ theme_override_font_sizes/font_size = 30
 text = "1 ak
 2 knif"
 
+[node name="MapNameLabel" type="Label" parent="Ui" unique_id=891930449]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 645.0
+offset_top = 18.0
+offset_right = 1016.0
+offset_bottom = 89.0
+rotation = 0.037717294
+theme_override_colors/font_color = Color(0, 0.23137255, 1, 1)
+text = "levele is ur mom"
+
 [node name="up3" type="Sprite2D" parent="Ui" unique_id=2055766624]
 position = Vector2(154, 621.00006)
 scale = Vector2(2.79, 1.03)

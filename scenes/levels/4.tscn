@@ -28,8 +28,10 @@
 [ext_resource type="AudioStream" uid="uid://d34qbyfvnlxjm" path="res://sounds/SpongeBob Production Music Tomfoolery.mp3" id="25_ijlsx"]
 [ext_resource type="PackedScene" uid="uid://b7suu2b2w1ad6" path="res://scenes/enemies/feddy.tscn" id="27_4gutu"]
 [ext_resource type="PackedScene" uid="uid://bou16ejrefph6" path="res://scenes/enemies/teto.tscn" id="30_npng3"]
+[ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="31_yp678"]
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="32_3wgxy"]
 [ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="33_3vf3f"]
+[ext_resource type="Material" uid="uid://dbnrtprjnf8ws" path="res://materials/weapons/rifle.tres" id="33_xu3h8"]
 
 [sub_resource type="Shader" id="Shader_wpetf"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
@@ -513,7 +515,7 @@ sky_material = SubResource("PanoramaSkyMaterial_te8bf")
 background_mode = 2
 sky = SubResource("Sky_ijlsx")
 
-[node name="4" type="Node3D" unique_id=481761467]
+[node name="cheese boi rectangle" type="Node3D" unique_id=481761467]
 script = ExtResource("1_mowbc")
 
 [node name="FuncGodotMap" type="Node3D" parent="." unique_id=1372424652]
@@ -982,3 +984,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.898592, 0.75342, 89.76402
 
 [node name="Skibidi10" parent="." unique_id=1113426380 instance=ExtResource("20_7lqgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.803166, 0.75342, 86.07801)
+
+[node name="SkinPickup2" parent="." unique_id=1646798220 instance=ExtResource("31_yp678")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.980392, 0.8000002, 9.414358)
+weapon_material = ExtResource("33_xu3h8")
+weapon_name = "rifle"

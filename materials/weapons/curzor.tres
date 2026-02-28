@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c0081sujuv788"]
+
+[ext_resource type="Shader" uid="uid://cyffa053m1s8n" path="res://scenes/weapons/weapon_base.gdshader" id="1_o0r27"]
+[ext_resource type="Texture2D" uid="uid://ll18c770cnda" path="res://gut textures/weapons/curzor.png" id="2_25g8c"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_o0r27")
+shader_parameter/albedo_texture = ExtResource("2_25g8c")
+shader_parameter/skin_textures = Array[Texture2D]([])

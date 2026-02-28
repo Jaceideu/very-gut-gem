@@ -21,7 +21,7 @@ func _ready() -> void:
 	
 	for enemy in get_tree().get_nodes_in_group("enemies"):
 		enemy.chased_target = spongebob
-		enemy.always_chase = true
+		enemy.dont_change_targets = true
 	
 	if !multiplayer.is_server(): return
 	
