@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6jb4a2xsew7j"]
+
+[ext_resource type="PackedScene" uid="uid://56uswgpqg75j" path="res://scenes/projectiles/projectile_base.tscn" id="1_qt432"]
+
+[node name="Pea" unique_id=703363241 instance=ExtResource("1_qt432")]
+damage = 25

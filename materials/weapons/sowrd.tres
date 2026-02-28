@@ -2,9 +2,10 @@
 
 [ext_resource type="Shader" uid="uid://cyffa053m1s8n" path="res://scenes/weapons/weapon_base.gdshader" id="1_k2ex2"]
 [ext_resource type="Texture2D" uid="uid://c74jjv83yppia" path="res://gut textures/weapons/sowrd.png" id="2_qbryf"]
+[ext_resource type="Texture2D" uid="uid://03guedu3onp1" path="res://gut textures/weapons/skins/wood_sowrd.png" id="3_qbryf"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_k2ex2")
 shader_parameter/albedo_texture = ExtResource("2_qbryf")
-shader_parameter/skin_textures = Array[Texture2D]([])
+shader_parameter/skin_textures = Array[Texture2D]([ExtResource("3_qbryf")])

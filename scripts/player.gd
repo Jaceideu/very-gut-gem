@@ -68,7 +68,7 @@ signal starman_started
 signal starman_ended
 signal ammo_changed(new_amount: int)
 signal respawn_requested(id: int, attacker_id: int)
-
+signal skin_found
 
 func heal():
 	health = 100

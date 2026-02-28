@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://56uswgpqg75j"]
+
+[ext_resource type="Script" uid="uid://drnxnjrwl6m15" path="res://scripts/projectile_base.gd" id="1_iupiv"]
+[ext_resource type="Texture2D" uid="uid://dicbu0vmpaa13" path="res://gut textures/projectiles/pea.png" id="2_ckspq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5wmxj"]
+radius = 0.19733657
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_iupiv"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="ProjectileBase" type="Area3D" unique_id=703363241]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_iupiv")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1939362539]
+billboard = 2
+texture_filter = 2
+texture = ExtResource("2_ckspq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=87375851]
+shape = SubResource("SphereShape3D_5wmxj")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=492702340]
+replication_config = SubResource("SceneReplicationConfig_iupiv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

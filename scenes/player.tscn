@@ -24,6 +24,8 @@
 [ext_resource type="AudioStream" uid="uid://hbd1rlh8t46x" path="res://sounds/Caramella Girls - Caramelldansen HD Version (Swedish Original) Official [6-8E4Nirh9s].mp3" id="15_fulsm"]
 [ext_resource type="AudioStream" uid="uid://dkmtfgeppu7jg" path="res://sounds/Correct Answer sound effect [mhgOQmwaic4].wav" id="15_mc2k8"]
 [ext_resource type="AudioStream" uid="uid://6lkrxq1j2yty" path="res://sounds/EXTREMELY LOUD INCORRECT BUZZER [3GDr-eyhsSM].wav" id="17_by5co"]
+[ext_resource type="Texture2D" uid="uid://dhq5187xg7wx2" path="res://gut textures/menu/skin flash.png" id="18_ujl30"]
+[ext_resource type="AudioStream" uid="uid://njkuo68uebfy" path="res://sounds/Plants Vs Zombies Victory Jingle [pNr0kw_VBvg].mp3" id="19_31cv2"]
 [ext_resource type="Script" uid="uid://g45diceseji1" path="res://scripts/multiplayer/pvp_hitbox.gd" id="22_a38lo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4r5pv"]
@@ -604,6 +606,24 @@ offset_bottom = 244.0
 theme_override_font_sizes/font_size = 120
 text = "0"
 
+[node name="new_skin_flash" type="TextureRect" parent="Ui" unique_id=1570813141]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.360784)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("18_ujl30")
+expand_mode = 1
+
+[node name="victory_sound" type="AudioStreamPlayer" parent="Ui/new_skin_flash" unique_id=731039627]
+unique_name_in_owner = true
+stream = ExtResource("19_31cv2")
+
 [node name="starman_flash" type="ColorRect" parent="Ui" unique_id=1555058224]
 unique_name_in_owner = true
 visible = false
@@ -719,6 +739,7 @@ shape = SubResource("CapsuleShape3D_i4ail")
 [connection signal="credit_changed" from="." to="Ui" method="_on_player_credit_changed"]
 [connection signal="health_changed" from="." to="Ui" method="_on_player_health_changed"]
 [connection signal="received_damage" from="." to="Ui" method="_on_player_received_damage"]
+[connection signal="skin_found" from="." to="Ui" method="_on_player_skin_found"]
 [connection signal="starman_ended" from="." to="Ui" method="_on_player_starman_ended"]
 [connection signal="starman_started" from="." to="Ui" method="_on_player_starman_started"]
 [connection signal="weapons_changed" from="." to="Ui" method="_on_player_weapons_changed"]

@@ -1,8 +1,16 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0ygvctjw816c"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b0ygvctjw816c"]
 
 [ext_resource type="Texture2D" uid="uid://d0cp10p806xfd" path="res://textures/feddy.png" id="1_ob2q3"]
+[ext_resource type="Shader" uid="uid://c6rs010ufmerg" path="res://materials/map_material.gdshader" id="1_shfif"]
 
 [resource]
-albedo_texture = ExtResource("1_ob2q3")
-metallic_specular = 0.0
-texture_filter = 2
+render_priority = 0
+shader = ExtResource("1_shfif")
+shader_parameter/texture_albedo = ExtResource("1_ob2q3")
+shader_parameter/alpha_scissor_threshold = 0.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)

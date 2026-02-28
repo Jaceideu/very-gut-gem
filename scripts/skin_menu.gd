@@ -21,7 +21,7 @@ func create_skin_buttons(weapon_name: String, weapon_material: ShaderMaterial):
 	for btn in skin_buttons_container.get_children():
 		btn.queue_free()
 	
-	var skin_ids: Array[int] = GlobalSettings.inventory.get(weapon_name, [] as Array[int])
+	var skin_ids: Array = GlobalSettings.inventory.get(weapon_name, [])
 	
 	if skin_ids.is_empty():
 		return

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://njkuo68uebfy"
+path="res://.godot/imported/Plants Vs Zombies Victory Jingle [pNr0kw_VBvg].mp3-a88f74dfad9d81d5140c2f842009ebb9.mp3str"
+
+[deps]
+
+source_file="res://sounds/Plants Vs Zombies Victory Jingle [pNr0kw_VBvg].mp3"
+dest_files=["res://.godot/imported/Plants Vs Zombies Victory Jingle [pNr0kw_VBvg].mp3-a88f74dfad9d81d5140c2f842009ebb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

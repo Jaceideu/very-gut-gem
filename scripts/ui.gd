@@ -16,6 +16,8 @@ extends Control
 @onready var starman_flash: ColorRect = %starman_flash
 @onready var starman_blink_timer: Timer = %starman_blink_timer
 @onready var map_name_label: Label = %MapNameLabel
+@onready var new_skin_flash: TextureRect = %new_skin_flash
+@onready var victory_sound: AudioStreamPlayer = %victory_sound
 
 
 func _ready():
@@ -98,3 +100,10 @@ func _on_player_starman_started() -> void:
 
 func _on_player_starman_ended() -> void:
 	starman_flash.hide()
+
+
+func _on_player_skin_found() -> void:
+	new_skin_flash.show()
+	victory_sound.play()
+	await get_tree().create_timer(3.0).timeout
+	new_skin_flash.hide()

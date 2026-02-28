@@ -12,7 +12,7 @@ signal died
 @export var is_crasher := false
 @export var dont_change_targets := false
 var attacked_target: Node3D = null
-
+var dir := Vector3.ZERO
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var player_detector: Area3D = %player_detector
@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 	if !chased_target:
 		return
 	
-	var dir: Vector3 = chased_target.global_position - global_position
+	dir = chased_target.global_position - global_position
 	dir.y = 0.0
 	dir = dir.normalized()
 	velocity = Vector3(0, 0, move_speed).rotated(Vector3.UP, atan2(dir.x, dir.z))

@@ -19,5 +19,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if body is not Player:
 		return
 	
+	body.skin_found.emit()
 	GlobalSettings.add_skin(weapon_name, skin_id)
+	GlobalSettings.save()
 	queue_free()

@@ -172,6 +172,7 @@ pointing/version="2.0"
 3d_physics/layer_3="player_pvp"
 3d_physics/layer_4="breakable_wall"
 3d_physics/layer_5="enemy"
+3d_physics/layer_6="projectile"
 
 [physics]
 

@@ -4,6 +4,8 @@ extends Control
 @onready var click_sound: AudioStreamPlayer = %click_sound
 
 func _ready() -> void:
+	GlobalSettings.was_game_loaded = true
+	GlobalSettings.load_save()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	click_sound.play()
 
@@ -49,7 +51,7 @@ func enable_vsync():
 	Engine.max_fps = 0
 
 func set_max_fps(max: int):
-	#click_sound.play()
+	click_sound.play()
 	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	Engine.max_fps = max
 	
