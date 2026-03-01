@@ -92,6 +92,8 @@ radius = 19.950453
 
 [node name="Gd face" type="CharacterBody3D" unique_id=904934226 groups=["enemies"]]
 script = ExtResource("1_b5elj")
+health = 6
+attack_damage = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=179618690]
 mesh = SubResource("QuadMesh_l3tdd")
@@ -131,3 +133,4 @@ wait_time = 0.5
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
 [connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]
 [connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="timeout" from="TargetChangeTimer" to="." method="_on_target_change_timer_timeout"]

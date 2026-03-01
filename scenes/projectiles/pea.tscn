@@ -2,5 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://56uswgpqg75j" path="res://scenes/projectiles/projectile_base.tscn" id="1_qt432"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_qt432"]
+radius = 0.27018097
+
 [node name="Pea" unique_id=703363241 instance=ExtResource("1_qt432")]
 damage = 25
+
+[node name="Sprite3D" parent="." index="0" unique_id=1939362539]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=87375851]
+shape = SubResource("SphereShape3D_qt432")

@@ -105,9 +105,8 @@ func _on_player_detector_body_entered(body: Node3D) -> void:
 
 func _on_target_change_timer_timeout() -> void:
 	if (!multiplayer.is_server()): return
-	if (!is_instance_valid(chased_target)): return
 	
-	var current_target_squared_distance := chased_target.global_position.distance_squared_to(global_position)
+	var current_target_squared_distance := chased_target.global_position.distance_squared_to(global_position) if is_instance_valid(chased_target) else INF
 	
 	var bodies := player_detector.get_overlapping_bodies()
 	for body in bodies:

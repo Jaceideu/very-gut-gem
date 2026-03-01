@@ -33,8 +33,9 @@ func set_skin(id: int):
 
 func swap_to():
 	ammo_changed.emit(ammo)
-	is_shooting = false
-	#shoot_timer.stop()
+	if automatic:
+		is_shooting = false
+		shoot_timer.stop()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -119,10 +120,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_shoot_timeout() -> void:
-	if is_physics_processing():
-		if automatic:
-			shoot()
-			return
-			
-		is_shooting = false
-		shoot_timer.stop()
+	if automatic and is_physics_processing():
+		shoot()
+		return
+		
+	is_shooting = false
+	shoot_timer.stop()

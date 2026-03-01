@@ -59,6 +59,7 @@ var weapon_damage_multiplier := 1.0
 @onready var nickname_label: Label3D = %nickname_label
 @onready var pvp_hitbox: Area3D = %pvp_hitbox
 
+
 signal health_changed(new_health: int)
 signal received_damage(damage: int)
 signal credit_changed(new_credit: int)

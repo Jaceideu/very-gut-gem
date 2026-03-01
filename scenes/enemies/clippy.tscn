@@ -163,3 +163,4 @@ wait_time = 0.5
 [connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]
 [connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
 [connection signal="timeout" from="ClippySpawner/Timer" to="ClippySpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="TargetChangeTimer" to="." method="_on_target_change_timer_timeout"]

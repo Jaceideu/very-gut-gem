@@ -113,7 +113,8 @@ transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0
 mesh = SubResource("QuadMesh_oprun")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1396745482]
+[node name="normal_collision" type="CollisionShape3D" parent="." unique_id=1396745482]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19112083, 0)
 shape = SubResource("CapsuleShape3D_l4k5t")
 
@@ -367,7 +368,6 @@ offset_right = 123.0
 offset_bottom = 143.0
 rotation = 0.134595
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_eeb25")
 theme_override_font_sizes/font_size = 30
 text = "1 ak
 2 knif"
@@ -731,7 +731,8 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("22_a38lo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pvp_hitbox" unique_id=782789572]
+[node name="normal_pvp_collision" type="CollisionShape3D" parent="pvp_hitbox" unique_id=782789572]
+unique_name_in_owner = true
 shape = SubResource("CapsuleShape3D_i4ail")
 
 [connection signal="ammo_changed" from="." to="Ui" method="_on_player_ammo_changed"]

@@ -8,7 +8,7 @@ var is_activated := false
 
 func _on_shoot_timer_timeout() -> void:
 	var new_pea := PEA.instantiate()
-	get_tree().current_scene.add_child(new_pea)
+	get_tree().current_scene.add_child(new_pea, true)
 	new_pea.global_position = shooter.global_position
 	new_pea.global_rotation.y = atan2(shooter.dir.x, shooter.dir.z)
 

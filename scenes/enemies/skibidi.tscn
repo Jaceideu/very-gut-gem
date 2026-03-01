@@ -84,6 +84,8 @@ radius = 9.444148
 
 [node name="Skibidi" type="CharacterBody3D" unique_id=111595298 groups=["enemies"]]
 script = ExtResource("1_saqua")
+move_speed = 6.0
+health = 4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1810971608]
 mesh = SubResource("QuadMesh_l4x0u")
