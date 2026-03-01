@@ -29,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="23_t1lb4"]
 [ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="26_d6l04"]
 [ext_resource type="Material" uid="uid://dbnrtprjnf8ws" path="res://materials/weapons/rifle.tres" id="27_dlb51"]
-[ext_resource type="Material" uid="uid://cmgqxj7qxarpw" path="res://materials/weapons/sowrd.tres" id="28_0hqpe"]
 
 [sub_resource type="Environment" id="Environment_xm6im"]
 ambient_light_source = 2
@@ -1564,11 +1563,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4097991, 0.5, -3.526556)
 
 [node name="LevelBorder" parent="." unique_id=1692510602 instance=ExtResource("23_5psil")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
-
-[node name="SkinPickup2" parent="." unique_id=337438143 instance=ExtResource("26_d6l04")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.4713871, 0.7362478, -2.2675257)
-weapon_material = ExtResource("28_0hqpe")
-weapon_name = "sowrd"
 
 [node name="SpawnPoint" type="Node3D" parent="." unique_id=1723993756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
