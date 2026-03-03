@@ -21,11 +21,13 @@ radius = 0.7
 [sub_resource type="BoxShape3D" id="BoxShape3D_a0yeh"]
 size = Vector3(1.2, 1.2, 1.2)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_5ea8b"]
+radius = 9.444148
+
 [node name="Crasher" type="CharacterBody3D" unique_id=111595298]
 script = ExtResource("1_5ea8b")
 move_speed = 12.01
 is_crasher = true
-always_chase = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1810971608]
 mesh = SubResource("QuadMesh_h057u")
@@ -46,6 +48,18 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=761893044]
 shape = SubResource("BoxShape3D_a0yeh")
+
+[node name="player_detector" type="Area3D" parent="." unique_id=1011990342]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_detector" unique_id=1297169576]
+shape = SubResource("SphereShape3D_5ea8b")
+
+[node name="TargetChangeTimer" type="Timer" parent="." unique_id=1492122237]
+unique_name_in_owner = true
+wait_time = 0.5
 
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
 [connection signal="body_exited" from="hurt_box" to="." method="_on_hurt_box_body_exited"]
