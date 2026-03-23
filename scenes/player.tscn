@@ -113,6 +113,12 @@ transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0
 mesh = SubResource("QuadMesh_oprun")
 skeleton = NodePath("../..")
 
+[node name="flashlight" type="SpotLight3D" parent="Head" unique_id=927150647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.559, 0, 0)
+shadow_enabled = true
+spot_range = 12.5
+spot_attenuation = 0.5
+
 [node name="normal_collision" type="CollisionShape3D" parent="." unique_id=1396745482]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19112083, 0)
