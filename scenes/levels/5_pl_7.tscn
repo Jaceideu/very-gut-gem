@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cy1oroschpq45"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_3fe6w"]
+[ext_resource type="PackedScene" uid="uid://uunv1ohp7ihs" path="res://scenes/bepis_machine.tscn" id="2_5xth6"]
+[ext_resource type="PackedScene" uid="uid://b7suu2b2w1ad6" path="res://scenes/enemies/feddy.tscn" id="3_rlyjr"]
+[ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="4_thibd"]
+
+[node name="5_pl_7" unique_id=1910117350 instance=ExtResource("1_3fe6w")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "W jakiej wojnie wziął udział Cezary?"
+answers_texts = Array[String](["II wojnie światowej", "I wojnie światowej", "rewolucji francuskiej", "wojnie polsko-bolszewickiej"])
+correct_index = 3
+correct_level_path = "uid://c5pyihr5fba7l"
+
+[node name="Bepis machine" parent="." index="9" unique_id=134580942 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.499585, 0, 12.486963)
+
+[node name="Bepis machine2" parent="." index="10" unique_id=817904167 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -10.4127865, -2.3841858e-06, 16.738972)
+
+[node name="Bepis machine3" parent="." index="11" unique_id=651225866 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -21.727255, 0, 12.20083)
+
+[node name="Bepis machine4" parent="." index="12" unique_id=245262984 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.633518, 2.3841858e-06, -8.937957)
+
+[node name="Bepis machine5" parent="." index="13" unique_id=1032138719 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.70439, 0, -10.320692)
+
+[node name="Bepis machine6" parent="." index="14" unique_id=1097486375 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 22.281929, 0, -7.1958375)
+
+[node name="Bepis machine7" parent="." index="15" unique_id=381589735 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 14.875135, 0, 13.275609)
+
+[node name="Bepis machine8" parent="." index="16" unique_id=1591387422 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 18.05543, 2.3841858e-06, 17.148172)
+
+[node name="Bepis machine9" parent="." index="17" unique_id=950155151 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 25.068644, 2.3841858e-06, 17.101189)
+
+[node name="Bepis machine10" parent="." index="18" unique_id=1261915476 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.322587, 2.3841858e-06, 11.963654)
+
+[node name="Bepis machine11" parent="." index="19" unique_id=107263102 instance=ExtResource("2_5xth6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -31.150923, 0, 12.090682)
+
+[node name="Feddy2" parent="." index="20" unique_id=2144591248 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.733468, 1.5, -12.720508)
+
+[node name="Feddy3" parent="." index="21" unique_id=47833294 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.896965, 1.5, -21.811653)
+
+[node name="Feddy4" parent="." index="22" unique_id=1873096059 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.50528, 1.5000012, -2.8509476)
+
+[node name="RiflePickup" parent="." index="23" unique_id=118521975 instance=ExtResource("4_thibd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.394392, 0.7500006, 2.0616295)
+
+[node name="RiflePickup2" parent="." index="24" unique_id=2035470932 instance=ExtResource("4_thibd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4517326, 0.75, 5.822504)
+
+[node name="RiflePickup3" parent="." index="25" unique_id=1015190575 instance=ExtResource("4_thibd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24889886, 0.7499988, 1.8576207)
+
+[node name="Feddy5" parent="." index="26" unique_id=635559479 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.987566, 1.5000048, 26.783531)
+
+[node name="Feddy6" parent="." index="27" unique_id=1088922748 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.928612, 1.5, -23.43362)
+
+[node name="Feddy7" parent="." index="28" unique_id=2059508069 instance=ExtResource("3_rlyjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.623871, 1.5, 20.563847)

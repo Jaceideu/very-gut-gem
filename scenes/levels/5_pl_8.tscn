@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://c5pyihr5fba7l"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_mddgg"]
+[ext_resource type="PackedScene" uid="uid://b7suu2b2w1ad6" path="res://scenes/enemies/feddy.tscn" id="2_460e3"]
+[ext_resource type="PackedScene" uid="uid://pr7hbdqvfype" path="res://scenes/enemies/peashooter.tscn" id="3_p2mtr"]
+[ext_resource type="PackedScene" uid="uid://b0gwdcfb4nrc0" path="res://scenes/weapon_pickups/sowrd_pickup.tscn" id="4_jk7d8"]
+[ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="5_e8b4k"]
+[ext_resource type="PackedScene" uid="uid://uunv1ohp7ihs" path="res://scenes/bepis_machine.tscn" id="6_p2mtr"]
+
+[node name="5_pl_8" unique_id=1910117350 instance=ExtResource("1_mddgg")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Dokąd zabrał Cezarego Hipolit?"
+answers_texts = Array[String](["do Warszawy", "do posiadłości Nawłoci", "na zamek w Krakowie", "nad morze"])
+correct_index = 1
+correct_level_path = "uid://bsb4xo3jgbaef"
+
+[node name="Feddy" parent="." index="9" unique_id=493577690 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.260572, 1.5, -9.690968)
+
+[node name="Feddy2" parent="." index="10" unique_id=296518501 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.459743, 1.4999952, 14.083962)
+
+[node name="Feddy3" parent="." index="11" unique_id=47908971 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.485907, 1.4999952, 13.72139)
+
+[node name="Feddy4" parent="." index="12" unique_id=338623951 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.37617, 1.5, -11.391752)
+
+[node name="Feddy5" parent="." index="13" unique_id=348623082 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.575846, 1.5, 14.765465)
+
+[node name="Feddy6" parent="." index="14" unique_id=108323289 instance=ExtResource("2_460e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.117811, 1.4999952, -8.8034115)
+
+[node name="Peashooter" parent="." index="15" unique_id=111595298 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.006538, 0.75, 12.4051075)
+
+[node name="Peashooter2" parent="." index="16" unique_id=2073798055 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8428502, 0.75000477, 12.119377)
+
+[node name="Peashooter3" parent="." index="17" unique_id=1115567121 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.209322, 0.75, -7.5801473)
+
+[node name="Peashooter4" parent="." index="18" unique_id=1899087056 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.841218, 0.75, -24.324394)
+
+[node name="Peashooter5" parent="." index="19" unique_id=735417010 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.72946, 0.74999523, -11.389181)
+
+[node name="Peashooter6" parent="." index="20" unique_id=90412204 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.974277, 0.74999523, 23.827314)
+
+[node name="Peashooter7" parent="." index="21" unique_id=2053896283 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.103447, 0.75, 26.555597)
+
+[node name="SowrdPickup" parent="." index="22" unique_id=118521975 instance=ExtResource("4_jk7d8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.519117, 0.7500012, 3.0631282)
+
+[node name="AWP_Pickup" parent="." index="23" unique_id=202999116 instance=ExtResource("5_e8b4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73298216, 0.75, 2.8230217)
+
+[node name="Peashooter8" parent="." index="24" unique_id=1970061402 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.250004, 0.11428833, -2.4343896)
+
+[node name="Peashooter9" parent="." index="25" unique_id=510908761 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.250004, 1.0001469, 9.631104)
+
+[node name="Peashooter10" parent="." index="26" unique_id=1188865281 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.49392, 5.75, 25.199684)
+
+[node name="Peashooter11" parent="." index="27" unique_id=1692150411 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.99132, 0.75, 29.25847)
+
+[node name="Peashooter12" parent="." index="28" unique_id=622949040 instance=ExtResource("3_p2mtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.115637, 0.75, -22.205223)
+
+[node name="Bepis machine" parent="." index="29" unique_id=134580942 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -13.6408, -1.1920929e-06, -3.745329)
+
+[node name="Bepis machine2" parent="." index="30" unique_id=1120802334 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -12.6408, -1.1920929e-06, -3.745329)
+
+[node name="Bepis machine3" parent="." index="31" unique_id=1078849201 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -11.6408, -1.1920929e-06, -3.745329)
+
+[node name="Bepis machine4" parent="." index="32" unique_id=1490196466 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -10.6408, -1.1920929e-06, -3.745329)
+
+[node name="Bepis machine5" parent="." index="33" unique_id=877448203 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -10.6408, -1.1920929e-06, -3.745329)
+
+[node name="Bepis machine6" parent="." index="34" unique_id=653062788 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.818285, -1.1920929e-06, -1.8577275)
+
+[node name="Bepis machine7" parent="." index="35" unique_id=1122504920 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.818285, -1.1920929e-06, -1.8577275)
+
+[node name="Bepis machine8" parent="." index="36" unique_id=759110940 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.818285, -1.1920929e-06, -1.8577275)
+
+[node name="Bepis machine9" parent="." index="37" unique_id=576504368 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.85277, -1.1920929e-06, -1.8577275)
+
+[node name="Bepis machine10" parent="." index="38" unique_id=2133538864 instance=ExtResource("6_p2mtr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.85277, -1.1920929e-06, -1.8577275)

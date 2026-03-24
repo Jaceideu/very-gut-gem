@@ -138,6 +138,8 @@ Placeholder"
 font = ExtResource("4_yn87u")
 font_size = 80
 outline_size = 0
+autowrap_mode = 3
+width = 800.0
 
 [node name="Room" parent="." unique_id=110572265 instance=ExtResource("2_1mxsi")]
 

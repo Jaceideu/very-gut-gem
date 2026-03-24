@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://yyp44kwdmhej"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_p1tfq"]
+[ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="2_3m64o"]
+[ext_resource type="PackedScene" uid="uid://mjwninu5ixcb" path="res://scenes/enemies/skibidi.tscn" id="3_0xgvm"]
+[ext_resource type="PackedScene" uid="uid://c7akkd5pba6bv" path="res://scenes/enemies/spongebob.tscn" id="4_0xgvm"]
+
+[node name="5_pl_4" unique_id=1910117350 instance=ExtResource("1_p1tfq")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Jakie wydarzenia miały miejsce w Baku?"
+answers_texts = Array[String](["wybory prezydenckie", "rewolucja bolszewicka", "powódź", "tornado"])
+correct_index = 1
+correct_level_path = "uid://bhxpjqid1jcdt"
+
+[node name="RiflePickup" parent="." index="9" unique_id=118521975 instance=ExtResource("2_3m64o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.048546, 0.75, 2.011309)
+
+[node name="RiflePickup2" parent="." index="10" unique_id=414842434 instance=ExtResource("2_3m64o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.980542, 0.7500018, 5.343171)
+
+[node name="RiflePickup3" parent="." index="11" unique_id=1542419314 instance=ExtResource("2_3m64o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26983202, 0.7499994, 1.091263)
+
+[node name="RiflePickup4" parent="." index="12" unique_id=1375053540 instance=ExtResource("2_3m64o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25565028, 0.7499994, 2.7003884)
+
+[node name="Skibidi" parent="." index="13" unique_id=111595298 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.561829, 0.75, -10.893894)
+
+[node name="Skibidi2" parent="." index="14" unique_id=1232179430 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36802, 0.7499976, -8.769232)
+
+[node name="Skibidi3" parent="." index="15" unique_id=2100008369 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.833651, 0.75, 12.214014)
+
+[node name="Skibidi4" parent="." index="16" unique_id=570129486 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.667221, 0.75, 10.924713)
+
+[node name="Skibidi5" parent="." index="17" unique_id=533939493 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.42115, 0.75, 23.29501)
+
+[node name="Skibidi6" parent="." index="18" unique_id=38777466 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3463807, 0.75, 13.19439)
+
+[node name="Skibidi7" parent="." index="19" unique_id=898808754 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6232533, 0.7499976, 1.2766731)
+
+[node name="Skibidi8" parent="." index="20" unique_id=1581628365 instance=ExtResource("3_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.363564, 0.7500024, -10.790119)
+
+[node name="Spongebob" parent="." index="21" unique_id=493577690 instance=ExtResource("4_0xgvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.584198, 1.5, 8.80441)

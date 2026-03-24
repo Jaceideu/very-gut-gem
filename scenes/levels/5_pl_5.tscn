@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bhxpjqid1jcdt"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_qn5eq"]
+[ext_resource type="PackedScene" uid="uid://b0gwdcfb4nrc0" path="res://scenes/weapon_pickups/sowrd_pickup.tscn" id="2_8karg"]
+[ext_resource type="PackedScene" uid="uid://bou16ejrefph6" path="res://scenes/enemies/teto.tscn" id="3_3lg2w"]
+
+[node name="5_pl_5" unique_id=1910117350 instance=ExtResource("1_qn5eq")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Jaka historia zachęciła Cezarego do powrodu do Polski?"
+answers_texts = Array[String](["o szklanych domach", "o staropolskiej gościnności", "o pięknej przyrodzie", "o wspaniałej historii kraju"])
+correct_level_path = "uid://b68qq541sveu"
+
+[node name="Ceiling" parent="PlLabirynth/Building" parent_id_path=PackedInt32Array(482465846, 821528135) index="1" unique_id=902298798]
+visible = false
+
+[node name="SowrdPickup" parent="." index="9" unique_id=118521975 instance=ExtResource("2_8karg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.367221, 0.7500003, 1.5077668)
+
+[node name="SowrdPickup2" parent="." index="10" unique_id=59286695 instance=ExtResource("2_8karg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.674277, 0.7499994, 4.8812065)
+
+[node name="SowrdPickup3" parent="." index="11" unique_id=1317977878 instance=ExtResource("2_8karg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0041974, 0.75, 2.9242592)
+
+[node name="Teto" parent="." index="12" unique_id=493577690 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.629839, 1.5, -12.558132)
+
+[node name="Teto2" parent="." index="13" unique_id=1490738078 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6757646, 1.5, -23.133871)
+
+[node name="Teto3" parent="." index="14" unique_id=1477075913 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.620123, 1.5, -0.25387812)
+
+[node name="Teto4" parent="." index="15" unique_id=1023007668 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.089504, 1.5, 6.100228)
+
+[node name="Teto5" parent="." index="16" unique_id=799364200 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.606115, 1.5000006, 27.794228)
+
+[node name="Teto6" parent="." index="17" unique_id=497410775 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.543075, 1.5000001, 27.631382)
+
+[node name="Teto7" parent="." index="18" unique_id=1548917558 instance=ExtResource("3_3lg2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.394506, 1.5000001, 28.915771)
+
+[editable path="PlLabirynth"]

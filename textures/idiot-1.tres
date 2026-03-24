@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://o3itvacsuljy"]
+
+[ext_resource type="Shader" uid="uid://c0w08h0nnonht" path="res://materials/idiot-1.gdshader" id="1_pl1if"]
+[ext_resource type="Texture2D" uid="uid://cdvm84egnl3ps" path="res://textures/idiot-1.png" id="2_76v3p"]
+[ext_resource type="Texture2D" uid="uid://crv50d1uj26q2" path="res://gut textures/idiot-2.png" id="3_ket2r"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_pl1if")
+shader_parameter/frame_time = 0.3
+shader_parameter/frames = Array[Texture2D]([ExtResource("2_76v3p"), ExtResource("3_ket2r")])

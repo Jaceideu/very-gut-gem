@@ -2,9 +2,11 @@
 
 [ext_resource type="Shader" uid="uid://cyffa053m1s8n" path="res://scenes/weapons/weapon_base.gdshader" id="1_o0r27"]
 [ext_resource type="Texture2D" uid="uid://ll18c770cnda" path="res://gut textures/weapons/curzor.png" id="2_25g8c"]
+[ext_resource type="Texture2D" uid="uid://oiokqa5n6x2m" path="res://gut textures/idiot_skin.png" id="3_25g8c"]
+[ext_resource type="Texture2D" uid="uid://d0vmyhb870rlh" path="res://gut textures/idiot2_skin.png" id="4_6l5oj"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_o0r27")
 shader_parameter/albedo_texture = ExtResource("2_25g8c")
-shader_parameter/skin_textures = Array[Texture2D]([])
+shader_parameter/skin_textures = Array[Texture2D]([ExtResource("3_25g8c"), ExtResource("4_6l5oj")])

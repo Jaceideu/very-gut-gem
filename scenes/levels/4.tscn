@@ -925,7 +925,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55472946, 0.25028852, 50.1
 
 [node name="LevelEnd" parent="." unique_id=2144118839 instance=ExtResource("32_3wgxy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09151, 0.550213, 96.83941)
-level_path = "uid://cinldpvlq38es"
+level_path = "uid://c158t063jqxog"
 
 [node name="LevelBorder" parent="." unique_id=1692510602 instance=ExtResource("33_3vf3f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -38, 0)

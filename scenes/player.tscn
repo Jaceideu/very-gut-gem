@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvjo68pgvj8rb" path="res://scripts/player.gd" id="1_ru37c"]
 [ext_resource type="Script" uid="uid://bjyad841phuek" path="res://scripts/CameraShake.gd" id="2_ck8fr"]
+[ext_resource type="Script" uid="uid://b04aittjomq7a" path="res://scripts/flashlight.gd" id="3_pf23h"]
 [ext_resource type="FontFile" uid="uid://dmq4sp8sk1s2a" path="res://comic.ttf" id="5_4ni07"]
 [ext_resource type="Texture2D" uid="uid://cuxo6p70auugl" path="res://gut textures/enemies/feddy.png" id="5_a8ls1"]
 [ext_resource type="PackedScene" uid="uid://dat62mww4pi3g" path="res://scenes/cube/cube_ui.tscn" id="6_fulsm"]
@@ -118,6 +119,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.559, 0, 0)
 shadow_enabled = true
 spot_range = 12.5
 spot_attenuation = 0.5
+script = ExtResource("3_pf23h")
+
+[node name="burst" type="Timer" parent="Head/flashlight" unique_id=1452994498]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
 
 [node name="normal_collision" type="CollisionShape3D" parent="." unique_id=1396745482]
 unique_name_in_owner = true
@@ -750,6 +757,7 @@ shape = SubResource("CapsuleShape3D_i4ail")
 [connection signal="starman_ended" from="." to="Ui" method="_on_player_starman_ended"]
 [connection signal="starman_started" from="." to="Ui" method="_on_player_starman_started"]
 [connection signal="weapons_changed" from="." to="Ui" method="_on_player_weapons_changed"]
+[connection signal="timeout" from="Head/flashlight/burst" to="Head/flashlight" method="_on_timer_timeout"]
 [connection signal="button_down" from="Ui/game_over/play" to="Ui" method="_on_play_button_down"]
 [connection signal="button_down" from="Ui/game_over/menu" to="Ui" method="_on_menu_button_down"]
 [connection signal="timeout" from="starman_timer" to="." method="_on_starman_timer_timeout"]

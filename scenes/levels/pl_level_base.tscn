@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c0pin1efug144"]
+
+[ext_resource type="Script" uid="uid://dbk2sw0f5lbla" path="res://scripts/multiplayer/world.gd" id="1_dtht8"]
+[ext_resource type="PackedScene" uid="uid://c5r3v2ob1c82l" path="res://scenes/pl_labirynth.tscn" id="2_1jc4j"]
+[ext_resource type="PackedScene" uid="uid://ck4x72ymypphl" path="res://scenes/player_spawner.tscn" id="3_7r0mg"]
+[ext_resource type="PackedScene" uid="uid://bp0ynyor35x51" path="res://scenes/player_spawn_point.tscn" id="4_wigv6"]
+[ext_resource type="PackedScene" uid="uid://ca5cvww1u7iq1" path="res://scenes/player.tscn" id="5_6ro8k"]
+[ext_resource type="AudioStream" uid="uid://bh3w5fm1jlixt" path="res://sounds/Resident Evil： Director's Cut (DualShock) - Mansion Basement [b9sjMQ29F1E].mp3" id="6_1jc4j"]
+[ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="7_7r0mg"]
+
+[sub_resource type="Environment" id="Environment_06j40"]
+ambient_light_source = 1
+ambient_light_energy = 0.0
+
+[node name="pl_base" type="Node3D" unique_id=1910117350]
+script = ExtResource("1_dtht8")
+
+[node name="PlLabirynth" parent="." unique_id=482465846 instance=ExtResource("2_1jc4j")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="PlayerSpawner" parent="." unique_id=713220184 instance=ExtResource("3_7r0mg")]
+
+[node name="PlayerSpawnPoint" parent="." unique_id=1697027510 instance=ExtResource("4_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4217715, 0.8839222, 2.680152)
+
+[node name="PlayerSpawnPoint2" parent="." unique_id=1667547919 instance=ExtResource("4_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4217715, 0.8839222, 2.680152)
+
+[node name="PlayerSpawnPoint3" parent="." unique_id=1861496297 instance=ExtResource("4_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4217715, 0.8839222, 2.680152)
+
+[node name="Player" parent="." unique_id=1859002790 instance=ExtResource("5_6ro8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5556, 0.9545646, 2.9400392)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1297459116]
+environment = SubResource("Environment_06j40")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=521116759]
+stream = ExtResource("6_1jc4j")
+volume_db = -11.556
+autoplay = true
+bus = &"\"music\""
+
+[node name="LevelBorder" parent="." unique_id=1692510602 instance=ExtResource("7_7r0mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -31, 0)

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://1r1tlqmn7joh"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_8bwwn"]
+[ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="2_g6eso"]
+[ext_resource type="PackedScene" uid="uid://b7suu2b2w1ad6" path="res://scenes/enemies/feddy.tscn" id="3_vpq08"]
+[ext_resource type="PackedScene" uid="uid://b0nwlx25mcy4l" path="res://scenes/enemies/gd_face.tscn" id="4_ghhgd"]
+[ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="5_loadk"]
+[ext_resource type="PackedScene" uid="uid://b0gwdcfb4nrc0" path="res://scenes/weapon_pickups/sowrd_pickup.tscn" id="6_wlkvl"]
+
+[node name="5_pl_3" unique_id=1910117350 instance=ExtResource("1_8bwwn")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Co się stało z ojcem Cezarego, gdy ten był w wieku szkolnym?"
+answers_texts = Array[String](["zabrano go na II wojnę światową", "zabrano go na I wojnę światową", "wziął udział w rewolucji bolszewickiej", "uciekł z kraju"])
+correct_index = 1
+correct_level_path = "uid://yyp44kwdmhej"
+
+[node name="RiflePickup" parent="." index="8" unique_id=118521975 instance=ExtResource("2_g6eso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.306082, 0.75, 1.5818763)
+
+[node name="RiflePickup2" parent="." index="9" unique_id=1454055025 instance=ExtResource("2_g6eso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.161024, 0.7499988, 5.6523647)
+
+[node name="Feddy" parent="." index="10" unique_id=493577690 instance=ExtResource("3_vpq08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0500784, 1.5, -11.825576)
+
+[node name="Feddy2" parent="." index="11" unique_id=1560221822 instance=ExtResource("3_vpq08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.93903, 0.24809599, 26.543999)
+
+[node name="Gd face" parent="." index="12" unique_id=904934226 instance=ExtResource("4_ghhgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.981884, 0.75, -8.3303175)
+
+[node name="Gd face2" parent="." index="13" unique_id=1523683992 instance=ExtResource("4_ghhgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.567822, 0.75, 14.414898)
+
+[node name="Gd face3" parent="." index="14" unique_id=380181502 instance=ExtResource("4_ghhgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.825279, 0.7500024, -18.827307)
+
+[node name="AWP_Pickup" parent="." index="15" unique_id=1853045081 instance=ExtResource("5_loadk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.465749, 0.75, 3.9823895)
+
+[node name="AWP_Pickup2" parent="." index="16" unique_id=1649399611 instance=ExtResource("5_loadk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.2342205, 0.75, 1.1492473)
+
+[node name="SowrdPickup" parent="." index="17" unique_id=1997498402 instance=ExtResource("6_wlkvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.506397, 0.75, 5.718655)

@@ -1,39 +1,11 @@
-[gd_scene format=3 uid="uid://c0pin1efug144"]
+[gd_scene format=3 uid="uid://c158t063jqxog"]
 
-[ext_resource type="Script" uid="uid://dbk2sw0f5lbla" path="res://scripts/multiplayer/world.gd" id="1_evm86"]
-[ext_resource type="PackedScene" uid="uid://c5r3v2ob1c82l" path="res://scenes/pl_labirynth.tscn" id="2_06j40"]
-[ext_resource type="PackedScene" uid="uid://ck4x72ymypphl" path="res://scenes/player_spawner.tscn" id="3_vdqr5"]
-[ext_resource type="PackedScene" uid="uid://bp0ynyor35x51" path="res://scenes/player_spawn_point.tscn" id="4_yhh0y"]
-[ext_resource type="PackedScene" uid="uid://ca5cvww1u7iq1" path="res://scenes/player.tscn" id="5_fdg1a"]
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_evm86"]
 
-[sub_resource type="Environment" id="Environment_06j40"]
-ambient_light_source = 1
-ambient_light_energy = 0.0
+[node name="5-pl-1" unique_id=1910117350 instance=ExtResource("1_evm86")]
 
-[node name="5-pl-1" type="Node3D" unique_id=1910117350]
-script = ExtResource("1_evm86")
-
-[node name="CSGCombiner3D" parent="." unique_id=482465846 instance=ExtResource("2_06j40")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
-
-[node name="Ceiling" parent="CSGCombiner3D/Building" parent_id_path=PackedInt32Array(482465846, 821528135) index="1" unique_id=902298798]
-visible = false
-
-[node name="PlayerSpawner" parent="." unique_id=713220184 instance=ExtResource("3_vdqr5")]
-
-[node name="PlayerSpawnPoint" parent="." unique_id=1697027510 instance=ExtResource("4_yhh0y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4217715, 0.8839222, 2.680152)
-
-[node name="PlayerSpawnPoint2" parent="." unique_id=1667547919 instance=ExtResource("4_yhh0y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4217715, 0.8839222, 2.680152)
-
-[node name="PlayerSpawnPoint3" parent="." unique_id=1861496297 instance=ExtResource("4_yhh0y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4217715, 0.8839222, 2.680152)
-
-[node name="Player" parent="." unique_id=1859002790 instance=ExtResource("5_fdg1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5556, 0.9545646, 2.9400392)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1297459116]
-environment = SubResource("Environment_06j40")
-
-[editable path="CSGCombiner3D"]
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Miejsce urodzenia Cezarego Baryki"
+answers_texts = Array[String](["Warszawa", "Kraków", "Petersburg", "Baku"])
+correct_index = 3
+correct_level_path = "uid://c65uujenia2yh"

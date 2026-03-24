@@ -113,6 +113,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=968220557]
+visible = false
 shape = SubResource("BoxShape3D_nhe5d")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1519172805]
@@ -124,6 +125,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player_detector" unique_id=1144968142]
+visible = false
 shape = SubResource("SphereShape3D_181tp")
 
 [node name="TargetChangeTimer" type="Timer" parent="." unique_id=2015953713]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c65uujenia2yh"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_ebusl"]
+[ext_resource type="PackedScene" uid="uid://b0nwlx25mcy4l" path="res://scenes/enemies/gd_face.tscn" id="2_ud8mw"]
+[ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="3_27b7l"]
+
+[node name="5_pl_2" unique_id=1910117350 instance=ExtResource("1_ebusl")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Imiona rodziców Cezarego Baryki"
+answers_texts = Array[String](["Jadwiga i Seweryn", "Jadwiga i Jan", "Jaś i Małgosia", "Elżbieta i Seweryn"])
+correct_level_path = "uid://1r1tlqmn7joh"
+
+[node name="Gd face" parent="." index="8" unique_id=904934226 instance=ExtResource("2_ud8mw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.506699, 0.75, 12.089139)
+
+[node name="Gd face2" parent="." index="9" unique_id=1231045846 instance=ExtResource("2_ud8mw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.631512, 0.75, 11.211019)
+
+[node name="Gd face3" parent="." index="10" unique_id=284398932 instance=ExtResource("2_ud8mw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.177355, 0.75, -15.598713)
+
+[node name="Gd face4" parent="." index="11" unique_id=214828494 instance=ExtResource("2_ud8mw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.762808, 0.7500006, -8.179712)
+
+[node name="RiflePickup2" parent="." index="12" unique_id=118521975 instance=ExtResource("3_27b7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.293132, 0.7500006, 5.1891146)

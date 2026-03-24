@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b68qq541sveu"]
+
+[ext_resource type="PackedScene" uid="uid://c0pin1efug144" path="res://scenes/levels/pl_level_base.tscn" id="1_bavqn"]
+[ext_resource type="PackedScene" uid="uid://pr7hbdqvfype" path="res://scenes/enemies/peashooter.tscn" id="2_fy5s0"]
+[ext_resource type="PackedScene" uid="uid://brcax8mff2mo2" path="res://scenes/weapon_pickups/cursor_pickup.tscn" id="3_228vi"]
+
+[node name="5_pl_6" unique_id=1910117350 instance=ExtResource("1_bavqn")]
+
+[node name="PlLabirynth" parent="." index="0" unique_id=482465846]
+question_text = "Kto pomógł Cezaremu w Polsce?"
+answers_texts = Array[String](["Maciej Boryna", "Jan Kochanowski", "Kubuś Puchatek", "Szymon Gejowiec"])
+correct_index = 3
+correct_level_path = "uid://cy1oroschpq45"
+
+[node name="Peashooter" parent="." index="9" unique_id=111595298 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.034371, 0.75, -7.3004093)
+
+[node name="Peashooter2" parent="." index="10" unique_id=543675617 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.995812, 0.7499994, 2.6500845)
+
+[node name="Peashooter3" parent="." index="11" unique_id=1602682751 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.954624, 0.75, 12.940128)
+
+[node name="Peashooter4" parent="." index="12" unique_id=434548592 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.842999, 0.75, 11.574521)
+
+[node name="Peashooter5" parent="." index="13" unique_id=2005705372 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.859154, 0.7500024, -3.1280816)
+
+[node name="Peashooter6" parent="." index="14" unique_id=1815814109 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.437614, 0.75, 12.111684)
+
+[node name="Peashooter7" parent="." index="15" unique_id=447307099 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.676592, 0.75, 23.798843)
+
+[node name="Peashooter8" parent="." index="16" unique_id=771910468 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5882206, 0.75, 12.082661)
+
+[node name="Peashooter9" parent="." index="17" unique_id=2145611352 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6912456, 0.75, 0.92651963)
+
+[node name="Peashooter10" parent="." index="18" unique_id=246036229 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.897448, 0.75, 13.683572)
+
+[node name="Peashooter11" parent="." index="19" unique_id=1967961042 instance=ExtResource("2_fy5s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.197675, 0.7500024, 27.74701)
+
+[node name="CursorPickup" parent="." index="20" unique_id=118521975 instance=ExtResource("3_228vi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3220012, 0.7499988, 1.9099396)
+
+[node name="CursorPickup2" parent="." index="21" unique_id=1314633699 instance=ExtResource("3_228vi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8693056, 0.7499988, 6.4279613)
+
+[node name="CursorPickup3" parent="." index="22" unique_id=981558669 instance=ExtResource("3_228vi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.253053, 0.7499994, 2.2157419)

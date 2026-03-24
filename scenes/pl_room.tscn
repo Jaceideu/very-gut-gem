@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dn2ucepffchdk" path="res://scripts/pl/pl_room.gd" id="2_ftbhk"]
 [ext_resource type="FontFile" uid="uid://dmq4sp8sk1s2a" path="res://comic.ttf" id="3_ftbhk"]
 [ext_resource type="AudioStream" uid="uid://nhkrxfxshxww" path="res://sounds/error-126627.mp3" id="3_nuajp"]
+[ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="5_sfxv8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_idu7x"]
 size = Vector3(3.052, 1.069, 1.787)
@@ -49,5 +50,10 @@ shape = SubResource("BoxShape3D_idu7x")
 
 [node name="ErrorSound" type="AudioStreamPlayer3D" parent="." unique_id=260140960]
 stream = ExtResource("3_nuajp")
+
+[node name="LevelEnd" parent="." unique_id=2144118839 instance=ExtResource("5_sfxv8")]
+unique_name_in_owner = true
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+visible = false
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
