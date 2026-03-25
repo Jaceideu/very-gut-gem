@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://du55ra04ln2qp"]
+
+[ext_resource type="Material" uid="uid://d3qt78asv15kt" path="res://materials/texture_randomizer_material.tres" id="1_fn3lw"]
+[ext_resource type="Script" uid="uid://ffnghbpmjyv4" path="res://scripts/ad.gd" id="2_wbmsd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ekrcq"]
+material = ExtResource("1_fn3lw")
+size = Vector2(8.6, 3.6)
+
+[node name="Ad" type="MeshInstance3D" unique_id=1680538194]
+instance_shader_parameters/rand_index = 0
+mesh = SubResource("QuadMesh_ekrcq")
+script = ExtResource("2_wbmsd")

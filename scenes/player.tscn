@@ -21,7 +21,6 @@
 [ext_resource type="AudioStream" uid="uid://bykiapvg4vycf" path="res://sounds/Sad Violin - Sound Effect (HD) [7ODcC5z6Ca0].mp3" id="12_42oe0"]
 [ext_resource type="Texture2D" uid="uid://ce4c72eyllaex" path="res://gut textures/menu/minus credit.png" id="12_punb5"]
 [ext_resource type="Script" uid="uid://bldj77l6uuqmy" path="res://addons/touch_screen_joystick/touch_screen_joystick.gd" id="14_fulsm"]
-[ext_resource type="Script" uid="uid://bmp0g8ixsijrb" path="res://scripts/debug_unfuck_mouse.gd" id="15_4r5pv"]
 [ext_resource type="AudioStream" uid="uid://hbd1rlh8t46x" path="res://sounds/Caramella Girls - Caramelldansen HD Version (Swedish Original) Official [6-8E4Nirh9s].mp3" id="15_fulsm"]
 [ext_resource type="AudioStream" uid="uid://dkmtfgeppu7jg" path="res://sounds/Correct Answer sound effect [mhgOQmwaic4].wav" id="15_mc2k8"]
 [ext_resource type="AudioStream" uid="uid://6lkrxq1j2yty" path="res://sounds/EXTREMELY LOUD INCORRECT BUZZER [3GDr-eyhsSM].wav" id="17_by5co"]
@@ -396,6 +395,17 @@ rotation = 0.037717294
 theme_override_colors/font_color = Color(0, 0.23137255, 1, 1)
 text = "levele is ur mom"
 
+[node name="FpsLabel" type="Label" parent="Ui" unique_id=1375929517]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 187.0
+offset_top = 646.0
+offset_right = 595.0
+offset_bottom = 717.0
+rotation = -0.089388415
+theme_override_colors/font_color = Color(0.90250003, 0.95, 0, 1)
+text = "second per frame: 0.001"
+
 [node name="up3" type="Sprite2D" parent="Ui" unique_id=2055766624]
 position = Vector2(154, 621.00006)
 scale = Vector2(2.79, 1.03)
@@ -700,9 +710,6 @@ volume_db = 24.0
 
 [node name="starman_blink_timer" type="Timer" parent="Ui" unique_id=1769295315]
 unique_name_in_owner = true
-
-[node name="DebugUnfuckMouse" type="Node" parent="Ui" unique_id=1791126160]
-script = ExtResource("15_4r5pv")
 
 [node name="hurt_sound" type="AudioStreamPlayer" parent="." unique_id=670269047]
 unique_name_in_owner = true

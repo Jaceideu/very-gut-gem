@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="33_3vf3f"]
 [ext_resource type="Material" uid="uid://b6idud4a5te46" path="res://materials/weapons/awp.tres" id="33_xu3h8"]
 [ext_resource type="Material" uid="uid://cmgqxj7qxarpw" path="res://materials/weapons/sowrd.tres" id="34_xu3h8"]
+[ext_resource type="PackedScene" uid="uid://du55ra04ln2qp" path="res://scenes/ad.tscn" id="35_lejej"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kgmrq"]
 render_priority = 0
@@ -958,3 +959,6 @@ skin_id = 1
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.379887, 0.79999995, 9.5407295)
 weapon_material = ExtResource("34_xu3h8")
 weapon_name = "sowrd"
+
+[node name="CrbAd" parent="." unique_id=1680538194 instance=ExtResource("35_lejej")]
+transform = Transform3D(-0.15442163, -0.34618592, -0.34861755, -0.47032946, 0.20979777, 2.0748768e-08, 0.14201786, 0.31837893, -0.37906563, 11.717575, 5.8859754, 6.182186)

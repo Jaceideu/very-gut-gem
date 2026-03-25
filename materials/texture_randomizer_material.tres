@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://d3qt78asv15kt"]
+
+[ext_resource type="Shader" uid="uid://bjydc2liaa67i" path="res://materials/texture_randomizer_material.gdshader" id="1_qfy2t"]
+[ext_resource type="Texture2D" uid="uid://dhrw6o8jvq4x6" path="res://gut textures/ads/crb ad.png" id="2_m1js1"]
+[ext_resource type="Texture2D" uid="uid://bus8msw038vwu" path="res://gut textures/ads/cola ad.png" id="3_hluji"]
+[ext_resource type="Texture2D" uid="uid://j43cj1mqdqmf" path="res://gut textures/ads/boblox ad.png" id="4_mupv3"]
+[ext_resource type="Texture2D" uid="uid://bwbj60p4bgv4q" path="res://gut textures/ads/1 bit ad.png" id="5_elwhh"]
+[ext_resource type="Texture2D" uid="uid://b08d5mfs6hti7" path="res://gut textures/ads/mc miku ad.png" id="6_sp6jm"]
+[ext_resource type="Texture2D" uid="uid://bn26hbmwxibx5" path="res://gut textures/ads/ur ad ad.png" id="7_fqdr4"]
+[ext_resource type="Texture2D" uid="uid://cy1mmvjhoy53e" path="res://gut textures/ads/alario ad.png" id="8_elwhh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qfy2t")
+shader_parameter/textures = Array[Texture2D]([ExtResource("2_m1js1"), ExtResource("3_hluji"), ExtResource("4_mupv3"), ExtResource("5_elwhh"), ExtResource("6_sp6jm"), ExtResource("7_fqdr4"), ExtResource("8_elwhh")])

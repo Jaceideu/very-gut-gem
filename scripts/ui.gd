@@ -18,6 +18,7 @@ extends Control
 @onready var map_name_label: Label = %MapNameLabel
 @onready var new_skin_flash: TextureRect = %new_skin_flash
 @onready var victory_sound: AudioStreamPlayer = %victory_sound
+@onready var fps_label: Label = %FpsLabel
 
 
 func _ready():
@@ -29,6 +30,10 @@ func _process(delta):
 		
 	if starman_flash.visible:
 		starman_flash.color.h += 0.01
+		
+		
+func _physics_process(delta: float) -> void:
+	fps_label.text = "second per frame: %s" % (1 / Engine.get_frames_per_second())
 
 func show_gameover_screen():
 	get_tree().paused = true

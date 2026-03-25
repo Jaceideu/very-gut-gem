@@ -60,7 +60,7 @@ func spawn_player(player_data: Dictionary):
 	if spawn_points.size() > 0:
 		var chosen_spawn = spawn_points.pick_random()
 		new_player.position = chosen_spawn.global_position
-		new_player.rotation = chosen_spawn.global_rotation
+		new_player.rotation.y = chosen_spawn.global_rotation.y
 	
 	player_respawned.emit(player_data.id)
 	print_debug("on: %s player %s spawned" % [multiplayer.get_unique_id(), player_data.id])

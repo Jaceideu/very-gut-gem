@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ca5cvww1u7iq1" path="res://scenes/player.tscn" id="5_6ro8k"]
 [ext_resource type="AudioStream" uid="uid://bh3w5fm1jlixt" path="res://sounds/Resident Evil： Director's Cut (DualShock) - Mansion Basement [b9sjMQ29F1E].mp3" id="6_1jc4j"]
 [ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="7_7r0mg"]
+[ext_resource type="PackedScene" uid="uid://du55ra04ln2qp" path="res://scenes/ad.tscn" id="8_wigv6"]
 
 [sub_resource type="Environment" id="Environment_06j40"]
 ambient_light_source = 1
@@ -43,3 +44,22 @@ bus = &"\"music\""
 
 [node name="LevelBorder" parent="." unique_id=1692510602 instance=ExtResource("7_7r0mg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -31, 0)
+
+[node name="CrbAd" parent="." unique_id=1680538194 instance=ExtResource("8_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8292584, 2.6137624, -10.068695)
+
+[node name="CrbAd2" parent="." unique_id=1678609915 instance=ExtResource("8_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8292584, 2.6137624, -24.924301)
+max_index = 2
+
+[node name="Ad" parent="." unique_id=1616067488 instance=ExtResource("8_wigv6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 29.865797, 2.5693607, 0.16265191)
+max_index = 5
+
+[node name="Ad2" parent="." unique_id=219270724 instance=ExtResource("8_wigv6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -23.756067, 2.830007, 24.833937)
+max_index = 1
+
+[node name="Ad3" parent="." unique_id=846277978 instance=ExtResource("8_wigv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23234054, 2.4832575, 10.031978)
+max_index = 4

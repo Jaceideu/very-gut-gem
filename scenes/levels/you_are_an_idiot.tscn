@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="11_k45qa"]
 [ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="12_uilxm"]
 [ext_resource type="Material" uid="uid://c0081sujuv788" path="res://materials/weapons/curzor.tres" id="13_d4tnv"]
+[ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="14_g11mw"]
 
 [sub_resource type="Environment" id="Environment_rvlou"]
 ambient_light_source = 2
@@ -131,9 +132,11 @@ script = ExtResource("1_pnspt")
 
 [node name="PlayerSpawner" parent="." unique_id=713220184 node_paths=PackedStringArray("offline_player", "spawn_points") instance=ExtResource("2_wjik6")]
 offline_player = NodePath("../Player")
+enable_pvp = true
 spawn_points = [NodePath("../PlayerSpawnPoint")]
 
 [node name="PlayerSpawnPoint" parent="." unique_id=1697027510 instance=ExtResource("3_by6b5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="YouAreAnIdiot!![48Rz8UdZBmQ]" type="AudioStreamPlayer" parent="." unique_id=1574192734]
 stream = ExtResource("4_rvlou")
@@ -141,6 +144,7 @@ autoplay = true
 bus = &"\"music\""
 
 [node name="Player" parent="." unique_id=1859002790 instance=ExtResource("5_rvlou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=183199678]
 environment = SubResource("Environment_rvlou")
@@ -295,5 +299,8 @@ transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 11.036122, -
 weapon_material = ExtResource("13_d4tnv")
 weapon_name = "curzor"
 skin_id = 1
+
+[node name="AWP_Pickup" parent="." unique_id=118521975 instance=ExtResource("14_g11mw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.758007, 0.75, -1.3464483)
 
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
