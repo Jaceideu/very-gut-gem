@@ -19,7 +19,8 @@ script = ExtResource("1_dtht8")
 [node name="PlLabirynth" parent="." unique_id=482465846 instance=ExtResource("2_1jc4j")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
 
-[node name="PlayerSpawner" parent="." unique_id=713220184 instance=ExtResource("3_7r0mg")]
+[node name="PlayerSpawner" parent="." unique_id=713220184 node_paths=PackedStringArray("offline_player") instance=ExtResource("3_7r0mg")]
+offline_player = NodePath("../Player")
 
 [node name="PlayerSpawnPoint" parent="." unique_id=1697027510 instance=ExtResource("4_wigv6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4217715, 0.8839222, 2.680152)

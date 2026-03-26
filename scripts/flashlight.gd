@@ -1,4 +1,4 @@
-extends SpotLight3D
+extends Node3D
 
 @onready var burst: Timer = %burst
 
