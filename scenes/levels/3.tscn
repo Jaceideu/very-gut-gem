@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://bxog3c2u5r3ef" path="res://scenes/weapon_pickups/rifle_pickup.tscn" id="20_5iqgx"]
 [ext_resource type="PackedScene" uid="uid://uunv1ohp7ihs" path="res://scenes/bepis_machine.tscn" id="21_pyocg"]
 [ext_resource type="PackedScene" uid="uid://8g4ntx3bripd" path="res://scenes/weapon_pickups/awp_pickup.tscn" id="22_pyocg"]
+[ext_resource type="PackedScene" uid="uid://bapb3ngq6bgs0" path="res://scenes/wc_sign.tscn" id="24_7qo8t"]
 [ext_resource type="PackedScene" uid="uid://qg27ga56s03y" path="res://scenes/enemies/clippy.tscn" id="25_pergv"]
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="26_y00na"]
 [ext_resource type="PackedScene" uid="uid://c2hgs3wk8hm5w" path="res://scenes/level_border.tscn" id="27_ag0k3"]
@@ -33,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="31_diutk"]
 [ext_resource type="Material" uid="uid://b6idud4a5te46" path="res://materials/weapons/awp.tres" id="32_8fhop"]
 [ext_resource type="PackedScene" uid="uid://du55ra04ln2qp" path="res://scenes/ad.tscn" id="33_8fhop"]
+[ext_resource type="PackedScene" uid="uid://b4i0yqk7bwl6e" path="res://scenes/toilet.tscn" id="35_gryq2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_s5tjy"]
 panorama = ExtResource("2_cddsv")
@@ -720,6 +722,9 @@ transform = Transform3D(-3.621208, 0, 8.742276e-08, 0, 3.6620035, 0, -3.1657606e
 [node name="Door2" parent="stuff" unique_id=1780826008 instance=ExtResource("19_xrvj4")]
 transform = Transform3D(-5.604683, 0, 8.742277e-08, 0, 4.7819996, 0, -4.8997697e-07, 0, -0.99999994, -24.666643, 2.2244031, 14.098627)
 
+[node name="WC sign" parent="stuff/Door2" unique_id=2147456894 instance=ExtResource("24_7qo8t")]
+transform = Transform3D(0.20000002, 0, -2.220446e-16, 0, 0.2, 0, 0, 0, 0.20000002, 0, 0.32625538, 0)
+
 [node name="RiflePickup" parent="stuff" unique_id=67825147 instance=ExtResource("20_5iqgx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7025, 0.75, -8.147118)
 skeleton = NodePath("../..")
@@ -930,3 +935,6 @@ max_index = 3
 [node name="Ad2" parent="." unique_id=428358963 instance=ExtResource("33_8fhop")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9360042, 2.6111357, -10.238835)
 max_index = 6
+
+[node name="Toilet" parent="." unique_id=1941316452 instance=ExtResource("35_gryq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.692827, 0.64, 19.479067)

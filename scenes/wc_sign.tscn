@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bapb3ngq6bgs0"]
+
+[ext_resource type="Texture2D" uid="uid://x2p67io10c2h" path="res://gut textures/wc sign.png" id="1_modfl"]
+
+[node name="WC sign" type="Sprite3D" unique_id=2147456894]
+texture = ExtResource("1_modfl")

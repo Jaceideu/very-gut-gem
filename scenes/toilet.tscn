@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b4i0yqk7bwl6e"]
+
+[ext_resource type="Script" uid="uid://bunxm6fhm3glq" path="res://scripts/toilet.gd" id="1_ujtcc"]
+[ext_resource type="Texture2D" uid="uid://c1em341hho4cy" path="res://gut textures/toilet.png" id="2_yyxms"]
+[ext_resource type="AudioStream" uid="uid://d1137ohw8bu7h" path="res://sounds/Toilet Flush Sound Effect - High Quality Flushing [BhsVpvM2ZrM].mp3" id="3_5rkpo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5rkpo"]
+radius = 0.4239645
+
+[node name="Toilet" type="StaticBody3D" unique_id=1941316452]
+collision_mask = 0
+script = ExtResource("1_ujtcc")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=537975373]
+billboard = 2
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_yyxms")
+
+[node name="sfx" type="AudioStreamPlayer3D" parent="." unique_id=1474271562]
+unique_name_in_owner = true
+stream = ExtResource("3_5rkpo")
+volume_db = 80.0
+max_db = 6.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2009571265]
+shape = SubResource("SphereShape3D_5rkpo")

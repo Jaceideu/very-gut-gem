@@ -32,6 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://cwx7d2cqbk72s" path="res://scenes/skin_pickup.tscn" id="30_k8nic"]
 [ext_resource type="Material" uid="uid://dbnrtprjnf8ws" path="res://materials/weapons/rifle.tres" id="31_uko7y"]
 [ext_resource type="PackedScene" uid="uid://du55ra04ln2qp" path="res://scenes/ad.tscn" id="32_uko7y"]
+[ext_resource type="PackedScene" uid="uid://b4i0yqk7bwl6e" path="res://scenes/toilet.tscn" id="33_c3tqq"]
+[ext_resource type="PackedScene" uid="uid://bapb3ngq6bgs0" path="res://scenes/wc_sign.tscn" id="34_a5ylg"]
 
 [sub_resource type="Shader" id="Shader_wpetf"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
@@ -928,10 +930,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0587635, 0.4735726, -29.7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3497753, 0.47357166, -28.84975)
 
 [node name="Teto" parent="Things" unique_id=999899262 instance=ExtResource("9_kt1qv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.546906, 0.47357213, -6.510502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.419727, 0.47357213, -6.510502)
 
 [node name="Teto2" parent="Things" unique_id=388559001 instance=ExtResource("9_kt1qv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.149807, 0.47357166, -3.4120789)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.022629, 0.47357166, -3.4120789)
 
 [node name="Teto6" parent="Things" unique_id=1317208674 instance=ExtResource("9_kt1qv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.060274, 0.47357166, -40.564373)
@@ -1387,3 +1389,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.7
 [node name="Ad2" parent="." unique_id=439458660 instance=ExtResource("32_uko7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.731557, 1.8673795, -5.17887)
 max_index = 4
+
+[node name="Toilet" parent="." unique_id=1941316452 instance=ExtResource("33_c3tqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.097637, -0.38642812, -6.734242)
+
+[node name="WC sign" parent="." unique_id=2147456894 instance=ExtResource("34_a5ylg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.937325, 4.2434473, -1.0933485)

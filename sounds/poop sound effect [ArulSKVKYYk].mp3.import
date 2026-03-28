@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfkth5r3jenqg"
+path="res://.godot/imported/poop sound effect [ArulSKVKYYk].mp3-5c9cce805bb0ab1237e57c4b0208c3d8.mp3str"
+
+[deps]
+
+source_file="res://sounds/poop sound effect [ArulSKVKYYk].mp3"
+dest_files=["res://.godot/imported/poop sound effect [ArulSKVKYYk].mp3-5c9cce805bb0ab1237e57c4b0208c3d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

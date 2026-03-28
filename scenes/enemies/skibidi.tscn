@@ -95,7 +95,7 @@ shape = SubResource("SphereShape3D_iwecp")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=867456851]
 stream = ExtResource("2_uilxw")
-volume_db = -6.636
+volume_db = -19.969
 unit_size = 1.0
 autoplay = true
 bus = &"enemies"

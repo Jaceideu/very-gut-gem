@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dhq5187xg7wx2" path="res://gut textures/menu/skin flash.png" id="18_ujl30"]
 [ext_resource type="AudioStream" uid="uid://njkuo68uebfy" path="res://sounds/Plants Vs Zombies Victory Jingle [pNr0kw_VBvg].mp3" id="19_31cv2"]
 [ext_resource type="Script" uid="uid://g45diceseji1" path="res://scripts/multiplayer/pvp_hitbox.gd" id="22_a38lo"]
+[ext_resource type="AudioStream" uid="uid://bfkth5r3jenqg" path="res://sounds/poop sound effect [ArulSKVKYYk].mp3" id="28_pf23h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4r5pv"]
 load_path = "res://.godot/imported/up.png-64eac8d21747a198f740e5f6e6778bc8.s3tc.ctex"
@@ -68,6 +69,11 @@ material = SubResource("StandardMaterial3D_fulsm")
 font_names = PackedStringArray("Comic Sans MS")
 subpixel_positioning = 0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_31cv2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf23h"]
+bg_color = Color(0.43, 0.13616666, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n281d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lbvwy"]
@@ -91,6 +97,11 @@ properties/3/replication_mode = 1
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i4ail"]
 radius = 0.92529297
 height = 2.9291992
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pf23h"]
+random_pitch = 1.0116194
+streams_count = 1
+stream_0/stream = ExtResource("28_pf23h")
 
 [node name="Player" type="CharacterBody3D" unique_id=1859002790 node_paths=PackedStringArray("meshes") groups=["players"]]
 collision_layer = 2
@@ -383,6 +394,29 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "1 ak
 2 knif"
+
+[node name="PoopContainer" type="HBoxContainer" parent="Ui" unique_id=2105090094]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 34.0
+offset_right = 1044.0
+offset_bottom = 105.0
+rotation = -0.04632229
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Ui/PoopContainer" unique_id=1096007512]
+layout_mode = 2
+text = "💩"
+
+[node name="PoopBar" type="ProgressBar" parent="Ui/PoopContainer" unique_id=1698828888]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 30)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_31cv2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pf23h")
+show_percentage = false
 
 [node name="MapNameLabel" type="Label" parent="Ui" unique_id=891930449]
 unique_name_in_owner = true
@@ -755,10 +789,20 @@ script = ExtResource("22_a38lo")
 unique_name_in_owner = true
 shape = SubResource("CapsuleShape3D_i4ail")
 
+[node name="PoopTimer" type="Timer" parent="." unique_id=759648139]
+wait_time = 0.5
+autostart = true
+
+[node name="PoopSound" type="AudioStreamPlayer" parent="." unique_id=1730465508]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_pf23h")
+volume_db = 24.0
+
 [connection signal="ammo_changed" from="." to="Ui" method="_on_player_ammo_changed"]
 [connection signal="credit_added" from="." to="Ui" method="_on_player_credit_added"]
 [connection signal="credit_changed" from="." to="Ui" method="_on_player_credit_changed"]
 [connection signal="health_changed" from="." to="Ui" method="_on_player_health_changed"]
+[connection signal="poop_changed" from="." to="Ui" method="_on_player_poop_changed"]
 [connection signal="received_damage" from="." to="Ui" method="_on_player_received_damage"]
 [connection signal="skin_found" from="." to="Ui" method="_on_player_skin_found"]
 [connection signal="starman_ended" from="." to="Ui" method="_on_player_starman_ended"]
@@ -769,3 +813,4 @@ shape = SubResource("CapsuleShape3D_i4ail")
 [connection signal="button_down" from="Ui/game_over/menu" to="Ui" method="_on_menu_button_down"]
 [connection signal="timeout" from="starman_timer" to="." method="_on_starman_timer_timeout"]
 [connection signal="got_hit" from="pvp_hitbox" to="." method="_on_pvp_hitbox_got_hit"]
+[connection signal="timeout" from="PoopTimer" to="." method="_on_poop_timer_timeout"]

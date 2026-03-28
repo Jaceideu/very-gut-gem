@@ -19,6 +19,7 @@ extends Control
 @onready var new_skin_flash: TextureRect = %new_skin_flash
 @onready var victory_sound: AudioStreamPlayer = %victory_sound
 @onready var fps_label: Label = %FpsLabel
+@onready var poop_bar: ProgressBar = %PoopBar
 
 
 func _ready():
@@ -112,3 +113,7 @@ func _on_player_skin_found() -> void:
 	victory_sound.play()
 	await get_tree().create_timer(3.0).timeout
 	new_skin_flash.hide()
+
+
+func _on_player_poop_changed(new_amount: float) -> void:
+	poop_bar.value = new_amount

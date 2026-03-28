@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1137ohw8bu7h"
+path="res://.godot/imported/Toilet Flush Sound Effect - High Quality Flushing [BhsVpvM2ZrM].mp3-2eefac36132ea6aa331435a2ec056e75.mp3str"
+
+[deps]
+
+source_file="res://sounds/Toilet Flush Sound Effect - High Quality Flushing [BhsVpvM2ZrM].mp3"
+dest_files=["res://.godot/imported/Toilet Flush Sound Effect - High Quality Flushing [BhsVpvM2ZrM].mp3-2eefac36132ea6aa331435a2ec056e75.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,6 +4,8 @@ class_name Player
 
 static var dead_count: int = 0
 
+const POOP = preload("uid://dx3qnsgsrf1xp")
+
 var jump_velocity: float = 10.0
 
 
@@ -48,6 +50,23 @@ var nickname := "stoopid guy"
 var has_infinite_ammo := false
 var weapon_damage_multiplier := 1.0
 
+
+
+
+var poop := 0.0:
+	set(new_amount):
+		poop = new_amount
+		poop_changed.emit(new_amount)
+		
+		if poop >= 100.0:
+			var is_shiny := false
+			if randf() < 0.01:
+				is_shiny = true
+				
+			poop_poop.rpc(Lobby.local_nickname, is_shiny)
+
+			
+
 @onready var camera = %Head/Camera3D
 @onready var head = %Head
 @onready var hurt_sound = %hurt_sound
@@ -58,6 +77,7 @@ var weapon_damage_multiplier := 1.0
 @onready var starman_sound: AudioStreamPlayer3D = %starman_sound
 @onready var nickname_label: Label3D = %nickname_label
 @onready var pvp_hitbox: Area3D = %pvp_hitbox
+@onready var poop_sound: AudioStreamPlayer = %PoopSound
 
 
 signal health_changed(new_health: int)
@@ -70,6 +90,7 @@ signal starman_ended
 signal ammo_changed(new_amount: int)
 signal respawn_requested(id: int, attacker_id: int)
 signal skin_found
+signal poop_changed(new_amount: float)
 
 func heal():
 	health = 100
@@ -105,7 +126,6 @@ func damage(amount: int, attacker_path: String):
 
 func die(attacker_path: String):
 	if Lobby.online_mode:
-		
 		var attacker := get_node(attacker_path) as Player
 		if attacker:
 			attacker.add_credit(50)
@@ -142,7 +162,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		head.rotate_x(-event.relative.y * mouse_sensitivity)
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		#head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90.0), deg_to_rad(90.0))
+		#head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89.0), deg_to_rad(89.0))
 		
 	if event is InputEventScreenDrag:
 		rotate_y(-event.relative.x * mouse_sensitivity)
@@ -258,6 +278,9 @@ func _physics_process(delta: float) -> void:
 	
 	if !is_multiplayer_authority(): return
 	
+	if Input.is_action_just_pressed("poop"):
+		poop = 100.0
+	
 	if not is_on_floor():
 		internal_velocity += get_gravity() * delta
 
@@ -369,3 +392,21 @@ func _on_weapon_ammo_changed(new_amount: int):
 
 func _on_pvp_hitbox_got_hit(amount: int, player_path: String) -> void:
 	damage(amount, player_path)
+
+
+func _on_poop_timer_timeout() -> void:
+	if !is_multiplayer_authority(): return
+	poop += 0.1
+
+
+@rpc("reliable", "call_local", "authority")
+func poop_poop(poop_name: String, is_shiny: bool):
+	var new_poop := POOP.instantiate()
+	get_parent().add_child(new_poop)
+	new_poop.global_position = global_position
+	new_poop.set_nickname(poop_name, is_shiny)
+	poop_sound.play()
+	
+	if is_multiplayer_authority():
+		damage.rpc(20, get_path())
+		poop = 0.0
