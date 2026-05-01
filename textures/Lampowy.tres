@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cakunuf5i3c41"]
+
+[ext_resource type="Texture2D" uid="uid://g6velqqbv4pr" path="res://textures/Lampowy.png" id="1_ir2qc"]
+
+[resource]
+albedo_texture = ExtResource("1_ir2qc")
+emission_enabled = true
+emission_energy_multiplier = 4.0
+emission_texture = ExtResource("1_ir2qc")

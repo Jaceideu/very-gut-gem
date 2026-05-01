@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgvaivru3j3l3"]
+
+[ext_resource type="Texture2D" uid="uid://cwoth4qxpm7bv" path="res://textures/InstrybutorowyEkran.png" id="1_1cd54"]
+
+[resource]
+albedo_texture = ExtResource("1_1cd54")
+emission_enabled = true
+emission_texture = ExtResource("1_1cd54")
+texture_filter = 0

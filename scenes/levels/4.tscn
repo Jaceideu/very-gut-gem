@@ -1023,3 +1023,7 @@ transform = Transform3D(-5.8055537e-08, 0, -1, 0, 0.74716765, 0, 1.3281559, 0, -
 
 [node name="Toilet" parent="." unique_id=1941316452 instance=ExtResource("39_yjcg8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.103482, 0.6400002, -6.5693035)
+
+[node name="Ad" parent="." unique_id=146808072 instance=ExtResource("35_lejej")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.4663308, 1.7999995, -10.319492)
+max_index = 7

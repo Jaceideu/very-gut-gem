@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://b08d5mfs6hti7" path="res://gut textures/ads/mc miku ad.png" id="6_sp6jm"]
 [ext_resource type="Texture2D" uid="uid://bn26hbmwxibx5" path="res://gut textures/ads/ur ad ad.png" id="7_fqdr4"]
 [ext_resource type="Texture2D" uid="uid://cy1mmvjhoy53e" path="res://gut textures/ads/alario ad.png" id="8_elwhh"]
+[ext_resource type="Texture2D" uid="uid://dqbjtsn7hh3gv" path="res://gut textures/ads/too hard ad.png" id="9_sp6jm"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_qfy2t")
-shader_parameter/textures = Array[Texture2D]([ExtResource("2_m1js1"), ExtResource("3_hluji"), ExtResource("4_mupv3"), ExtResource("5_elwhh"), ExtResource("6_sp6jm"), ExtResource("7_fqdr4"), ExtResource("8_elwhh")])
+shader_parameter/textures = Array[Texture2D]([ExtResource("2_m1js1"), ExtResource("3_hluji"), ExtResource("4_mupv3"), ExtResource("5_elwhh"), ExtResource("6_sp6jm"), ExtResource("7_fqdr4"), ExtResource("8_elwhh"), ExtResource("9_sp6jm")])

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cw1m38u2vbhje"]
+
+[ext_resource type="Texture2D" uid="uid://cvxcro1mmmf2y" path="res://textures/LampowyCzerwony.png" id="1_lryf5"]
+
+[resource]
+albedo_texture = ExtResource("1_lryf5")
+emission_enabled = true
+emission_energy_multiplier = 4.0
+emission_texture = ExtResource("1_lryf5")

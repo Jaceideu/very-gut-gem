@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8mo6xe8r17hu"]
+
+[ext_resource type="Texture2D" uid="uid://dowqasmwn0oxn" path="res://textures/Glass.png" id="1_c8jn2"]
+
+[resource]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.49803922)
+albedo_texture = ExtResource("1_c8jn2")
