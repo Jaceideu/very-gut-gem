@@ -3,6 +3,14 @@ extends Control
 @onready var settings_layer: CanvasLayer = %Settings
 @onready var click_sound: AudioStreamPlayer = %click_sound
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("confirm"):
+		_on_play_single_button_down()
+	if event.is_action_pressed("cancel"):
+		_on_quit_button_down()
+	if event.is_action_pressed("interact"):
+		_on_skins_button_down()
+
 func _ready() -> void:
 	GlobalSettings.was_game_loaded = true
 	GlobalSettings.load_save()

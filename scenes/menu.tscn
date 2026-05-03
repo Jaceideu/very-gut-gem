@@ -190,10 +190,24 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -605.0
-offset_top = 173.0
-offset_right = -480.0
-offset_bottom = 222.0
+offset_left = -581.0
+offset_top = 183.0
+offset_right = -512.0
+offset_bottom = 212.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_acihy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu3p5")
+
+[node name="ok" type="Button" parent="Settings" unique_id=1201401252]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -571.0
+offset_top = 214.0
+offset_right = -502.0
+offset_bottom = 243.0
 grow_horizontal = 0
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
@@ -205,9 +219,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -574.0
-offset_top = 229.0
+offset_top = 250.0
 offset_right = -392.0
-offset_bottom = 290.0
+offset_bottom = 282.0
 grow_horizontal = 0
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4ibg8")
@@ -396,8 +410,9 @@ max_polyphony = 100
 [connection signal="button_down" from="Settings/fullscreen" to="." method="_on_fullscreen_button_down"]
 [connection signal="button_down" from="Settings/window" to="." method="_on_window_button_down"]
 [connection signal="button_down" from="Settings/small" to="." method="set_mouse_sensitivity" binds= [0.001]]
+[connection signal="button_down" from="Settings/ok" to="." method="set_mouse_sensitivity" binds= [0.002]]
 [connection signal="button_down" from="Settings/normal" to="." method="set_mouse_sensitivity" binds= [0.003]]
-[connection signal="button_down" from="Settings/big" to="." method="set_mouse_sensitivity" binds= [0.01]]
+[connection signal="button_down" from="Settings/big" to="." method="set_mouse_sensitivity" binds= [0.02]]
 [connection signal="button_down" from="Settings/biggerer" to="." method="set_mouse_sensitivity" binds= [0.1]]
 [connection signal="button_down" from="Settings/mute" to="." method="_on_mute_button_down"]
 [connection signal="button_down" from="Settings/vsync" to="." method="enable_vsync"]

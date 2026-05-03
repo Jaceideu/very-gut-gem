@@ -80,7 +80,7 @@ size = Vector2(3, 3)
 radius = 0.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nhe5d"]
-size = Vector3(1.2, 1.2, 1.2)
+size = Vector3(1.5, 2, 1.5)
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_181tp"]
 properties/0/path = NodePath(".:position")
@@ -116,6 +116,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hurt_box" unique_id=968220557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18528914, 0)
 visible = false
 shape = SubResource("BoxShape3D_nhe5d")
 

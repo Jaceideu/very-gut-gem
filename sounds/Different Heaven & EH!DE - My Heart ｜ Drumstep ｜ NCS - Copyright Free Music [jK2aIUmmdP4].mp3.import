@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://copm6d204pppk"
+path="res://.godot/imported/Different Heaven & EH!DE - My Heart ｜ Drumstep ｜ NCS - Copyright Free Music [jK2aIUmmdP4].mp3-8fd23abcdaca6db5a50f3c4437dd1c25.mp3str"
+
+[deps]
+
+source_file="res://sounds/Different Heaven & EH!DE - My Heart ｜ Drumstep ｜ NCS - Copyright Free Music [jK2aIUmmdP4].mp3"
+dest_files=["res://.godot/imported/Different Heaven & EH!DE - My Heart ｜ Drumstep ｜ NCS - Copyright Free Music [jK2aIUmmdP4].mp3-8fd23abcdaca6db5a50f3c4437dd1c25.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -5,9 +5,18 @@ var current_weapon_index: int = 0
 @onready var weapon_preview: Sprite3D = %weapon_preview
 @onready var click_sound: AudioStreamPlayer = %click_sound
 @onready var skin_buttons_container: VBoxContainer = %skin_buttons_container
+var current_skin_index: int = 0
 
 const NO = preload("uid://cydmvpwy3rys5")
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("cancel"):
+		_on_back_pressed()
+	if event.is_action_pressed("weapon_next"):
+		_on_next_pressed()
+	if event.is_action_pressed("weapon_prev"):
+		_on_prev_pressed()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,22 +24,24 @@ func _ready() -> void:
 	load_weapon_preview(0)
 	
 	
-
-	
 func create_skin_buttons(weapon_name: String, weapon_material: ShaderMaterial):
 	for btn in skin_buttons_container.get_children():
 		btn.queue_free()
 	
 	var skin_ids: Array = GlobalSettings.inventory.get(weapon_name, [])
 	
-	if skin_ids.is_empty():
-		return
+
 		
 	var empty_button := TextureButton.new()
 	empty_button.action_mode = BaseButton.ACTION_MODE_BUTTON_PRESS
 	empty_button.texture_normal = NO
 	skin_buttons_container.add_child(empty_button)
 	empty_button.pressed.connect(_on_skin_button_pressed.bind(-1))
+	empty_button.set_meta("skin_id", -1)
+		
+		
+	if skin_ids.is_empty():
+		return
 		
 	var skin_textures: Array = weapon_material.get_shader_parameter("skin_textures")
 	
@@ -41,6 +52,7 @@ func create_skin_buttons(weapon_name: String, weapon_material: ShaderMaterial):
 		new_button.texture_normal = skin_textures[skin_id]
 		skin_buttons_container.add_child(new_button)
 		new_button.pressed.connect(_on_skin_button_pressed.bind(skin_id))
+		new_button.set_meta("skin_id", skin_id)
 		
 		
 func load_weapon_preview(index: int):

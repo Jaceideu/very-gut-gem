@@ -160,6 +160,7 @@ outline_size = 0
 
 [node name="Ui" type="Control" parent="." unique_id=1968337169]
 unique_name_in_owner = true
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -176,6 +177,13 @@ offset_left = 74.0
 offset_top = 38.0
 offset_right = 323.17456
 offset_bottom = 273.0
+
+[node name="CUBE4" parent="Ui" unique_id=1006109590 instance=ExtResource("6_fulsm")]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 144.0
+offset_right = 329.86664
+offset_bottom = 291.0
 
 [node name="Phone" type="Control" parent="Ui" unique_id=525103905]
 layout_mode = 1
@@ -421,10 +429,10 @@ show_percentage = false
 [node name="MapNameLabel" type="Label" parent="Ui" unique_id=891930449]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 645.0
-offset_top = 18.0
-offset_right = 1016.0
-offset_bottom = 89.0
+offset_left = 18.0
+offset_top = -3.0
+offset_right = 389.0
+offset_bottom = 68.0
 rotation = 0.037717294
 theme_override_colors/font_color = Color(0, 0.23137255, 1, 1)
 text = "levele is ur mom"

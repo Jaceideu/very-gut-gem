@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://blrt5vostpjug"]
+
+[ext_resource type="Shader" uid="uid://c42f260cek40m" path="res://materials/billboard.gdshader" id="1_8kgyp"]
+[ext_resource type="Texture2D" uid="uid://c6xp5kocqjmlf" path="res://textures/pvp2/Billboard/Gura.png" id="2_miyxq"]
+[ext_resource type="Texture2D" uid="uid://cjm3j2s0prptg" path="res://textures/pvp2/Billboard/IndiHome.png" id="3_3dvqv"]
+[ext_resource type="Texture2D" uid="uid://cvco4ca2fffp1" path="res://textures/pvp2/Billboard/Kiepscy.png" id="4_7keuk"]
+[ext_resource type="Texture2D" uid="uid://dxg1hrfiaobyo" path="res://textures/pvp2/Billboard/Mecz.png" id="5_ge1nj"]
+[ext_resource type="Texture2D" uid="uid://dq5xw6afbww2e" path="res://textures/pvp2/Billboard/PoPiPo.png" id="6_o4om8"]
+[ext_resource type="Texture2D" uid="uid://dsxa5wu0bpuhu" path="res://textures/pvp2/Billboard/Stonoga.png" id="7_r6mw7"]
+[ext_resource type="Texture2D" uid="uid://bc1edu07r3og7" path="res://textures/pvp2/Billboard/XBOXLIVE.png" id="8_bqowx"]
+[ext_resource type="Texture2D" uid="uid://xpax2u2hsiqw" path="res://textures/pvp2/Billboard/XP.png" id="9_n0cc5"]
+[ext_resource type="Texture2D" uid="uid://d0t3faky5lpev" path="res://textures/pvp2/Billboard/Yuuri.png" id="10_qlax0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8kgyp")
+shader_parameter/frame_time = 30.0
+shader_parameter/frames = Array[Texture2D]([ExtResource("2_miyxq"), ExtResource("3_3dvqv"), ExtResource("4_7keuk"), ExtResource("5_ge1nj"), ExtResource("6_o4om8"), ExtResource("7_r6mw7"), ExtResource("8_bqowx"), ExtResource("9_n0cc5"), ExtResource("10_qlax0")])

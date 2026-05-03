@@ -20,6 +20,7 @@ class_properties = Dictionary[String, Variant]({
 "awp": "awp",
 "curzor": "curzor",
 "rifle": "rifle",
+"rifle2": "rifle2",
 "sowrd": "sowrd"
 }
 })

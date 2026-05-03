@@ -19,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xmlfx")
-weapon_names = Array[String](["rifle", "awp", "curzor", "sowrd"])
+weapon_names = Array[String](["rifle", "awp", "curzor", "sowrd", "rifle2"])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=352772124]
 layout_mode = 1

@@ -10,7 +10,6 @@ var jump_velocity: float = 10.0
 
 
 var mouse_sensitivity: float = 0.003
-var joypad_sensitivity: float = 3
 var joypad_deadzone: float = 0.1
 var jump_buffer_time: float = 0.5
 var coyote_time := 0.1
@@ -49,7 +48,6 @@ var has_starman := false
 var nickname := "stoopid guy"
 var has_infinite_ammo := false
 var weapon_damage_multiplier := 1.0
-
 
 
 
@@ -106,15 +104,15 @@ func damage(amount: int, attacker_path: String):
 	
 	if has_starman or is_invincible: return
 	
-
-	
-	health -= amount
-	health_changed.emit(health)
-	received_damage.emit(amount)
+	if is_multiplayer_authority():
+		health -= amount
+		health_changed.emit(health)
+		received_damage.emit(amount)
+		if health <= 0:
+			die.rpc(attacker_path)
 	hurt_sound.play()
 	
-	if health <= 0:
-		die(attacker_path)
+	
 	
 	for mesh in meshes:
 		mesh.get_active_material(0).albedo_color = Color.RED
@@ -123,7 +121,7 @@ func damage(amount: int, attacker_path: String):
 		mesh.get_active_material(0).albedo_color = Color.WHITE
 	
 
-
+@rpc("any_peer", "call_local", "reliable")
 func die(attacker_path: String):
 	if Lobby.online_mode:
 		var attacker := get_node(attacker_path) as Player
@@ -238,9 +236,12 @@ func add_weapon(weapon_path: String):
 @rpc("any_peer", "call_local", "reliable")
 func set_weapon(id: int, forced: bool = false):
 	
+	if id < 0 or id > weapons.get_child_count() - 1:
+		return
 	
 	if id == current_weapon_id && !forced:
 		return
+	
 	
 	if weapon:
 		weapon.set_physics_process(false)
@@ -263,20 +264,24 @@ func _process(delta: float) -> void:
 	
 	if !can_move:
 		return
-	
-	#if abs(Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)) > joypad_deadzone or abs(Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)) > joypad_deadzone:		
-		#head.rotate_x(-Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) * joypad_sensitivity * delta)
-		#rotate_y(-Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) * joypad_sensitivity * delta)
-		#head.rotation.x = clamp(head.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))	
 		
 	for i in range(0, weapons.get_child_count()):
 		if Input.is_action_just_pressed(str(i + 1)):
 			set_weapon.rpc(i)
+	if Input.is_action_just_pressed("weapon_next"):
+		set_weapon.rpc(current_weapon_id+1)
+	if Input.is_action_just_pressed("weapon_prev"):
+		set_weapon.rpc(current_weapon_id-1)
 	
 
 func _physics_process(delta: float) -> void:
 	
 	if !is_multiplayer_authority(): return
+	
+	if abs(Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)) > joypad_deadzone or abs(Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)) > joypad_deadzone:		
+		head.rotate_x(-Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) * mouse_sensitivity * 2000 * delta)
+		rotate_y(-Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) * mouse_sensitivity * 2000 * delta)
+		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))	
 	
 	if Input.is_action_just_pressed("poop"):
 		poop = 100.0
@@ -360,7 +365,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 @rpc("any_peer", "call_local", "reliable")
-func interact(object_path: String):
+func player_interact(object_path: String):
 	var object: Node3D = get_node(object_path)
 	object.interact(get_path())
 	
@@ -374,7 +379,7 @@ func start_starman(time: float):
 
 func _on_weapon_interact(object: Node3D) -> void:
 	if !is_multiplayer_authority(): return
-	interact.rpc(object.get_path())
+	player_interact.rpc(object.get_path())
 	
 func _shake_camera(shake_strength: float, shake_duration: float):
 	if !is_multiplayer_authority(): return

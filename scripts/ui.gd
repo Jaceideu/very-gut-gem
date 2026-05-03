@@ -28,6 +28,14 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("escape") && !Lobby.online_mode:
 		show_gameover_screen()
+	
+	if game_over_screen.visible:
+	
+		if Input.is_action_just_pressed("confirm"):
+			restart_game()
+			
+		if Input.is_action_just_pressed("cancel"):
+			go_to_menu()
 		
 	if starman_flash.visible:
 		starman_flash.color.h += 0.01
@@ -43,7 +51,13 @@ func show_gameover_screen():
 	over_sound.play()
 	
 
-
+func restart_game():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+	
+func go_to_menu():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_player_ammo_changed(new_amount: int) -> void:
 	ammo_label.text = str(new_amount)
@@ -62,14 +76,14 @@ func _on_player_received_damage(damage: int) -> void:
 	screen_flash.hide()
 
 
+
+
 func _on_play_button_down() -> void:
-	get_tree().paused = false
-	get_tree().reload_current_scene()
+	restart_game()
 
 
 func _on_menu_button_down() -> void:
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	go_to_menu()
 #
 func _on_player_credit_changed(new_credit: int) -> void:
 	credit_label.text = str(new_credit)

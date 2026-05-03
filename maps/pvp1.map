@@ -221,11 +221,11 @@
 }
 // brush 9
 {
-( -624 -512 192 ) ( -624 -511 192 ) ( -624 -512 193 ) Snajperski 0 0 0 1 1
+( -688 -512 192 ) ( -688 -511 192 ) ( -688 -512 193 ) Snajperski 0 0 0 1 1
 ( -592 -512 192 ) ( -592 -512 193 ) ( -591 -512 192 ) Snajperski 0 0 0 1 1
 ( -592 -512 192 ) ( -591 -512 192 ) ( -592 -511 192 ) Snajperski 0 0 0 1 1
 ( -448 -496 208 ) ( -448 -495 208 ) ( -447 -496 208 ) Snajperski 0 0 0 1 1
-( -448 -496 208 ) ( -447 -496 208 ) ( -448 -496 209 ) Snajperski 0 0 0 1 1
+( -448 -504 208 ) ( -447 -504 208 ) ( -448 -504 209 ) Snajperski 0 0 0 1 1
 ( -400 -496 208 ) ( -400 -496 209 ) ( -400 -495 208 ) Snajperski 0 0 0 1 1
 }
 // brush 10
@@ -312,39 +312,66 @@
 }
 // brush 19
 {
-( -504 -704 268 ) ( -504 -703 268 ) ( -504 -704 269 ) LampowyCzerwony 12 12 0 1 1
-( -504 -704 268 ) ( -504 -704 269 ) ( -503 -704 268 ) LampowyCzerwony -8 12 0 1 1
-( -504 -704 268 ) ( -503 -704 268 ) ( -504 -703 268 ) LampowyCzerwony -8 -12 0 1 1
-( -496 -688 272 ) ( -496 -687 272 ) ( -495 -688 272 ) LampowyCzerwony -8 -12 0 1 1
-( -496 -688 272 ) ( -495 -688 272 ) ( -496 -688 273 ) LampowyCzerwony -8 12 0 1 1
-( -488 -688 272 ) ( -488 -688 273 ) ( -488 -687 272 ) LampowyCzerwony 12 12 0 1 1
+( -504 -700 268 ) ( -504 -699 268 ) ( -504 -700 269 ) LampowyCzerwony 8 12 0 1 1
+( -504 -700 268 ) ( -504 -700 269 ) ( -503 -700 268 ) LampowyCzerwony -8 12 0 1 1
+( -504 -700 268 ) ( -503 -700 268 ) ( -504 -699 268 ) LampowyCzerwony -8 -8 0 1 1
+( -496 -684 272 ) ( -496 -683 272 ) ( -495 -684 272 ) LampowyCzerwony -8 -8 0 1 1
+( -496 -684 272 ) ( -495 -684 272 ) ( -496 -684 273 ) LampowyCzerwony -8 12 0 1 1
+( -488 -684 272 ) ( -488 -684 273 ) ( -488 -683 272 ) LampowyCzerwony 8 12 0 1 1
 }
 // brush 20
 {
-( -384 -608 268 ) ( -384 -607 268 ) ( -384 -608 269 ) LampowyCzerwony 12 -4 0 1 1
-( -384 -608 268 ) ( -384 -608 269 ) ( -383 -608 268 ) LampowyCzerwony 0 -4 0 1 1
-( -384 -608 268 ) ( -383 -608 268 ) ( -384 -607 268 ) LampowyCzerwony 0 -12 0 1 1
-( -376 -592 272 ) ( -376 -591 272 ) ( -375 -592 272 ) LampowyCzerwony 0 -12 0 1 1
-( -376 -592 272 ) ( -375 -592 272 ) ( -376 -592 273 ) LampowyCzerwony 0 -4 0 1 1
-( -368 -592 272 ) ( -368 -592 273 ) ( -368 -591 272 ) LampowyCzerwony 12 -4 0 1 1
+( -388 -608 236 ) ( -388 -607 236 ) ( -388 -608 237 ) LampowyCzerwony 12 -4 0 1 1
+( -388 -608 236 ) ( -388 -608 237 ) ( -387 -608 236 ) LampowyCzerwony 4 -4 0 1 1
+( -388 -608 236 ) ( -387 -608 236 ) ( -388 -607 236 ) LampowyCzerwony 4 -12 0 1 1
+( -380 -592 240 ) ( -380 -591 240 ) ( -379 -592 240 ) LampowyCzerwony 4 -12 0 1 1
+( -380 -592 240 ) ( -379 -592 240 ) ( -380 -592 241 ) LampowyCzerwony 4 -4 0 1 1
+( -372 -592 240 ) ( -372 -592 241 ) ( -372 -591 240 ) LampowyCzerwony 12 -4 0 1 1
 }
 // brush 21
 {
-( -504 -512 268 ) ( -504 -511 268 ) ( -504 -512 269 ) LampowyCzerwony 12 12 0 1 1
-( -504 -512 268 ) ( -504 -512 269 ) ( -503 -512 268 ) LampowyCzerwony -8 12 0 1 1
-( -504 -512 268 ) ( -503 -512 268 ) ( -504 -511 268 ) LampowyCzerwony -8 -12 0 1 1
-( -496 -496 272 ) ( -496 -495 272 ) ( -495 -496 272 ) LampowyCzerwony -8 -12 0 1 1
-( -496 -496 272 ) ( -495 -496 272 ) ( -496 -496 273 ) LampowyCzerwony -8 12 0 1 1
-( -488 -496 272 ) ( -488 -496 273 ) ( -488 -495 272 ) LampowyCzerwony 12 12 0 1 1
+( -504 -516 252 ) ( -504 -515 252 ) ( -504 -516 253 ) LampowyCzerwony 0 -4 0 1 1
+( -504 -516 252 ) ( -504 -516 253 ) ( -503 -516 252 ) LampowyCzerwony -8 -4 0 1 1
+( -504 -516 252 ) ( -503 -516 252 ) ( -504 -515 252 ) LampowyCzerwony -8 0 0 1 1
+( -496 -500 256 ) ( -496 -499 256 ) ( -495 -500 256 ) LampowyCzerwony -8 0 0 1 1
+( -496 -500 256 ) ( -495 -500 256 ) ( -496 -500 257 ) LampowyCzerwony -8 -4 0 1 1
+( -488 -500 256 ) ( -488 -500 257 ) ( -488 -499 256 ) LampowyCzerwony 0 -4 0 1 1
 }
 // brush 22
 {
-( -624 -600 268 ) ( -624 -599 268 ) ( -624 -600 269 ) LampowyCzerwony 4 -4 0 1 1
-( -616 -608 268 ) ( -616 -608 269 ) ( -615 -608 268 ) LampowyCzerwony -8 -4 0 1 1
-( -616 -600 268 ) ( -615 -600 268 ) ( -616 -599 268 ) LampowyCzerwony -8 -4 0 1 1
-( -608 -584 272 ) ( -608 -583 272 ) ( -607 -584 272 ) LampowyCzerwony -8 -4 0 1 1
-( -608 -592 272 ) ( -607 -592 272 ) ( -608 -592 273 ) LampowyCzerwony -8 -4 0 1 1
-( -608 -584 272 ) ( -608 -584 273 ) ( -608 -583 272 ) LampowyCzerwony 4 -4 0 1 1
+( -620 -600 268 ) ( -620 -599 268 ) ( -620 -600 269 ) LampowyCzerwony 4 -4 0 1 1
+( -612 -608 268 ) ( -612 -608 269 ) ( -611 -608 268 ) LampowyCzerwony -12 -4 0 1 1
+( -612 -600 268 ) ( -611 -600 268 ) ( -612 -599 268 ) LampowyCzerwony -12 -4 0 1 1
+( -604 -584 272 ) ( -604 -583 272 ) ( -603 -584 272 ) LampowyCzerwony -12 -4 0 1 1
+( -604 -592 272 ) ( -603 -592 272 ) ( -604 -592 273 ) LampowyCzerwony -12 -4 0 1 1
+( -604 -584 272 ) ( -604 -584 273 ) ( -604 -583 272 ) LampowyCzerwony 4 -4 0 1 1
+}
+// brush 23
+{
+( -384 -688 192 ) ( -384 -687 192 ) ( -384 -688 193 ) Snajperski 0 0 0 1 1
+( -384 -672 192 ) ( -384 -672 193 ) ( -383 -672 192 ) Snajperski 0 0 0 1 1
+( -384 -688 192 ) ( -383 -688 192 ) ( -384 -687 192 ) Snajperski 0 0 0 1 1
+( -368 -528 208 ) ( -368 -527 208 ) ( -367 -528 208 ) Snajperski 0 0 0 1 1
+( -368 -528 208 ) ( -367 -528 208 ) ( -368 -528 209 ) Snajperski 0 0 0 1 1
+( -376 -528 208 ) ( -376 -528 209 ) ( -376 -527 208 ) Snajperski 0 0 0 1 1
+}
+// brush 24
+{
+( -384 -640 256 ) ( -384 -639 256 ) ( -384 -640 257 ) Snajperski 0 0 0 1 1
+( -416 -672 256 ) ( -416 -672 257 ) ( -415 -672 256 ) Snajperski 0 0 0 1 1
+( -416 -640 240 ) ( -415 -640 240 ) ( -416 -639 240 ) Snajperski 0 0 0 1 1
+( -368 -528 272 ) ( -368 -527 272 ) ( -367 -528 272 ) Snajperski 0 0 0 1 1
+( -368 -528 272 ) ( -367 -528 272 ) ( -368 -528 273 ) Snajperski 0 0 0 1 1
+( -376 -528 272 ) ( -376 -528 273 ) ( -376 -527 272 ) Snajperski 0 0 0 1 1
+}
+// brush 25
+{
+( -688 -512 256 ) ( -688 -511 256 ) ( -688 -512 257 ) Snajperski 0 0 0 1 1
+( -560 -512 256 ) ( -560 -512 257 ) ( -559 -512 256 ) Snajperski 0 0 0 1 1
+( -560 -512 256 ) ( -559 -512 256 ) ( -560 -511 256 ) Snajperski 0 0 0 1 1
+( -400 -496 272 ) ( -400 -495 272 ) ( -399 -496 272 ) Snajperski 0 0 0 1 1
+( -400 -504 272 ) ( -399 -504 272 ) ( -400 -504 273 ) Snajperski 0 0 0 1 1
+( -400 -496 272 ) ( -400 -496 273 ) ( -400 -495 272 ) Snajperski 0 0 0 1 1
 }
 }
 // entity 2
@@ -918,6 +945,40 @@
 }
 // entity 3
 {
+"classname" "Bepis"
+"origin" "-528 496 0"
+"angle" "90"
+"_tb_group" "6"
+}
+// entity 4
+{
+"classname" "WeaponPickup"
+"origin" "-456 488 8"
+"weapon" "rifle2"
+"_tb_group" "6"
+}
+// entity 5
+{
+"classname" "PlayerSpawn"
+"origin" "-408 488 16"
+"_tb_group" "6"
+}
+// entity 6
+{
+"classname" "WeaponPickup"
+"origin" "-408 440 8"
+"weapon" "rifle2"
+"_tb_group" "6"
+}
+// entity 7
+{
+"classname" "WeaponPickup"
+"origin" "-408 552 8"
+"weapon" "sowrd"
+"_tb_group" "6"
+}
+// entity 8
+{
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "News Post"
@@ -925,26 +986,26 @@
 "_tb_linked_group_id" "{83373285-6342-4e76-8f9e-d626198c78a4}"
 // brush 0
 {
-( -32 -32 0 ) ( -32 -31 0 ) ( -32 -32 1 ) Ogloszeniowy 8 0 0 1 1
-( -16 -32 128 ) ( -32 -16 128 ) ( -32 -16 256 ) Ogloszeniowy 8 0 0 1 1
+( -32 -32 0 ) ( -32 -31 0 ) ( -32 -32 1 ) NewsPost/Side3 64 0 0 -0.25 0.25
+( -16 -32 128 ) ( -32 -16 128 ) ( -32 -16 256 ) NewsPost/Corner4 -6 0 0 -0.16 0.25
 ( -32 0 96 ) ( 0 0 128 ) ( -32 -8 96 ) Czarny 24 16 0 1 1
-( -32 16 128 ) ( -16 32 128 ) ( -16 32 256 ) Ogloszeniowy 8 0 0 1 1
+( -32 16 128 ) ( -16 32 128 ) ( -16 32 256 ) NewsPost/Corner3 6 0 0 -0.16 0.25
 ( -32 -16 96 ) ( 0 0 128 ) ( -16 -32 96 ) Czarny 24 16 0 1 1
 ( -16 32 96 ) ( 0 0 128 ) ( -32 16 96 ) Czarny 24 16 0 1 1
-( -16 -32 0 ) ( -16 -32 1 ) ( -15 -32 0 ) Ogloszeniowy 0 0 0 1 1
+( -16 -32 0 ) ( -16 -32 1 ) ( -15 -32 0 ) NewsPost/Front 64 0 0 0.25 0.25
 ( 0 0 128 ) ( 8 0 128 ) ( 0 -32 96 ) Czarny 0 15.999998 0 1 1
 ( -16 -32 0 ) ( -15 -32 0 ) ( -16 -31 0 ) Ogloszeniowy 0 -8 0 1 1
 ( 0 32 96 ) ( 0 0 128 ) ( -8 0 128 ) Czarny 0 -8 0 1 1
-( 16 32 8 ) ( 17 32 8 ) ( 16 32 9 ) Ogloszeniowy 0 0 0 1 1
+( 16 32 8 ) ( 17 32 8 ) ( 16 32 9 ) NewsPost/Side2 64 0 0 -0.25 0.25
 ( 16 -32 96 ) ( 0 0 128 ) ( 32 -16 96 ) Czarny 0 16 0 1 1
 ( 32 16 96 ) ( 0 0 128 ) ( 16 32 96 ) Czarny 0 -8 0 1 1
-( 16 -32 128 ) ( 32 -16 256 ) ( 32 -16 128 ) Ogloszeniowy -16 0 0 1 1
+( 16 -32 128 ) ( 32 -16 256 ) ( 32 -16 128 ) NewsPost/Corner1 6 0 0 0.16 0.25
 ( 32 0 96 ) ( 0 0 128 ) ( 32 8 96 ) Czarny 24.000002 16 0 1 1
-( 16 32 128 ) ( 32 16 128 ) ( 32 16 256 ) Ogloszeniowy -16 0 0 1 1
-( 32 0 8 ) ( 32 0 9 ) ( 32 1 8 ) Ogloszeniowy 8 0 0 1 1
+( 16 32 128 ) ( 32 16 128 ) ( 32 16 256 ) NewsPost/Corner2 -6 0 0 0.16 0.25
+( 32 0 8 ) ( 32 0 9 ) ( 32 1 8 ) NewsPost/Side1 64 0 0 0.25 0.25
 }
 }
-// entity 4
+// entity 9
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -988,7 +1049,7 @@
 ( 608 864 8 ) ( 608 864 9 ) ( 608 865 8 ) Szynowy 0 0 0 1 1
 }
 }
-// entity 5
+// entity 10
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -996,7 +1057,7 @@
 "_tb_id" "43"
 "_tb_linked_group_id" "{7e8491b4-6f01-4810-ae8e-c5df4fe516ad}"
 }
-// entity 6
+// entity 11
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1006,7 +1067,7 @@
 "_tb_transformation" "1 0 0 0 0 1 0 -8 0 0 1 0 0 0 0 1"
 "_tb_group" "43"
 }
-// entity 7
+// entity 12
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1021,7 +1082,7 @@
 ( 576 64 72 ) ( 576 64 73 ) ( 577 64 72 ) TomaszowyGlowny 0 0 0 1 1
 ( 576 56 72 ) ( 577 56 72 ) ( 576 57 72 ) TomaszowyGlowny 0 -8 0 1 1
 ( 688 88 104 ) ( 688 89 104 ) ( 689 88 104 ) TomaszowyGlowny 0 -8 0 1 1
-( 688 96 80 ) ( 689 96 80 ) ( 688 96 81 ) TomaszowyGlowny 0 0 0 1 1
+( 688 92 80 ) ( 689 92 80 ) ( 688 92 81 ) TomaszowyGlowny 0 0 0 1 1
 ( 680 88 80 ) ( 680 88 81 ) ( 680 89 80 ) TomaszowyGlowny 8 0 0 1 1
 }
 // brush 1
@@ -1071,7 +1132,7 @@
 // brush 6
 {
 ( 584 120 72 ) ( 584 121 72 ) ( 584 120 73 ) TomaszowyGlowny 0 0 0 1 1
-( 640 112 72 ) ( 640 112 73 ) ( 641 112 72 ) TomaszowyGlowny 0 0 0 1 1
+( 640 116 72 ) ( 640 116 73 ) ( 641 116 72 ) TomaszowyGlowny 0 0 0 1 1
 ( 640 120 72 ) ( 641 120 72 ) ( 640 121 72 ) TomaszowyGlowny 0 0 0 1 1
 ( 680 128 104 ) ( 680 129 104 ) ( 681 128 104 ) TomaszowyGlowny 0 0 0 1 1
 ( 680 128 80 ) ( 681 128 80 ) ( 680 128 81 ) TomaszowyGlowny 0 0 0 1 1
@@ -1315,7 +1376,7 @@
 ( 680 176 80 ) ( 680 176 81 ) ( 680 177 80 ) TomaszowyPierwszy 0 8 0 1 1
 }
 }
-// entity 8
+// entity 13
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1369,7 +1430,7 @@
 ( 672 56 56 ) ( 672 55 56 ) ( 672 56 57 ) Szynowy 8 8 180 1 -1
 }
 }
-// entity 9
+// entity 14
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1423,7 +1484,7 @@
 ( 600 272 56 ) ( 600 272 57 ) ( 600 273 56 ) Szynowy 8 0 0 1 1
 }
 }
-// entity 10
+// entity 15
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1503,7 +1564,7 @@
 ( 600 224.97056274847714 40 ) ( 600 208 32.970562748477164 ) ( 600 215.02943725152284 40 ) TomaszowyGlowny 8 16 90 1 -1
 }
 }
-// entity 11
+// entity 16
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1583,7 +1644,7 @@
 ( 640 152 40 ) ( 640 152 41 ) ( 640 153 40 ) Szynowy 16 8 0 1 1
 }
 }
-// entity 12
+// entity 17
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1663,7 +1724,7 @@
 ( 640 80 40 ) ( 640 80 41 ) ( 640 81 40 ) Szynowy -8 8 0 1 1
 }
 }
-// entity 13
+// entity 18
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1772,7 +1833,7 @@
 ( 680 192 40 ) ( 680 192 41 ) ( 680 193 40 ) Szynowy 8 0 0 1 1
 }
 }
-// entity 14
+// entity 19
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -1790,7 +1851,7 @@
 ( 648 24 80 ) ( 648 24 81 ) ( 648 25 80 ) Guma 0 8 0 1 1
 }
 }
-// entity 15
+// entity 20
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2077,7 +2138,7 @@
 ( 684 -178 65.65685424949241 ) ( 684 -180 62.343145750507645 ) ( 684 -180 65.65685424949241 ) LampowyCzerwony 0 0 0 1 1
 }
 }
-// entity 16
+// entity 21
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2123,7 +2184,7 @@
 ( 648 16 64 ) ( 648 16 65 ) ( 648 17 64 ) Guma -8 8 0 1 1
 }
 }
-// entity 17
+// entity 22
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2178,7 +2239,7 @@
 ( 536 -56 32 ) ( 536 -56 33 ) ( 536 -55 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 18
+// entity 23
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2232,7 +2293,7 @@
 ( 600 32 64 ) ( 600 32 65 ) ( 600 33 64 ) Szynowy -8 8 0 1 1
 }
 }
-// entity 19
+// entity 24
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2312,7 +2373,7 @@
 ( 640 -24 40 ) ( 640 -24 41 ) ( 640 -23 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 20
+// entity 25
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2392,7 +2453,7 @@
 ( 640 -128 40 ) ( 640 -128 41 ) ( 640 -127 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 21
+// entity 26
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2438,7 +2499,7 @@
 ( 648 -176 72 ) ( 648 -176 73 ) ( 648 -175 72 ) Guma 0 8 0 1 1
 }
 }
-// entity 22
+// entity 27
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2493,7 +2554,14 @@
 ( 736 -56 32 ) ( 736 -56 33 ) ( 736 -55 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 23
+// entity 28
+{
+"classname" "WeaponPickup"
+"origin" "632 -168 80"
+"weapon" "rifle2"
+"_tb_group" "39"
+}
+// entity 29
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2503,7 +2571,7 @@
 "_tb_transformation" "1 0 0 0 0 1 0 0 0 0 1 8 0 0 0 1"
 "_tb_group" "43"
 }
-// entity 24
+// entity 30
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2790,7 +2858,7 @@
 ( 684 -402 65.65685424949241 ) ( 684 -404 62.343145750507645 ) ( 684 -404 65.65685424949241 ) LampowyCzerwony 0 0 0 1 1
 }
 }
-// entity 25
+// entity 31
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2845,7 +2913,7 @@
 ( 536 -280 32 ) ( 536 -280 33 ) ( 536 -279 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 26
+// entity 32
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2900,7 +2968,7 @@
 ( 736 -280 32 ) ( 736 -280 33 ) ( 736 -279 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 27
+// entity 33
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -2980,7 +3048,7 @@
 ( 640 -248 40 ) ( 640 -248 41 ) ( 640 -247 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 28
+// entity 34
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3060,7 +3128,7 @@
 ( 640 -352 40 ) ( 640 -352 41 ) ( 640 -351 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 29
+// entity 35
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3106,7 +3174,13 @@
 ( 648 -400 72 ) ( 648 -400 73 ) ( 648 -399 72 ) Guma 0 8 0 1 1
 }
 }
-// entity 30
+// entity 36
+{
+"classname" "PlayerSpawn"
+"origin" "632 -304 88"
+"_tb_group" "31"
+}
+// entity 37
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3116,7 +3190,7 @@
 "_tb_transformation" "1 0 0 0 0 1 0 0 0 0 1 8 0 0 0 1"
 "_tb_group" "43"
 }
-// entity 31
+// entity 38
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3403,7 +3477,7 @@
 ( 684 -626 65.65685424949241 ) ( 684 -628 62.343145750507645 ) ( 684 -628 65.65685424949241 ) LampowyCzerwony 0 0 0 1 1
 }
 }
-// entity 32
+// entity 39
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3458,7 +3532,7 @@
 ( 536 -504 32 ) ( 536 -504 33 ) ( 536 -503 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 33
+// entity 40
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3513,7 +3587,7 @@
 ( 656 -680 32 ) ( 656 -681 32 ) ( 656 -680 33 ) StalowyNieGladki 24 8 180 1 -1
 }
 }
-// entity 34
+// entity 41
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3559,7 +3633,7 @@
 ( 648 -632 64 ) ( 648 -632 65 ) ( 648 -631 64 ) Guma 0 8 0 1 1
 }
 }
-// entity 35
+// entity 42
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3614,7 +3688,7 @@
 ( 736 -504 32 ) ( 736 -504 33 ) ( 736 -503 32 ) StalowyNieGladki 0 8 0 1 1
 }
 }
-// entity 36
+// entity 43
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3694,7 +3768,7 @@
 ( 640 -576 40 ) ( 640 -576 41 ) ( 640 -575 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 37
+// entity 44
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3774,7 +3848,14 @@
 ( 640 -472 40 ) ( 640 -472 41 ) ( 640 -471 40 ) Szynowy 0 8 0 1 1
 }
 }
-// entity 38
+// entity 45
+{
+"classname" "WeaponPickup"
+"origin" "632 -440 80"
+"weapon" "rifle2"
+"_tb_group" "30"
+}
+// entity 46
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -3930,7 +4011,7 @@
 ( 88 192 16 ) ( 88 191 16 ) ( 88 192 17 ) Czarny 0 -15.999998 180 1 -1
 }
 }
-// entity 39
+// entity 47
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4111,7 +4192,7 @@
 ( -132 296 60 ) ( -132 295 60 ) ( -132 296 61 ) Krolewski 0 0 180 1 -1
 }
 }
-// entity 40
+// entity 48
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4261,15 +4342,15 @@
 }
 // brush 13
 {
-( -58 283 32 ) ( -58 253 44 ) ( -58 216 32 ) Wyscigowy 0 0 180 1 -1
+( -58 283 32 ) ( -58 253 44 ) ( -58 216 32 ) Glass 0 0 180 1 -1
 ( -56 224 48 ) ( -58 222 44 ) ( -56 236 48 ) Glass 0 0 180 1 -1
 ( -24 224 48 ) ( -22 222 44 ) ( -56 224 48 ) Glass 0 0 180 1 -1
-( -58 216 32 ) ( -22 216 32 ) ( -58 283 32 ) Wyscigowy -6 0 180 1 1
+( -58 216 32 ) ( -22 216 32 ) ( -58 283 32 ) Glass -6 0 180 1 1
 ( -24 224 48 ) ( -56 224 48 ) ( -24 236 48 ) Wyscigowy 0 0 180 1 1
 ( -24 236 48 ) ( -56 236 48 ) ( -23 248 46 ) Wyscigowy 0 0 180 1 1
 ( -58 283 32 ) ( -22 283 32 ) ( -58 253 44 ) Glass 0 0 180 1 1
 ( -23 248 46 ) ( -22 253 44 ) ( -24 236 48 ) Glass 0 0 180 1 -1
-( -22 216 32 ) ( -22 222 44 ) ( -22 283 32 ) Wyscigowy 0 0 180 1 -1
+( -22 216 32 ) ( -22 222 44 ) ( -22 283 32 ) Glass 0 0 180 1 -1
 }
 // brush 14
 {
@@ -4320,7 +4401,7 @@
 ( -32 294 30 ) ( -32 293 30 ) ( -32 294 31 ) Wyscigowy 0 0 180 1 -1
 }
 }
-// entity 41
+// entity 49
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5191,7 +5272,20 @@
 ( 248 428 84 ) ( 248 428 85 ) ( 248 429 84 ) Lampowy 4 -12 0 1 1
 }
 }
-// entity 42
+// entity 50
+{
+"classname" "PlayerSpawn"
+"origin" "336 432 48"
+"_tb_group" "54"
+}
+// entity 51
+{
+"classname" "WeaponPickup"
+"origin" "288 432 40"
+"weapon" "rifle2"
+"_tb_group" "54"
+}
+// entity 52
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5535,7 +5629,14 @@
 ( 176 214 36 ) ( 176 214 37 ) ( 176 215 36 ) Lampowy -2 0 0 1 1
 }
 }
-// entity 43
+// entity 53
+{
+"classname" "WeaponPickup"
+"origin" "272 240 40"
+"weapon" "sowrd"
+"_tb_group" "55"
+}
+// entity 54
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5858,7 +5959,7 @@
 ( 72 411 13 ) ( 72 410 13 ) ( 72 411 14 ) Guma 0 0 180 1 -1
 }
 }
-// entity 44
+// entity 55
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6181,7 +6282,7 @@
 ( -152 411 13 ) ( -152 410 13 ) ( -152 411 14 ) Guma 0 0 180 1 -1
 }
 }
-// entity 45
+// entity 56
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6324,7 +6425,20 @@
 ( -38 628 2 ) ( -38 628 3 ) ( -38 629 2 ) Szynowy 0 0 0 1 1
 }
 }
-// entity 46
+// entity 57
+{
+"classname" "WeaponPickup"
+"origin" "-40 688 8"
+"weapon" "rifle2"
+"_tb_group" "70"
+}
+// entity 58
+{
+"classname" "PlayerSpawn"
+"origin" "-8 648 16"
+"_tb_group" "70"
+}
+// entity 59
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6657,7 +6771,7 @@
 ( 208 -608 96 ) ( 208 -608 97 ) ( 208 -607 96 ) Lisciasty 0 0 0 1 1
 }
 }
-// entity 47
+// entity 60
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6793,7 +6907,7 @@
 ( 104 -252 28 ) ( 104 -253 28 ) ( 104 -252 29 ) Ladowy 0 12 180 1 -1
 }
 }
-// entity 48
+// entity 61
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6960,7 +7074,7 @@
 ( 112 -370.74516600406093 16 ) ( 112 -397.25483399593907 0 ) ( 112 -397.25483399593907 16 ) Kamienny 0 0 180 1 -1
 }
 }
-// entity 49
+// entity 62
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7098,7 +7212,7 @@
 ( 104 -364 82 ) ( 104 -365 82 ) ( 104 -364 83 ) KamiennyZielony 0 0 180 1 -1
 }
 }
-// entity 50
+// entity 63
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7234,7 +7348,7 @@
 ( 104 -514 30 ) ( 104 -514 31 ) ( 104 -513 30 ) Ladowy 0 12 0 1 1
 }
 }
-// entity 51
+// entity 64
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7370,7 +7484,7 @@
 ( 212 -400 28 ) ( 212 -400 29 ) ( 212 -399 28 ) Ladowy 0 12 0 1 1
 }
 }
-// entity 52
+// entity 65
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7506,7 +7620,7 @@
 ( -50 -408 30 ) ( -50 -409 30 ) ( -50 -408 31 ) Ladowy 0 12 180 1 -1
 }
 }
-// entity 53
+// entity 66
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7688,7 +7802,7 @@
 ( 211.51627563498914 -499.9599264488851 39.54743494847111 ) ( 208.96472381958995 -497.40837463348583 37.464101615137736 ) ( 212.67509445724977 -501.11874527114566 39.82003124070769 ) ZielonyMetaliczny -1.6798477 6.442505 112.207634 0.9354144 -0.7905694
 }
 }
-// entity 54
+// entity 67
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -7870,7 +7984,7 @@
 ( -38.37227048708684 -517.9286196731914 30.586539647744416 ) ( -39.758330239287545 -519.3146794253922 32.9691782796221 ) ( -36.63721525261542 -516.19356443872 29.169872981077788 ) ZielonyMetaliczny 7.8985386 8.667767 67.792366 0.9354144 0.7905694
 }
 }
-// entity 55
+// entity 68
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8052,7 +8166,7 @@
 ( -38.42071153756992 -250.0229393299975 30.586539647744416 ) ( -36.685656328952845 -251.7579945903232 29.169872981077788 ) ( -39.80677126911673 -248.6368795571428 32.9691782796221 ) ZielonyMetaliczny -12.630623 -9.066162 112.207634 0.9354144 -0.7905694
 }
 }
-// entity 56
+// entity 69
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8234,7 +8348,7 @@
 ( 213.9770608127451 -265.6277295129131 30.586539647744416 ) ( 212.24200557827373 -267.3627847473846 29.169872981077788 ) ( 215.36312056494592 -264.2416697607124 32.9691782796221 ) ZielonyMetaliczny -2.935913 -11.340637 112.207634 0.9354144 -0.7905694
 }
 }
-// entity 57
+// entity 70
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8370,7 +8484,7 @@
 ( 194 -664 28 ) ( 194 -664 29 ) ( 194 -663 28 ) Ladowy -8 12 0 1 1
 }
 }
-// entity 58
+// entity 71
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8552,7 +8666,27 @@
 ( -1.289424005451508 -637 38.946278254943905 ) ( 1.656854249492369 -637 36 ) ( -1.289424005451508 -659 38.946278254943905 ) ZielonyMetaliczny 6 -0.08830643 0 1 0.70710677
 }
 }
-// entity 59
+// entity 72
+{
+"classname" "PlayerSpawn"
+"origin" "152 -648 16"
+"_tb_group" "62"
+}
+// entity 73
+{
+"classname" "WeaponPickup"
+"origin" "104 -648 8"
+"weapon" "rifle2"
+"_tb_group" "62"
+}
+// entity 74
+{
+"classname" "WeaponPickup"
+"origin" "24 -648 8"
+"weapon" "sowrd"
+"_tb_group" "62"
+}
+// entity 75
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8671,90 +8805,25 @@
 ( -704 -640 144 ) ( -704 -640 145 ) ( -704 -639 144 ) Snajperski 0 0 0 1 1
 }
 }
-// entity 60
-{
-"classname" "PlayerSpawn"
-"origin" "-408 488 16"
-}
-// entity 61
-{
-"classname" "PlayerSpawn"
-"origin" "-8 648 16"
-}
-// entity 62
-{
-"classname" "PlayerSpawn"
-"origin" "336 432 48"
-}
-// entity 63
-{
-"classname" "PlayerSpawn"
-"origin" "632 -304 88"
-}
-// entity 64
-{
-"classname" "PlayerSpawn"
-"origin" "152 -648 16"
-}
-// entity 65
+// entity 76
 {
 "classname" "PlayerSpawn"
 "origin" "-680 -600 208"
+"_tb_group" "74"
 }
-// entity 66
-{
-"classname" "toilet"
-"origin" "88 8 8"
-}
-// entity 67
+// entity 77
 {
 "classname" "WeaponPickup"
 "origin" "-632 -600 200"
 "weapon" "awp"
+"_tb_group" "74"
 }
-// entity 68
+// entity 78
 {
-"classname" "WeaponPickup"
-"origin" "-456 488 8"
-"weapon" "rifle"
+"classname" "toilet"
+"origin" "88 8 8"
 }
-// entity 69
-{
-"classname" "WeaponPickup"
-"origin" "104 -648 8"
-"weapon" "rifle"
-}
-// entity 70
-{
-"classname" "WeaponPickup"
-"origin" "632 -168 80"
-"weapon" "rifle"
-}
-// entity 71
-{
-"classname" "WeaponPickup"
-"origin" "632 -440 80"
-"weapon" "rifle"
-}
-// entity 72
-{
-"classname" "WeaponPickup"
-"origin" "288 432 40"
-"weapon" "rifle"
-}
-// entity 73
-{
-"classname" "WeaponPickup"
-"origin" "-40 688 8"
-"weapon" "rifle"
-}
-// entity 74
-{
-"classname" "Bepis"
-"origin" "-528 496 0"
-"angle" "90"
-}
-// entity 75
+// entity 79
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -8787,7 +8856,7 @@
 ( -640 -96 176 ) ( -639 -96 176 ) ( -640 -95 176 ) Guma 0 16 0 1 1
 ( -592 -64 320 ) ( -592 -63 320 ) ( -591 -64 320 ) Guma 0 16 0 1 1
 ( -592 48 256 ) ( -591 48 256 ) ( -592 48 257 ) Guma 0 0 0 1 1
-( -608 -64 256 ) ( -608 -64 257 ) ( -608 -63 256 ) Guma -16 0 0 1 1
+( -608 -64 256 ) ( -608 -64 257 ) ( -608 -63 256 ) Billboard/Monitorowy -240 160 0 0.2 0.2
 }
 // brush 3
 {
@@ -8825,10 +8894,4 @@
 ( -592 64 192 ) ( -591 64 192 ) ( -592 64 193 ) ZielonyMetaliczny 0 0 0 1 1
 ( -592 64 192 ) ( -592 64 193 ) ( -592 65 192 ) ZielonyMetaliczny 0 0 0 1 1
 }
-}
-// entity 76
-{
-"classname" "WeaponPickup"
-"origin" "-408 440 8"
-"weapon" "rifle"
 }

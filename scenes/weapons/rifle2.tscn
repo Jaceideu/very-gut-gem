@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://0p6cg7o8isf5"]
+
+[ext_resource type="PackedScene" uid="uid://chkjwek33ppjd" path="res://scenes/weapons/rifle.tscn" id="1_t34pe"]
+[ext_resource type="Material" uid="uid://dfh4q3ev78bgr" path="res://materials/weapons/rifle2.tres" id="2_sn5u0"]
+[ext_resource type="Texture2D" uid="uid://ga5lhc7pndsl" path="res://gut textures/weapons/rifle2.png" id="3_vxokd"]
+
+[node name="rifle2" unique_id=1527665731 instance=ExtResource("1_t34pe")]
+damage = 2
+
+[node name="sprite" parent="RotPivot" parent_id_path=PackedInt32Array(395466194) index="0" unique_id=275115365]
+material_override = ExtResource("2_sn5u0")
+texture = ExtResource("3_vxokd")
+
+[node name="shoot" parent="." index="2" unique_id=143853678]
+wait_time = 0.15
+
+[node name="shootcast" parent="." index="5" unique_id=1686008047]
+target_position = Vector3(0, 0, -80)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 5

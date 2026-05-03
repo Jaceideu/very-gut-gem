@@ -1,6 +1,7 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://csy05eltw3q8w"]
 
 [resource]
+bus/0/volume_db = -0.12827492
 bus/1/name = &"powerup"
 bus/1/solo = false
 bus/1/mute = false

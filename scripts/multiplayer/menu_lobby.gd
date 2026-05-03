@@ -10,6 +10,7 @@ extends Control
 @onready var players_label: Label = %players_label
 @onready var nickname_edit: LineEdit = %nicknameEdit
 @onready var pvp: Button = %pvp
+@onready var pvp_2: Button = %pvp2
 
 
 
@@ -41,6 +42,7 @@ func _on_host_pressed() -> void:
 	start.show()
 	players_label.show()
 	pvp.show()
+	pvp_2.show()
 	
 
 func _on_join_pressed() -> void:
@@ -62,3 +64,7 @@ func _on_menu_pressed() -> void:
 
 func _on_pvp_pressed() -> void:
 	Lobby.load_game.rpc("res://scenes/levels/pvp_1.tscn")
+
+
+func _on_pvp_2_pressed() -> void:
+	Lobby.load_game.rpc("res://scenes/levels/pvp_2.tscn")

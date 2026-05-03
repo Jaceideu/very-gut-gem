@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dxynodk01g4g"]
+
+[ext_resource type="PackedScene" uid="uid://bekuuxbyxpjxa" path="res://scenes/weapon_pickups/weapon_pickup.tscn" id="1_q6sc6"]
+[ext_resource type="Texture2D" uid="uid://ga5lhc7pndsl" path="res://gut textures/weapons/rifle2.png" id="2_ltdls"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hs84l"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_ltdls")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_cdeo5"]
+material = SubResource("StandardMaterial3D_hs84l")
+size = Vector2(1.5, 1.5)
+
+[node name="Rifle2Pickup" unique_id=118521975 instance=ExtResource("1_q6sc6")]
+mesh = SubResource("QuadMesh_cdeo5")
+weapon_scene_path = "uid://0p6cg7o8isf5"
