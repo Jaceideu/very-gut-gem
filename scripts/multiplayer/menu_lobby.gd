@@ -11,6 +11,7 @@ extends Control
 @onready var nickname_edit: LineEdit = %nicknameEdit
 @onready var pvp: Button = %pvp
 @onready var pvp_2: Button = %pvp2
+@onready var pvp_3: Button = %pvp3
 
 
 
@@ -43,6 +44,7 @@ func _on_host_pressed() -> void:
 	players_label.show()
 	pvp.show()
 	pvp_2.show()
+	pvp_3.show()
 	
 
 func _on_join_pressed() -> void:
@@ -68,3 +70,7 @@ func _on_pvp_pressed() -> void:
 
 func _on_pvp_2_pressed() -> void:
 	Lobby.load_game.rpc("res://scenes/levels/pvp_2.tscn")
+
+
+func _on_pvp_3_pressed() -> void:
+	Lobby.load_game.rpc("res://scenes/levels/fuckcube.tscn")

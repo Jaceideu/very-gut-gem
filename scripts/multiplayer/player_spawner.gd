@@ -77,9 +77,7 @@ func _ready() -> void:
 		elif enable_pvp:
 			offline_player.global_position = spawn_points.pick_random().global_position
 		
-		
 
-		
 	spawn_function = spawn_player
 	
 	if multiplayer.is_server():
