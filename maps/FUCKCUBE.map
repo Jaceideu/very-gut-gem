@@ -319,12 +319,12 @@
 }
 // brush 34
 {
-( -40 -312 760 ) ( -40 -311 760 ) ( -40 -312 761 ) myadye 0 0 0 -1 1
-( -40 -312 760 ) ( -40 -312 761 ) ( -39 -312 760 ) myadye 0 0 0 -1 1
-( -40 -312 760 ) ( -39 -312 760 ) ( -40 -311 760 ) myadye 0 0 0 -1 1
-( 24 -248 768 ) ( 24 -247 768 ) ( 25 -248 768 ) myadye 0 0 0 -1 1
-( 24 -248 768 ) ( 25 -248 768 ) ( 24 -248 769 ) myadye 0 0 0 -1 1
-( 24 -248 768 ) ( 24 -248 769 ) ( 24 -247 768 ) myadye 0 0 0 -1 1
+( -248 8 856 ) ( -248 8 856.5 ) ( -248 7 856 ) myadye 0 -8 180 1 -1
+( -216 0 888 ) ( -216 0 888.4999999999999 ) ( -215.5 0 888 ) myadye -24 -8 180 1 -1
+( -248 8 856 ) ( -248 7 856 ) ( -247.5 8 856 ) myadye -24 0 180 1 -1
+( -216 0 888 ) ( -215.5 0 888 ) ( -216 -1 888 ) myadye -24 0 180 1 -1
+( -248 8 856 ) ( -247.5 8 856 ) ( -248 8 856.5 ) myadye -24 -8 180 1 -1
+( -216 0 888 ) ( -216 -1 888 ) ( -216 0 888.4999999999999 ) myadye 0 -8 180 1 -1
 }
 }
 // entity 1
@@ -1096,41 +1096,42 @@
 // entity 19
 {
 "classname" "WeaponPickup"
-"origin" "-8 -456 784"
+"origin" "192 -432 784"
 "weapon" "rifle"
 }
 // entity 20
 {
 "classname" "WeaponPickup"
-"origin" "176 -80 1288"
-}
-// entity 21
-{
-"classname" "WeaponPickup"
-"origin" "-8 -48 784"
-"weapon" "curzor"
-"targetname" ""
-}
-// entity 22
-{
-"classname" "WeaponPickup"
 "origin" "0 -256 1224"
 "weapon" "rifle2"
 }
-// entity 23
+// entity 21
 {
 "classname" "WeaponPickup"
 "origin" "320 64 848"
 "weapon" "curzor"
 }
-// entity 24
+// entity 22
 {
 "classname" "WeaponPickup"
 "origin" "-320 -576 848"
 "weapon" "sowrd"
 }
-// entity 25
+// entity 23
 {
 "classname" "Bepis"
-"origin" "-160 -400 1280"
+"origin" "208 -64 1280"
+}
+// entity 24
+{
+"classname" "WeaponPickup"
+"origin" "-192 -72 784"
+"weapon" "curzor"
+}
+// entity 25
+{
+"classname" "WeaponPickup"
+"origin" "-184 -448 1288"
+"weapon" "awp"
+"targetname" ""
 }

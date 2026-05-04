@@ -1,5 +1,7 @@
 extends Control
 
+const SKIN_MENU = preload("uid://d32h1sayj8qtg")
+
 @onready var ammo_label: Label = %ammo
 @onready var hp_lablel: Label = %hp
 @onready var screen_flash: ColorRect = %screen_flash
@@ -20,22 +22,24 @@ extends Control
 @onready var victory_sound: AudioStreamPlayer = %victory_sound
 @onready var fps_label: Label = %FpsLabel
 @onready var poop_bar: ProgressBar = %PoopBar
+@onready var esc_label: Label = %esc
 
 
 func _ready():
 	map_name_label.text = "levele is %s" % get_tree().current_scene.name
+	if Lobby.online_mode:
+		esc_label.text = "esc = memu"
 
 func _process(delta):
-	if Input.is_action_just_pressed("escape") && !Lobby.online_mode:
+	if Input.is_action_just_pressed("escape"):
 		show_gameover_screen()
 	
 	if game_over_screen.visible:
-	
 		if Input.is_action_just_pressed("confirm"):
-			restart_game()
+			_on_play_button_down()
 			
 		if Input.is_action_just_pressed("cancel"):
-			go_to_menu()
+			_on_menu_button_down()
 		
 	if starman_flash.visible:
 		starman_flash.color.h += 0.01
@@ -45,11 +49,18 @@ func _physics_process(delta: float) -> void:
 	fps_label.text = "second per frame: %s" % (1 / Engine.get_frames_per_second())
 
 func show_gameover_screen():
-	get_tree().paused = true
+	if !Lobby.online_mode:
+		get_tree().paused = true
+		over_sound.play()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	game_over_screen.show()
-	over_sound.play()
 	
+	
+
+func hide_gameover_screen():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	game_over_screen.hide()
+	over_sound.stop()
 
 func restart_game():
 	get_tree().paused = false
@@ -79,10 +90,15 @@ func _on_player_received_damage(damage: int) -> void:
 
 
 func _on_play_button_down() -> void:
-	restart_game()
+	if Lobby.online_mode:
+		hide_gameover_screen()
+	else:
+		restart_game()
 
 
 func _on_menu_button_down() -> void:
+	if Lobby.online_mode:
+		Lobby.end_networking()
 	go_to_menu()
 #
 func _on_player_credit_changed(new_credit: int) -> void:
@@ -131,3 +147,7 @@ func _on_player_skin_found() -> void:
 
 func _on_player_poop_changed(new_amount: float) -> void:
 	poop_bar.value = new_amount
+
+
+func _on_skins_button_down() -> void:
+	game_over_screen.add_child(SKIN_MENU.instantiate())

@@ -7,6 +7,7 @@ var local_nickname := ""
 var online_mode := false
 var match_started := false
 var is_loading_late := false
+var local_player: Player
 
 signal all_players_loaded
 signal player_added(player: Dictionary)
@@ -45,6 +46,7 @@ func end_networking():
 	
 func get_player_data(id: int) -> Dictionary:
 	var index := players.find_custom(func(p): return p.id == id)
+		
 	return players.get(index)
 	
 	
@@ -64,9 +66,9 @@ func _on_peer_disconnected(id: int):
 
 func _on_peer_connected(id: int):
 	add_player.rpc_id(id, multiplayer.get_unique_id(), local_nickname)
-	if multiplayer.is_server() and match_started:
-		print_debug(get_tree().current_scene.get_path())
-		late_load.rpc_id(id, get_tree().current_scene.scene_file_path)
+	#if multiplayer.is_server() and match_started:
+		#print_debug(get_tree().current_scene.get_path())
+		#late_load.rpc_id(id, get_tree().current_scene.scene_file_path)
 		
 		
 func _on_server_disconnected():

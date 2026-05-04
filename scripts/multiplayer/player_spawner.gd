@@ -2,6 +2,7 @@ extends MultiplayerSpawner
 
 signal leaderboards_changed
 signal player_died(attacker_id: int)
+signal player_killed(killed_id: int)
 signal player_respawned(id: int)
 
 @export var offline_player: Player
@@ -10,16 +11,25 @@ signal player_respawned(id: int)
 
 const PLAYER = preload("uid://ca5cvww1u7iq1")
 
+var max_kills := 0
 
 @rpc("authority", "call_local", "reliable")
 func player_died_inform(attacker_id: int):
 	player_died.emit(attacker_id)
+	
+@rpc("authority", "call_local", "reliable")
+func player_killed_inform(killed_id: int):
+	player_killed.emit(killed_id)
 
 @rpc("any_peer", "call_local", "reliable")
 func update_leaderboards(id: int, kills_diff: int, deaths_diff: int):
 	var player_data := Lobby.get_player_data(id)
 	player_data.kills += kills_diff
 	player_data.deaths += deaths_diff
+	
+	if player_data.kills > max_kills:
+		max_kills = player_data.kills
+		GlobalSignals.new_max_kills_reached.emit(max_kills)
 	
 	leaderboards_changed.emit()
 	
@@ -35,7 +45,9 @@ func _on_player_respawn_requested(id: int, attacker_id: int):
 	update_leaderboards.rpc(id, 0, 1)
 	if attacker_id > 0 and id != attacker_id:
 		update_leaderboards.rpc(attacker_id, 1, 0)
-		player_died_inform.rpc_id(id, attacker_id)
+		player_killed_inform.rpc_id(attacker_id, id)
+		
+	player_died_inform.rpc_id(id, attacker_id)
 	
 	await get_tree().create_timer(2.0).timeout
 	spawn(Lobby.get_player_data(id))
@@ -48,6 +60,9 @@ func spawn_player(player_data: Dictionary):
 	var new_player := PLAYER.instantiate()
 	new_player.name = str(player_data.id)
 	new_player.nickname = player_data.nickname
+	
+	if player_data.id == multiplayer.get_unique_id():
+		Lobby.local_player = new_player
 	
 	if enable_pvp:
 		new_player.collision_layer |= 4

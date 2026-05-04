@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://5cow84q03m6a" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="7_wpyo0"]
 [ext_resource type="Script" uid="uid://dygoafsw7mwx7" path="res://scripts/destroyable_wall.gd" id="8_7y183"]
 [ext_resource type="PackedScene" uid="uid://b4i0yqk7bwl6e" path="res://scenes/toilet.tscn" id="9_ewtn7"]
+[ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="10_6uubr"]
+[ext_resource type="Script" uid="uid://e60a2xnb8qjb" path="res://scripts/likes_killing_wall.gd" id="11_sxib2"]
 
 [sub_resource type="Resource" id="Resource_itjil"]
 script = ExtResource("4_6h75e")
@@ -69,10 +71,29 @@ scene_file = ExtResource("9_ewtn7")
 classname = "toilet"
 metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
 
+[sub_resource type="Resource" id="Resource_5i82v"]
+script = ExtResource("4_6h75e")
+scene_file = ExtResource("10_6uubr")
+classname = "warp"
+class_properties = Dictionary[String, Variant]({
+"destination": ""
+})
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
+
+[sub_resource type="Resource" id="Resource_77xbm"]
+script = ExtResource("7_wpyo0")
+script_class = ExtResource("11_sxib2")
+classname = "LikesKillingWall"
+class_properties = Dictionary[String, Variant]({
+"kill_threshold": 0
+})
+node_class = "StaticBody3D"
+metadata/_custom_type_script = "uid://5cow84q03m6a"
+
 [resource]
 script = ExtResource("2_kfyuo")
 fgd_name = "GutFGD"
 base_fgd_files = Array[Resource]([ExtResource("1_a7qod")])
-entity_definitions = Array[Resource]([SubResource("Resource_itjil"), SubResource("Resource_6h75e"), SubResource("Resource_4ch88"), SubResource("Resource_7y183"), SubResource("Resource_6uubr")])
+entity_definitions = Array[Resource]([SubResource("Resource_itjil"), SubResource("Resource_6h75e"), SubResource("Resource_4ch88"), SubResource("Resource_7y183"), SubResource("Resource_6uubr"), SubResource("Resource_5i82v"), SubResource("Resource_77xbm")])
 generate_model_point_class_models = false
 metadata/_custom_type_script = "uid://drlmgulwbjwqu"

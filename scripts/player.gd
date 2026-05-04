@@ -147,8 +147,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if !is_multiplayer_authority(): return
 	
-	if event.is_action_pressed("escape") && Lobby.online_mode:
-		damage.rpc(10000, get_path())
+	#if event.is_action_pressed("escape") && Lobby.online_mode:
+		#damage.rpc(10000, get_path())
 			
 	if event is InputEventMouseMotion:
 		

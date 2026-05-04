@@ -12,6 +12,7 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="SkinMenu" type="Control" unique_id=1146975928]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,6 +89,7 @@ stretch_mode = 3
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+focus_mode = 2
 
 [node name="click_sound" type="AudioStreamPlayer" parent="." unique_id=126333756]
 unique_name_in_owner = true

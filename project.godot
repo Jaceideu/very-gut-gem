@@ -28,6 +28,7 @@ buses/default_bus_layout="uid://csy05eltw3q8w"
 
 GlobalSettings="*res://scripts/global_settings.gd"
 Lobby="*uid://dk7eugis1e6xm"
+GlobalSignals="*uid://dw1tj3kncy7g6"
 
 [display]
 
