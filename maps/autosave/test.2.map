@@ -1,0 +1,83 @@
+// Game: GutGem
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"wad" ""
+"classname" "worldspawn"
+"_tb_mod" "textures"
+"_tb_textures" "textures"
+// brush 0
+{
+( -128 -64 -16 ) ( -128 -63 -16 ) ( -128 -64 -15 ) familyguy [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -64 -144 -16 ) ( -64 -144 -15 ) ( -63 -144 -16 ) familyguy [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) familyguy [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) familyguy [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 64 496 16 ) ( 65 496 16 ) ( 64 496 17 ) familyguy [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 512 64 16 ) ( 512 64 17 ) ( 512 65 16 ) familyguy [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( 144 -96 16 ) ( 144 -95 16 ) ( 144 -96 17 ) cobblestone [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 144 -96 16 ) ( 144 -96 17 ) ( 145 -96 16 ) cobblestone [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 144 -96 16 ) ( 145 -96 16 ) ( 144 -95 16 ) cobblestone [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 208 0 96 ) ( 208 1 96 ) ( 209 0 96 ) cobblestone [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 208 64 32 ) ( 209 64 32 ) ( 208 64 33 ) cobblestone [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 208 0 32 ) ( 208 0 33 ) ( 208 1 32 ) cobblestone [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 1
+{
+"classname" "PlayerSpawn"
+"origin" "280 -24 32"
+"targetname" "tak"
+}
+// entity 2
+{
+"classname" "PlayerSpawn"
+"origin" "8 40 32"
+}
+// entity 3
+{
+"classname" "PlayerSpawn"
+"origin" "56 -72 32"
+}
+// entity 4
+{
+"classname" "warp"
+"origin" "88 24 24"
+"destination" "res://scenes/levels/1.tscn"
+}
+// entity 5
+{
+"classname" "WeaponPickup"
+"origin" "-8 -24 24"
+"weapon" "awp"
+}
+// entity 6
+{
+"classname" "WeaponPickup"
+"origin" "8 -88 24"
+}
+// entity 7
+{
+"classname" "Trigger"
+"target" "stara"
+"target2" "dad"
+// brush 0
+{
+( 320 96 16 ) ( 320 97 16 ) ( 320 96 17 ) cobblestone [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 96 16 ) ( 320 96 17 ) ( 321 96 16 ) cobblestone [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 96 16 ) ( 321 96 16 ) ( 320 97 16 ) cobblestone [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 384 192 64 ) ( 384 193 64 ) ( 385 192 64 ) cobblestone [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 384 192 32 ) ( 385 192 32 ) ( 384 192 33 ) cobblestone [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 384 192 32 ) ( 384 192 33 ) ( 384 193 32 ) cobblestone [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 8
+{
+"classname" "AMessage"
+"origin" "280 104 24"
+"message" "twoja stara to gej"
+"targetname" "stara"
+}

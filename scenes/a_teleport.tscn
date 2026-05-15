@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://i7thoisc0ul1"]
+
+[ext_resource type="Script" uid="uid://c66pdwfd5hddo" path="res://scripts/a_teleport.gd" id="1_t3p62"]
+
+[node name="ATeleport" type="Marker3D" unique_id=1340669469]
+script = ExtResource("1_t3p62")

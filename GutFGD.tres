@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://b4i0yqk7bwl6e" path="res://scenes/toilet.tscn" id="9_ewtn7"]
 [ext_resource type="PackedScene" uid="uid://2n57g3pfwoq5" path="res://scenes/level_end.tscn" id="10_6uubr"]
 [ext_resource type="Script" uid="uid://e60a2xnb8qjb" path="res://scripts/likes_killing_wall.gd" id="11_sxib2"]
+[ext_resource type="Script" uid="uid://ix2roj7bm12q" path="res://scripts/trigger.gd" id="12_77xbm"]
+[ext_resource type="Script" uid="uid://bsaorwde6n6ud" path="res://scripts/activeable_message.gd" id="13_asy1p"]
+[ext_resource type="PackedScene" uid="uid://i7thoisc0ul1" path="res://scenes/a_teleport.tscn" id="14_3br65"]
 
 [sub_resource type="Resource" id="Resource_itjil"]
 script = ExtResource("4_6h75e")
@@ -90,10 +93,56 @@ class_properties = Dictionary[String, Variant]({
 node_class = "StaticBody3D"
 metadata/_custom_type_script = "uid://5cow84q03m6a"
 
+[sub_resource type="Resource" id="Resource_sxib2"]
+script = ExtResource("7_wpyo0")
+build_visuals = false
+collision_layer = 0
+collision_mask = 2
+script_class = ExtResource("12_77xbm")
+classname = "Trigger"
+class_properties = Dictionary[String, Variant]({
+"target": NodePath(""),
+"target2": null
+})
+auto_apply_to_matching_node_properties = true
+node_class = "Area3D"
+metadata/_custom_type_script = "uid://5cow84q03m6a"
+
+[sub_resource type="Resource" id="Resource_3br65"]
+script = ExtResource("4_6h75e")
+script_class = ExtResource("13_asy1p")
+classname = "AMessage"
+class_properties = Dictionary[String, Variant]({
+"message": "",
+"targetname": ""
+})
+auto_apply_to_matching_node_properties = true
+node_class = "Node"
+node_groups = Array[String](["activeable"])
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
+
+[sub_resource type="Resource" id="Resource_5ko3o"]
+script = ExtResource("4_6h75e")
+scene_file = ExtResource("14_3br65")
+classname = "ATeleport"
+class_properties = Dictionary[String, Variant]({
+"ignore_x": false,
+"ignore_y": false,
+"ignore_z": false,
+"targetname": ""
+})
+auto_apply_to_matching_node_properties = true
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -16, 8, 8, 32)
+})
+node_groups = Array[String](["activeable"])
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
+
 [resource]
 script = ExtResource("2_kfyuo")
 fgd_name = "GutFGD"
 base_fgd_files = Array[Resource]([ExtResource("1_a7qod")])
-entity_definitions = Array[Resource]([SubResource("Resource_itjil"), SubResource("Resource_6h75e"), SubResource("Resource_4ch88"), SubResource("Resource_7y183"), SubResource("Resource_6uubr"), SubResource("Resource_5i82v"), SubResource("Resource_77xbm")])
+entity_definitions = Array[Resource]([SubResource("Resource_itjil"), SubResource("Resource_6h75e"), SubResource("Resource_4ch88"), SubResource("Resource_7y183"), SubResource("Resource_6uubr"), SubResource("Resource_5i82v"), SubResource("Resource_77xbm"), SubResource("Resource_sxib2"), SubResource("Resource_3br65"), SubResource("Resource_5ko3o")])
 generate_model_point_class_models = false
 metadata/_custom_type_script = "uid://drlmgulwbjwqu"

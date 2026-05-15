@@ -18,7 +18,7 @@ var dir := Vector3.ZERO
 @onready var player_detector: Area3D = %player_detector
 @onready var target_change_timer: Timer = %TargetChangeTimer
 
-@rpc("any_peer", "call_local", "reliable")
+@rpc("authority", "call_local", "reliable")
 func kill_mult(player_path: String):
 	var target := get_node(player_path)
 	if target and target.has_method("add_credit"):
